@@ -1,9 +1,10 @@
-# Day 1: Introduction to homotopy type theory
+# Introduction to homotopy type theory
 
 Lecturer: [Andrej Bauer](http://www.andrej.com/)
 
 ## Schedule
 
+The online lectures will take place on Monday, April 12, 2021.
 All times are in UTC+2.
 
 | Time        | Topic                                      |
@@ -21,34 +22,83 @@ All times are in UTC+2.
 
 ### Part 1: Dependent type theory
 
-* Dependent type theory (judgements, rules, universes)
-* Exercises: basic types (`unit`, `empty`, `bool`, `N`)
+#### Lecture
+
+* Type theory as a theory of constructions
+* Geometric picture of types and type families
+* The type-theoretic judgements: contexts, types, terms, judgemental equality
+* Inference rules
+* Types as elements of a universe
+
+#### Exercises
+
+* Discuss the rules for `unit`, `empty`, `bool`.
+* Discuss the rules for `ℕ`
+
 
 ### Part 2: Dependent sums and products
 
-* `Σ` `Π`, `→`, `×`
-* Exercises: `+`, dependent currying
+#### Lecture
 
+* Dependent sum `Σ`
+* Dependent product `Π`
+* Function type `→` and product type `×`
+
+#### Exercises
+
+* Dependent currying
+* Formulate the types for `+`
 
 ### Part 3: Identity types
 
+#### Lecture
 
-Exercises:
-* (non-dependent) transport, `Σ (x : A) Id (x, y)`
-* why we cannot prove UIP by path induction
+* Identity type as a type of paths
+* Path induction
+* Why we cannot prove UIP by path induction
+* Basic properties of identity types, including transport
+
+#### Exercises
+
+* Inhabitation of `Π (u : Σ (x : A) Id (x, y)) Id ((x, refl x), u)`
 
 
 ### Part 4: Homotopy levels
 
-* Part 4: contractibility, propositions, homotopy levels
-* Exercises: logic via propositions-as-propositions
+#### Lecture
+
+* Contractible type
+* Proposition
+* Propositional truncation
+* Structure versus property
+* The idea of homotopy level
+
+#### Exercises
+
+* The difference between `∃`, `∨` and `Σ`, `+`.
+* `N` is a set
 
 ### Part 5: Equivalences & isomorphism
 
-* Equivalences & isomorphism
-* Exercise: universal property of set truncation
+#### Lecture
+
+* Equivalence of types
+* Being an equivalence is a property
+* Use equivalence to state the universal property of pullback
+
+#### Exercises
+
+* Use equivalence to state the universal property of `×`
+* Constructing `Id (A, B) → Equiv (A, B)`
 
 ### Part 6: Univalence
 
-* Univalence
-* Exercise: equality of algebraic structures
+#### Lecture
+
+* Analying the structure of `Id`
+* The statement of Univalence
+* Consequences of Univalence: function extensionality
+
+#### Exercises
+
+* Isomorphic groups are equal

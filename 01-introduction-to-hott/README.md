@@ -8,7 +8,7 @@ The online lectures will take place on Monday, April 12, 2021.
 All times are in UTC+2.
 
 | Time        | Topic                                      |
-|:=-----------|:-------------------------------------------|
+|:------------|:-------------------------------------------|
 | 14:00–14:30 | Part 1: Dependent type theory              |
 | 14:30–15:00 | Part 2: Dependent sums and products        |
 | 15:30–16:00 | (break)                                    |

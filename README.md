@@ -11,7 +11,7 @@ Course units are organized into folders:
 * Synthetic Homotopy Theory
 * Arend Proof Assistant
 
-The program of the week will be lectures + excercise sessions from 2pm to 6.30pm (UTC+2).
+**The program of the week will be lectures/excercise sessions from 2pm to 6.30pm (UTC+2). We will organize virtual social events in the evening.**
 
 Here is the day by day program, the detailled content and timing  of each lecture can be found in the corresponding subfolder. 
 

@@ -17,11 +17,11 @@ Here is the day by day program, the detailled content and timing  of each lectur
 
 * Day 1. 
   + Andrej Bauer: Introduction to Homotopy Type Theory 
-  + Together with excercise sessions
+  + Interleaved with excercise sessions
 
 * Day 2. 
   + Bas Spitters: The Coq-HoTT library
-  + Together with excercise sessions
+  + Excercise session (with Discord)
 
 
 * Day 3. 
@@ -30,7 +30,7 @@ Here is the day by day program, the detailled content and timing  of each lectur
 
 * Day 4. 
   + Anders Mortberg: Cubical Type Theory and Cubical Agda
-  + Together with excercise sessions
+  + Excercise session (with Discord)
 
 * Day 5. 
   +  Egbert Rijke: Synthetic Homotopy Theory

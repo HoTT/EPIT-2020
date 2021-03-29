@@ -11,18 +11,18 @@ Course units are organized into folders:
 * Synthetic Homotopy Theory
 * Arend Proof Assistant
 
-**The program of the week will be lectures/excercise sessions from 2pm to 6.30pm (UTC+2). We will organize virtual social events in the evening.**
+**The program of the week will be lectures/exercise sessions from 2pm to 6.30pm (UTC+2). We will organize virtual social events in the evening.**
 
 Here is the day by day program, the detailled content and timing  of each lecture can be found in the corresponding subfolder. 
 
 * Day 1. 
   + Andrej Bauer: Introduction to Homotopy Type Theory 
-  + Interleaved with excercise sessions
+  + Interleaved with exercise sessions
 
 * Day 2. 
   + Bas Spitters: The Coq-HoTT library
-  + Excercise session (with Discord)
-
+  + Exercise session (with Discord)
+  + Prerequisite: have Coq installed per the [instructions](Coq-Playground/README.md)
 
 * Day 3. 
    + Christian Sattler : Models of Homotopy Type Theory
@@ -30,7 +30,7 @@ Here is the day by day program, the detailled content and timing  of each lectur
 
 * Day 4. 
   + Anders Mortberg: Cubical Type Theory and Cubical Agda
-  + Excercise session (with Discord)
+  + Exercise session (with Discord)
 
 * Day 5. 
   +  Egbert Rijke: Synthetic Homotopy Theory

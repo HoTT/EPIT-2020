@@ -5,15 +5,15 @@
 Course units are organized into folders:
 
 * [Introduction to homotopy type theory](./01-introduction-to-hott)
-* The CoQ-HoTT library
+* [The CoQ-HoTT library](./02-Coq-HoTT)
 * Models of Homotopy Type Theory
-* Cubical Type Theory and Cubical Agda
-* Synthetic Homotopy Theory
+* [Cubical Type Theory and Cubical Agda](./04-cubical-type-theory)
+* [Synthetic Homotopy Theory](./05-synthetic-homotopy-theory)
 * Arend Proof Assistant
 
 **The program of the week will be lectures/exercise sessions from 2pm to 6.30pm (UTC+2). We will organize virtual social events in the evening.**
 
-Here is the day by day program, the detailled content and timing  of each lecture can be found in the corresponding subfolder. 
+Here is the day by day program, the detailed content and timing  of each lecture can be found in the corresponding subfolder. 
 
 * Day 1. 
   + Andrej Bauer: Introduction to Homotopy Type Theory 

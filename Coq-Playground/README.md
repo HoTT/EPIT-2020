@@ -14,7 +14,7 @@ for various platforms:
   - For [MacOS](https://github.com/HoTT/EPIT-2020/releases/download/v0.1/Macos.installer.zip)
   
     Note: after copying the application to /Applications, you may have to right-click on it 
-    and "Open" it explicitly to bypass MacOS's safeguard about applications downloaded for the web.
+    and "Open" it explicitly to bypass MacOS's safeguard about applications downloaded from the web.
   - For Linux distributions: a [snap](https://github.com/HoTT/EPIT-2020/releases/download/v0.1/Snap.package.zip) package is available.
 
 These packages come with an Integrated Development Environment, CoqIDE for short,
@@ -46,6 +46,7 @@ workspace *or* set the arguments to `coq` explicitely by going to `Settings`, `W
      "coqtop.args": [
           "-noinit", "-indices-matter"
      ]
+
 ## Installation from `opam`
 
 If you already are an [`opam`](http://opam.ocaml.org) user, then you can simply install `coq` 

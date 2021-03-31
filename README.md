@@ -22,7 +22,8 @@ Here is the day by day program, the detailed content and timing  of each lecture
 * Day 2. 
   + Bas Spitters: The Coq-HoTT library
   + Exercise session (with Discord)
-  + Prerequisite: have Coq installed per the [instructions](Coq-Playground/README.md)
+  + Prerequisite: check that you can run Coq with the HoTT library,
+    following the [instructions](Coq-Playground/README.md)
 
 * Day 3. 
    + Christian Sattler : Models of Homotopy Type Theory

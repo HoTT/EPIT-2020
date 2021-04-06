@@ -52,7 +52,9 @@ workspace *or* set the arguments to `coq` explicitely by going to `Settings`, `W
 If you already are an [`opam`](http://opam.ocaml.org) user, then you can simply install `coq` 
 and the `coq-hott` package, available from the `extra-dev` repository of Coq, using:
 
+     # opam repo add coq-released http://coq.inria.fr/opam/released
      # opam repo add coq-extra-dev http://coq.inria.fr/opam/extra-dev
      # opam install coq.8.13.1 coq-hott.8.13.dev
 
-The same adjustment of arguments needs to be done in your choice of interface.
+This version of the HoTT package requires to use `hoqtop` and `hoqc` in place of
+the usual `coqtop` and `coqc`, you need to setup your interface accordingly.

@@ -35,7 +35,4 @@ Here is the day by day program, the detailed content and timing  of each lecture
 
 * Day 5. 
   +  Egbert Rijke: Synthetic Homotopy Theory
-  +  Paige : Directed Homotopy Type Theory
-
-
-<iframe src="https://discord.com/widget?id=819217850526597141&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  +  Paige North: Directed Homotopy Type Theory

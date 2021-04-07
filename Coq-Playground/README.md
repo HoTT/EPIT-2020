@@ -4,6 +4,8 @@ If you'd rather avoid installing Coq locally, you can run Coq with the
 HoTT library directly [in your browser](https://hott.github.io/EPIT-2020/jscoq-hott/).
 The document there provides an introduction to Coq and jsCoq, and there is a scratchpad
 with local storage in your browser that can be used to do the exercises.
+You can use Ctrl-Shift-S (Cmd-Shift-S on Macs) in the scratchpad to save the file locally 
+or share it through hastebin.
 
 # Installation instructions for Coq/HoTT
 

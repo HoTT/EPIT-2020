@@ -5,7 +5,7 @@ Lecturer: [Anders Mörtberg](https://staff.math.su.se/anders.mortberg/)
 Teaching assistants for the exercise session:
 
 - [Axel Ljungström](https://www.su.se/english/profiles/axlj4439-1.450268)
-- [Loïc Pujet](https://pujet.fr/)]
+- [Loïc Pujet](https://pujet.fr/)
 - [Max Zeuner](https://www.su.se/english/profiles/maze1512-1.450461)
 
 ## Installation of Cubical Agda and agda/cubical

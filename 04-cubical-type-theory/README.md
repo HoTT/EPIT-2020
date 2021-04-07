@@ -10,13 +10,6 @@ Anders uses the "cabal sandbox install instructions" solution.
 It might be easier to use Agda 2.6.1 instead of the latest development
 version, you can then check out the tag v0.2 of the [agda/cubical](https://github.com/agda/cubical) library.
 
-## Additional material
-
-- [Cubical Agda: A dependently typed programming language with univalence and higher inductive types](https://staff.math.su.se/anders.mortberg/papers/cubicalagda2.pdf) - Paper about Cubical Agda. Contains quite a few examples and explains how the system is implemented.
-- [Internalizing Representation Independence with Univalence](https://arxiv.org/abs/2009.05547) - paper about proving representation independence results in Cubical Agda. This paper contains quite a few examples of reasoning cubically about datastructures and other CS examples.
-- [Cubical Synthetic Homotopy Theory](https://staff.math.su.se/anders.mortberg/papers/cubicalsynthetic.pdf) and [Synthetic Cohomology Theory in Cubical Agda](https://staff.math.su.se/anders.mortberg/papers/zcohomology.pdf) - synthetic algebraic topology in Cubical Agda. These papers contain various results from HoTT ported to Cubical Agda which led to some proofs becoming substantially shorter. There are also some new constructions and computations which rely on univalence and HITs not being axiomatic.
-- [Cubical Methods in Homotopy Type Theory and Univalent Foundations](https://staff.math.su.se/anders.mortberg/papers/cubicalmethods.pdf) - Lecture notes for the 2019 HoTT Summer School. The focus is more on cubical models and not so much on practical formalization in cubical type theory. Contains exercises and lots of background material.
-
 ## Schedule
 
 The online lectures will take place on Thursday, April 15, 2021.
@@ -33,7 +26,6 @@ All times are in UTC+2.
 | 16:15–17:00 | Part 5: Higher inductive types             |
 | 17:00–17:15 | (break)                                    |
 | 17:15–18:30 | Exercise session                           |
-
 
 ## Contents
 
@@ -101,3 +93,13 @@ All times are in UTC+2.
 #### Exercises
 
 * TODO
+
+## Additional material
+
+Here are some pointers to further reading about Cubical Agda and examples of programming and proving in cubical type theory:
+
+- [Cubical Agda: A dependently typed programming language with univalence and higher inductive types](https://staff.math.su.se/anders.mortberg/papers/cubicalagda2.pdf) - Paper about Cubical Agda. Contains quite a few examples and explains how the system is implemented.
+- [Internalizing Representation Independence with Univalence](https://arxiv.org/abs/2009.05547) - Paper about proving representation independence results in Cubical Agda. This paper contains quite a few examples of reasoning cubically about datastructures and other CS examples.
+- [Cubical Synthetic Homotopy Theory](https://staff.math.su.se/anders.mortberg/papers/cubicalsynthetic.pdf) and [Synthetic Cohomology Theory in Cubical Agda](https://staff.math.su.se/anders.mortberg/papers/zcohomology.pdf) - Synthetic algebraic topology in Cubical Agda. These papers contain various results from HoTT ported to Cubical Agda which led to some proofs becoming substantially shorter. There are also some new constructions and computations which rely on univalence and HITs not being axiomatic.
+- [Three Equivalent Ordinal Notation Systems in Cubical Agda](https://arxiv.org/abs/1904.10759) - Some classical proof theory and ordinals in Cubical Agda.
+- [Cubical Methods in Homotopy Type Theory and Univalent Foundations](https://staff.math.su.se/anders.mortberg/papers/cubicalmethods.pdf) - Lecture notes for the 2019 HoTT Summer School. The focus is more on cubical models and not so much on practical formalization in cubical type theory. Contains exercises and lots of background material. The reference list is quite extensive and contains pointers to further background material (a lot of it aimed at experts).

@@ -26,7 +26,7 @@ jobs:
           ls -al
           git config --global user.email "d.negrier@thecodingmachine.com"
           git config --global user.name "David Négrier"
-          git checkout master
+          git checkout main
           git commit -am "Adding files"
 
       - name: Deploy
@@ -35,7 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: WorkAdventure # The folder the action should deploy.
-          BASE_BRANCH: master
+          BASE_BRANCH: main
 
       - name: Bash2
         run: |

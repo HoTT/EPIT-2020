@@ -30,7 +30,7 @@ Here is the day by day program, the detailed content and timing  of each lecture
    + Valery Isaev : Arend proof assistant
 
 * Day 4. 
-  + Anders Mortberg: Cubical Type Theory and Cubical Agda
+  + Anders Mörtberg: Cubical Type Theory and Cubical Agda
   + Exercise session (with Discord)
   + Prerequisite: check that you can run Agda and build the agda/cubical library,
     following the [instructions](./04-cubical-type-theory#installation-of-cubical-agda-and-agdacubical)

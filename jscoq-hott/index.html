@@ -146,7 +146,7 @@ Proof.
   induction x in y |- *.
 </textarea>
 <p>
-  We proceed by induction on <code></code>x, but we must generalize 
+  We proceed by induction on <code>x</code>, but we must generalize 
   the induction hypothesis over any <code>y</code>.
 </p>
 <textarea id="hottproof">
@@ -164,6 +164,9 @@ Proof.
       Search (_ <> _).
       now apply not_eq_S.
 Qed. </textarea>
+  <p>
+    That's it for the shortest introduction to Coq ever!
+  </p>
   <hr/>
   </div> <!-- /#panel body -->
   </div> <!-- /#document -->

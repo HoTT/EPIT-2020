@@ -1,26 +1,32 @@
 # Playing with Coq-HoTT in the browser
 
 If you'd rather avoid installing Coq locally, you can run Coq with the 
-HoTT library directly [in your browser](https://x80.org/rhino-hott/). 
-The document there can be modified and run interactively, so that should
-be enough for doing the exercises.
+HoTT library directly [in your browser](https://hott.github.io/EPIT-2020/jscoq-hott/).
+The document there provides an introduction to Coq and jsCoq, and there is a scratchpad
+with local storage in your browser that can be used to do the exercises.
 
-# Installation instructions for Coq
+# Installation instructions for Coq/HoTT
 
 To install Coq along with the Coq HoTT library, you can use pre-built packages 
 for various platforms:
 
-  - For Windows: [32 bits](https://github.com/HoTT/EPIT-2020/releases/download/v0.1/Windows.installer.32.bits.zip) and [64 bits](https://github.com/HoTT/EPIT-2020/releases/download/v0.1/Windows.installer.64.bits.zip)
+  - For Windows: [32 bits](https://github.com/HoTT/EPIT-2020/releases/download/v0.1/Windows.installer.32.bits.zip) and [64 bits](https://github.com/HoTT/EPIT-2020/releases/download/v0.1/Windows.installer.64.bits.zip).
+
   - For [MacOS](https://github.com/HoTT/EPIT-2020/releases/download/v0.1/Macos.installer.zip)
   
     Note: after copying the application to /Applications, you may have to right-click on it 
     and "Open" it explicitly to bypass MacOS's safeguard about applications downloaded from the web.
+
   - For Linux distributions: a [snap](https://github.com/HoTT/EPIT-2020/releases/download/v0.1/Snap.package.zip) package is available.
 
 These packages come with an Integrated Development Environment, CoqIDE for short,
 which needs to be configured to call Coq with specific arguments. This can be done
 simply by putting the following [_CoqProject](_CoqProject) file at the root of your
 project, so that interfaces (CoqIDE, Emacs or VSCoq) can pick it up.
+
+These are stripped-down (much smaller) versions of the Coq Platform, with only support for the HoTT library.
+For a full Coq installation, see the [Coq Platform](https://github.com/coq/platform) project, whose upcoming
+release will also support the HoTT library.
 
 ### Testing
 

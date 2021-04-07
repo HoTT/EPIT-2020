@@ -28,11 +28,13 @@
         editor_theme = sp.get('editor_theme') || (panel_theme == 'dark' ? 'blackboard' : 'default');
 
 
+
     var jscoq_opts = {
+        prelude: false,
         implicit_libs: false,
         focus: false,
         init_pkgs: ['hott', 'init'],
-        all_pkgs:  ['coq'],
+        all_pkgs:  ['hott', 'coq'],
         file_dialog: true,
         editor: { mode: { 'company-coq': true }, theme: editor_theme },
         theme: panel_theme

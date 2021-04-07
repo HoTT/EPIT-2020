@@ -9,7 +9,11 @@ Course units are organized into folders:
 * [Models of Homotopy Type Theory](./03-simplicial-and-cubical-models)
 * [Cubical Type Theory and Cubical Agda](./04-cubical-type-theory)
 * [Synthetic Homotopy Theory](./05-synthetic-homotopy-theory)
-* Arend Proof Assistant
+
+We will also have two shorter lectures on:
+
+  * The Arend Proof Assistant by Valery Isaev
+  * Directed Homotopy Theory by Paige North
 
 **The program of the week will be lectures/exercise sessions from 2pm to 6.30pm (UTC+2). We will organize virtual social events in the evening.**
 

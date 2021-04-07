@@ -4,9 +4,9 @@ Lecturer: [Anders Mörtberg](https://staff.math.su.se/anders.mortberg/)
 
 Teaching assistants for the exercise session:
 
-- Axel Ljungström
-- Loïc Pujet
-- Max Zeuner
+- [Axel Ljungström](https://www.su.se/english/profiles/axlj4439-1.450268)
+- [Loïc Pujet](https://pujet.fr/)]
+- [Max Zeuner](https://www.su.se/english/profiles/maze1512-1.450461)
 
 ## Installation of Cubical Agda and agda/cubical
 
@@ -23,7 +23,7 @@ It can be a bit complicated to install the development version of Agda and Ander
 ## Schedule
 
 The online lectures will take place on Thursday, April 15, 2021.
-All times are in UTC+2.
+All times are in UTC+2 (i.e. Stockholm time).
 
 | Time        | Topic                                      |
 |:------------|:-------------------------------------------|

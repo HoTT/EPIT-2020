@@ -132,15 +132,15 @@ Lemma decidable_nat_eq (x y : nat) : Decidable (x = y).
 Proof. 
   Print Decidable. </textarea>
 <p>
-  The lemma states that for any two natural numbers <code>m</code> and <code>n</code>,
+  The lemma states that for any two natural numbers <code>x</code> and <code>y</code>,
   we can decide their equality.
 
   Coq is a <em>constructive system</em>, which among other things
   implies that to show the existence of an object, we need to
   actually provide an algorithm that will construct it.
 
-  In this case, we need to find a proof of either <code>n = m</code>
-  or <code>m = n</code>.
+  In this case, we need to find a proof of either <code>x = y</code>
+  or <code>~ (x = y)</code>, for any <code>x</code> and <code>y</code>.
 </p>
 <textarea id="hottlemmaind" >
   induction x in y |- *.

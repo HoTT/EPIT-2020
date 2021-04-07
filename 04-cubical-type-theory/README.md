@@ -14,7 +14,7 @@ version, you can then check out the tag v0.2 of the agda/cubical library.
 
 
 - [Cubical Methods in Homotopy Type Theory and Univalent Foundations](https://staff.math.su.se/anders.mortberg/papers/cubicalmethods.pdf) - Lecture notes for the 2019 HoTT Summer School. 
-- [Cubical Agda: A dependently typed programming language with univalence and higher inductive types](https://www.doi.org/10.1017/S0956796821000034) - Paper about Cubical Agda.
+- [Cubical Agda: A dependently typed programming language with univalence and higher inductive types](https://staff.math.su.se/anders.mortberg/papers/cubicalagda2.pdf) - Paper about Cubical Agda.
 
 ## Schedule
 

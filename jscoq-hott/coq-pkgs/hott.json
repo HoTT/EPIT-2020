@@ -1,0 +1,4615 @@
+{
+  "desc": "hott",
+  "deps": [],
+  "archive": "hott.coq-pkg",
+  "pkgs": [
+    {
+      "pkg_id": [ "HoTT" ],
+      "vo_files": [
+        [ "Basics.vo", null ],
+        [ "BoundedSearch.vo", null ],
+        [ "Categories.vo", null ],
+        [ "Constant.vo", null ],
+        [ "Cubical.vo", null ],
+        [ "DProp.vo", null ],
+        [ "EquivGroupoids.vo", null ],
+        [ "ExcludedMiddle.vo", null ],
+        [ "Extensions.vo", null ],
+        [ "Factorization.vo", null ],
+        [ "Functorish.vo", null ],
+        [ "FunextAxiom.vo", null ],
+        [ "HFiber.vo", null ],
+        [ "HProp.vo", null ],
+        [ "HSet.vo", null ],
+        [ "HoTT.vo", null ],
+        [ "Idempotents.vo", null ],
+        [ "Misc.vo", null ],
+        [ "NullHomotopy.vo", null ],
+        [ "ObjectClassifier.vo", null ],
+        [ "PathAny.vo", null ],
+        [ "Pointed.vo", null ],
+        [ "Projective.vo", null ],
+        [ "Tactics.vo", null ],
+        [ "Tests.vo", null ],
+        [ "TruncType.vo", null ],
+        [ "Truncations.vo", null ],
+        [ "Types.vo", null ],
+        [ "UnivalenceAxiom.vo", null ],
+        [ "Utf8.vo", null ],
+        [ "WildCat.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Algebra" ],
+      "vo_files": [
+        [ "AbGroups.vo", null ],
+        [ "Aut.vo", null ],
+        [ "Congruence.vo", null ],
+        [ "Groups.vo", null ],
+        [ "Rings.vo", null ],
+        [ "ooAction.vo", null ],
+        [ "ooGroup.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Algebra", "AbGroups" ],
+      "vo_files": [
+        [ "AbPullback.vo", null ],
+        [ "AbPushout.vo", null ],
+        [ "AbelianGroup.vo", null ],
+        [ "Abelianization.vo", null ],
+        [ "Z.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Algebra", "Groups" ],
+      "vo_files": [
+        [ "FreeGroup.vo", null ],
+        [ "FreeProduct.vo", null ],
+        [ "Group.vo", null ],
+        [ "GroupCoeq.vo", null ],
+        [ "GrpPullback.vo", null ],
+        [ "Image.vo", null ],
+        [ "Kernel.vo", null ],
+        [ "Presentation.vo", null ],
+        [ "QuotientGroup.vo", null ],
+        [ "ShortExactSequence.vo", null ],
+        [ "Subgroup.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Algebra", "Groups", "FreeGroup" ],
+      "vo_files": [ [ "ListQuotient.vo", null ], [ "LoopSusp.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Algebra", "Rings" ],
+      "vo_files": [
+        [ "CRing.vo", null ],
+        [ "Ideal.vo", null ],
+        [ "QuotientRing.vo", null ],
+        [ "Z.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Algebra", "Universal" ],
+      "vo_files": [
+        [ "Algebra.vo", null ],
+        [ "Homomorphism.vo", null ],
+        [ "Operation.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Analysis" ],
+      "vo_files": [ [ "Locator.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Basics" ],
+      "vo_files": [
+        [ "Contractible.vo", null ],
+        [ "Datatypes.vo", null ],
+        [ "Decidable.vo", null ],
+        [ "Decimal.vo", null ],
+        [ "Equivalences.vo", null ],
+        [ "Hexadecimal.vo", null ],
+        [ "Logic.vo", null ],
+        [ "Nat.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Numeral.vo", null ],
+        [ "Overture.vo", null ],
+        [ "PathGroupoids.vo", null ],
+        [ "Tactics.vo", null ],
+        [ "Trunc.vo", null ],
+        [ "UniverseLevel.vo", null ],
+        [ "Utf8.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories" ],
+      "vo_files": [
+        [ "Adjoint.vo", null ],
+        [ "Cat.vo", null ],
+        [ "Category.vo", null ],
+        [ "CategoryOfGroupoids.vo", null ],
+        [ "CategoryOfSections.vo", null ],
+        [ "ChainCategory.vo", null ],
+        [ "Comma.vo", null ],
+        [ "DependentProduct.vo", null ],
+        [ "DiscreteCategory.vo", null ],
+        [ "DualFunctor.vo", null ],
+        [ "ExponentialLaws.vo", null ],
+        [ "Functor.vo", null ],
+        [ "FunctorCategory.vo", null ],
+        [ "FundamentalPreGroupoidCategory.vo", null ],
+        [ "Grothendieck.vo", null ],
+        [ "GroupoidCategory.vo", null ],
+        [ "HomFunctor.vo", null ],
+        [ "HomotopyPreCategory.vo", null ],
+        [ "IndiscreteCategory.vo", null ],
+        [ "InitialTerminalCategory.vo", null ],
+        [ "KanExtensions.vo", null ],
+        [ "LaxComma.vo", null ],
+        [ "Limits.vo", null ],
+        [ "NatCategory.vo", null ],
+        [ "NaturalTransformation.vo", null ],
+        [ "Notations.vo", null ],
+        [ "ProductLaws.vo", null ],
+        [ "Profunctor.vo", null ],
+        [ "Pseudofunctor.vo", null ],
+        [ "PseudonaturalTransformation.vo", null ],
+        [ "SemiSimplicialSets.vo", null ],
+        [ "SetCategory.vo", null ],
+        [ "SimplicialSets.vo", null ],
+        [ "Structure.vo", null ],
+        [ "UniversalProperties.vo", null ],
+        [ "Utf8.vo", null ],
+        [ "Yoneda.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Adjoint" ],
+      "vo_files": [
+        [ "Composition.vo", null ],
+        [ "Core.vo", null ],
+        [ "Dual.vo", null ],
+        [ "Functorial.vo", null ],
+        [ "Hom.vo", null ],
+        [ "HomCoercions.vo", null ],
+        [ "Identity.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Paths.vo", null ],
+        [ "Pointwise.vo", null ],
+        [ "UnitCounit.vo", null ],
+        [ "UnitCounitCoercions.vo", null ],
+        [ "UniversalMorphisms.vo", null ],
+        [ "Utf8.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Adjoint", "Composition" ],
+      "vo_files": [
+        [ "AssociativityLaw.vo", null ],
+        [ "Core.vo", null ],
+        [ "IdentityLaws.vo", null ],
+        [ "LawsTactic.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Adjoint", "Functorial" ],
+      "vo_files": [ [ "Core.vo", null ], [ "Laws.vo", null ], [ "Parts.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Adjoint", "UniversalMorphisms" ],
+      "vo_files": [ [ "Core.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Cat" ],
+      "vo_files": [ [ "Core.vo", null ], [ "Morphisms.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Category" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "Dual.vo", null ],
+        [ "Morphisms.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Objects.vo", null ],
+        [ "Paths.vo", null ],
+        [ "Pi.vo", null ],
+        [ "Prod.vo", null ],
+        [ "Sigma.vo", null ],
+        [ "Strict.vo", null ],
+        [ "Subcategory.vo", null ],
+        [ "Sum.vo", null ],
+        [ "Univalent.vo", null ],
+        [ "Utf8.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Category", "Sigma" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "OnMorphisms.vo", null ],
+        [ "OnObjects.vo", null ],
+        [ "Univalent.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Category", "Subcategory" ],
+      "vo_files": [ [ "Full.vo", null ], [ "Wide.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "CategoryOfSections" ],
+      "vo_files": [ [ "Core.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Comma" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "Dual.vo", null ],
+        [ "Functorial.vo", null ],
+        [ "InducedFunctors.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Projection.vo", null ],
+        [ "ProjectionFunctors.vo", null ],
+        [ "Utf8.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "ExponentialLaws" ],
+      "vo_files": [
+        [ "Law0.vo", null ],
+        [ "Law1.vo", null ],
+        [ "Law2.vo", null ],
+        [ "Law3.vo", null ],
+        [ "Law4.vo", null ],
+        [ "Tactics.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "ExponentialLaws", "Law1" ],
+      "vo_files": [ [ "Functors.vo", null ], [ "Law.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "ExponentialLaws", "Law2" ],
+      "vo_files": [ [ "Functors.vo", null ], [ "Law.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "ExponentialLaws", "Law3" ],
+      "vo_files": [ [ "Functors.vo", null ], [ "Law.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "ExponentialLaws", "Law4" ],
+      "vo_files": [ [ "Functors.vo", null ], [ "Law.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Functor" ],
+      "vo_files": [
+        [ "Attributes.vo", null ],
+        [ "Composition.vo", null ],
+        [ "Core.vo", null ],
+        [ "Dual.vo", null ],
+        [ "Identity.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Paths.vo", null ],
+        [ "Pointwise.vo", null ],
+        [ "Prod.vo", null ],
+        [ "Sum.vo", null ],
+        [ "Utf8.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Functor", "Composition" ],
+      "vo_files": [ [ "Core.vo", null ], [ "Functorial.vo", null ], [ "Laws.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Functor", "Composition", "Functorial" ],
+      "vo_files": [ [ "Attributes.vo", null ], [ "Core.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Functor", "Pointwise" ],
+      "vo_files": [ [ "Core.vo", null ], [ "Properties.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Functor", "Prod" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "Functorial.vo", null ],
+        [ "Universal.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "FunctorCategory" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "Dual.vo", null ],
+        [ "Functorial.vo", null ],
+        [ "Morphisms.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Utf8.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Grothendieck" ],
+      "vo_files": [
+        [ "PseudofunctorToCat.vo", null ],
+        [ "ToCat.vo", null ],
+        [ "ToSet.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Grothendieck", "ToSet" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "Morphisms.vo", null ],
+        [ "Univalent.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "GroupoidCategory" ],
+      "vo_files": [ [ "Core.vo", null ], [ "Dual.vo", null ], [ "Morphisms.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "InitialTerminalCategory" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "Functors.vo", null ],
+        [ "NaturalTransformations.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Pseudofunctors.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "KanExtensions" ],
+      "vo_files": [ [ "Core.vo", null ], [ "Functors.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "LaxComma" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "CoreLaws.vo", null ],
+        [ "CoreParts.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Utf8.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Limits" ],
+      "vo_files": [ [ "Core.vo", null ], [ "Functors.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "NaturalTransformation" ],
+      "vo_files": [
+        [ "Composition.vo", null ],
+        [ "Core.vo", null ],
+        [ "Dual.vo", null ],
+        [ "Identity.vo", null ],
+        [ "Isomorphisms.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Paths.vo", null ],
+        [ "Pointwise.vo", null ],
+        [ "Prod.vo", null ],
+        [ "Sum.vo", null ],
+        [ "Utf8.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "NaturalTransformation", "Composition" ],
+      "vo_files": [ [ "Core.vo", null ], [ "Functorial.vo", null ], [ "Laws.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Profunctor" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "Identity.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Representable.vo", null ],
+        [ "Utf8.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Pseudofunctor" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "FromFunctor.vo", null ],
+        [ "Identity.vo", null ],
+        [ "RewriteLaws.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "PseudonaturalTransformation" ],
+      "vo_files": [ [ "Core.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "SetCategory" ],
+      "vo_files": [ [ "Core.vo", null ], [ "Functors.vo", null ], [ "Morphisms.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "SetCategory", "Functors" ],
+      "vo_files": [ [ "SetProp.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Categories", "Structure" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "IdentityPrinciple.vo", null ],
+        [ "Notations.vo", null ],
+        [ "Utf8.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Classes", "categories" ],
+      "vo_files": [ [ "ua_category.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Classes", "implementations" ],
+      "vo_files": [
+        [ "assume_rationals.vo", null ],
+        [ "binary_naturals.vo", null ],
+        [ "bool.vo", null ],
+        [ "family_prod.vo", null ],
+        [ "field_of_fractions.vo", null ],
+        [ "hprop_lattice.vo", null ],
+        [ "list.vo", null ],
+        [ "natpair_integers.vo", null ],
+        [ "ne_list.vo", null ],
+        [ "peano_naturals.vo", null ],
+        [ "pointwise.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Classes", "interfaces" ],
+      "vo_files": [
+        [ "abstract_algebra.vo", null ],
+        [ "archimedean.vo", null ],
+        [ "canonical_names.vo", null ],
+        [ "cauchy.vo", null ],
+        [ "integers.vo", null ],
+        [ "monad.vo", null ],
+        [ "naturals.vo", null ],
+        [ "orders.vo", null ],
+        [ "rationals.vo", null ],
+        [ "round.vo", null ],
+        [ "ua_algebra.vo", null ],
+        [ "ua_congruence.vo", null ],
+        [ "ua_setalgebra.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Classes", "isomorphisms" ],
+      "vo_files": [ [ "rings.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Classes", "orders" ],
+      "vo_files": [
+        [ "archimedean.vo", null ],
+        [ "dec_fields.vo", null ],
+        [ "fields.vo", null ],
+        [ "integers.vo", null ],
+        [ "lattices.vo", null ],
+        [ "maps.vo", null ],
+        [ "nat_int.vo", null ],
+        [ "naturals.vo", null ],
+        [ "orders.vo", null ],
+        [ "rings.vo", null ],
+        [ "semirings.vo", null ],
+        [ "sum.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Classes", "tactics" ],
+      "vo_files": [
+        [ "ring_pol.vo", null ],
+        [ "ring_quote.vo", null ],
+        [ "ring_tac.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Classes", "tests" ],
+      "vo_files": [ [ "ring_tac.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Classes", "theory" ],
+      "vo_files": [
+        [ "additional_operations.vo", null ],
+        [ "apartness.vo", null ],
+        [ "dec_fields.vo", null ],
+        [ "fields.vo", null ],
+        [ "groups.vo", null ],
+        [ "int_abs.vo", null ],
+        [ "integers.vo", null ],
+        [ "lattices.vo", null ],
+        [ "nat_distance.vo", null ],
+        [ "naturals.vo", null ],
+        [ "premetric.vo", null ],
+        [ "rationals.vo", null ],
+        [ "rings.vo", null ],
+        [ "ua_first_isomorphism.vo", null ],
+        [ "ua_homomorphism.vo", null ],
+        [ "ua_isomorphic.vo", null ],
+        [ "ua_prod_algebra.vo", null ],
+        [ "ua_quotient_algebra.vo", null ],
+        [ "ua_second_isomorphism.vo", null ],
+        [ "ua_subalgebra.vo", null ],
+        [ "ua_third_isomorphism.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Colimits" ],
+      "vo_files": [
+        [ "Colimit.vo", null ],
+        [ "Colimit_Coequalizer.vo", null ],
+        [ "Colimit_Flattening.vo", null ],
+        [ "Colimit_Prod.vo", null ],
+        [ "Colimit_Pushout.vo", null ],
+        [ "Colimit_Pushout_Flattening.vo", null ],
+        [ "Colimit_Sigma.vo", null ],
+        [ "MappingCylinder.vo", null ],
+        [ "Pushout.vo", null ],
+        [ "Quotient.vo", null ],
+        [ "Sequential.vo", null ],
+        [ "SpanPushout.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Cubical" ],
+      "vo_files": [
+        [ "DPath.vo", null ],
+        [ "DPathCube.vo", null ],
+        [ "DPathSquare.vo", null ],
+        [ "PathCube.vo", null ],
+        [ "PathSquare.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Diagrams" ],
+      "vo_files": [
+        [ "Cocone.vo", null ],
+        [ "CommutativeSquares.vo", null ],
+        [ "Cone.vo", null ],
+        [ "ConstantDiagram.vo", null ],
+        [ "DDiagram.vo", null ],
+        [ "Diagram.vo", null ],
+        [ "Graph.vo", null ],
+        [ "ParallelPair.vo", null ],
+        [ "Sequence.vo", null ],
+        [ "Span.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Equiv" ],
+      "vo_files": [
+        [ "BiInv.vo", null ],
+        [ "PathSplit.vo", null ],
+        [ "Relational.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "HIT" ],
+      "vo_files": [
+        [ "Coeq.vo", null ],
+        [ "Flattening.vo", null ],
+        [ "FreeIntQuotient.vo", null ],
+        [ "Interval.vo", null ],
+        [ "SetCone.vo", null ],
+        [ "V.vo", null ],
+        [ "epi.vo", null ],
+        [ "iso.vo", null ],
+        [ "quotient.vo", null ],
+        [ "surjective_factor.vo", null ],
+        [ "unique_choice.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Homotopy" ],
+      "vo_files": [
+        [ "BlakersMassey.vo", null ],
+        [ "CayleyDickson.vo", null ],
+        [ "ClassifyingSpace.vo", null ],
+        [ "EMSpace.vo", null ],
+        [ "ExactSequence.vo", null ],
+        [ "Freudenthal.vo", null ],
+        [ "HSpace.vo", null ],
+        [ "HSpaceS1.vo", null ],
+        [ "HomotopyGroup.vo", null ],
+        [ "Join.vo", null ],
+        [ "Pi1S1.vo", null ],
+        [ "Smash.vo", null ],
+        [ "SuccessorStructure.vo", null ],
+        [ "Suspension.vo", null ],
+        [ "Wedge.vo", null ],
+        [ "WhiteheadsPrinciple.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Limits" ],
+      "vo_files": [
+        [ "Equalizer.vo", null ],
+        [ "Limit.vo", null ],
+        [ "Pullback.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Metatheory" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "FunextVarieties.vo", null ],
+        [ "IntervalImpliesFunext.vo", null ],
+        [ "TruncImpliesFunext.vo", null ],
+        [ "UnivalenceImpliesFunext.vo", null ],
+        [ "UnivalenceVarieties.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Modalities" ],
+      "vo_files": [
+        [ "Accessible.vo", null ],
+        [ "Closed.vo", null ],
+        [ "CoreflectiveSubuniverse.vo", null ],
+        [ "Descent.vo", null ],
+        [ "Fracture.vo", null ],
+        [ "Identity.vo", null ],
+        [ "Lex.vo", null ],
+        [ "Localization.vo", null ],
+        [ "Modality.vo", null ],
+        [ "Notnot.vo", null ],
+        [ "Nullification.vo", null ],
+        [ "Open.vo", null ],
+        [ "ReflectiveSubuniverse.vo", null ],
+        [ "Separated.vo", null ],
+        [ "Topological.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Pointed" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "Loops.vo", null ],
+        [ "pEquiv.vo", null ],
+        [ "pFiber.vo", null ],
+        [ "pHomotopy.vo", null ],
+        [ "pMap.vo", null ],
+        [ "pSusp.vo", null ],
+        [ "pTrunc.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "PropResizing" ],
+      "vo_files": [
+        [ "ImpredicativeTruncation.vo", null ],
+        [ "Nat.vo", null ],
+        [ "PropResizing.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Spaces" ],
+      "vo_files": [
+        [ "BAut.vo", null ],
+        [ "Cantor.vo", null ],
+        [ "Card.vo", null ],
+        [ "Circle.vo", null ],
+        [ "Finite.vo", null ],
+        [ "Int.vo", null ],
+        [ "List.vo", null ],
+        [ "Nat.vo", null ],
+        [ "No.vo", null ],
+        [ "Pos.vo", null ],
+        [ "Spheres.vo", null ],
+        [ "TwoSphere.vo", null ],
+        [ "Universe.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Spaces", "BAut" ],
+      "vo_files": [ [ "Bool.vo", null ], [ "Cantor.vo", null ], [ "Rigid.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Spaces", "BAut", "Bool" ],
+      "vo_files": [ [ "IncoherentIdempotent.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Spaces", "Finite" ],
+      "vo_files": [
+        [ "Fin.vo", null ],
+        [ "FinInduction.vo", null ],
+        [ "FinNat.vo", null ],
+        [ "FinSeq.vo", null ],
+        [ "Finite.vo", null ],
+        [ "Tactics.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Spaces", "Int" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "Equiv.vo", null ],
+        [ "LoopExp.vo", null ],
+        [ "Spec.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Spaces", "No" ],
+      "vo_files": [ [ "Addition.vo", null ], [ "Core.vo", null ], [ "Negation.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Spaces", "Pos" ],
+      "vo_files": [ [ "Core.vo", null ], [ "Spec.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Spaces", "Torus" ],
+      "vo_files": [
+        [ "Torus.vo", null ],
+        [ "TorusEquivCircles.vo", null ],
+        [ "TorusHomotopy.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Spectra" ],
+      "vo_files": [ [ "Coinductive.vo", null ], [ "Spectrum.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Tactics" ],
+      "vo_files": [
+        [ "BinderApply.vo", null ],
+        [ "EquivalenceInduction.vo", null ],
+        [ "EvalIn.vo", null ],
+        [ "Nameless.vo", null ],
+        [ "RewriteModuloAssociativity.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Truncations" ],
+      "vo_files": [ [ "Connectedness.vo", null ], [ "Core.vo", null ] ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "Types" ],
+      "vo_files": [
+        [ "Arrow.vo", null ],
+        [ "Bool.vo", null ],
+        [ "Empty.vo", null ],
+        [ "Equiv.vo", null ],
+        [ "Forall.vo", null ],
+        [ "Paths.vo", null ],
+        [ "Prod.vo", null ],
+        [ "Sigma.vo", null ],
+        [ "Sum.vo", null ],
+        [ "Unit.vo", null ],
+        [ "Universe.vo", null ],
+        [ "Wtype.vo", null ]
+      ],
+      "cma_files": []
+    },
+    {
+      "pkg_id": [ "HoTT", "WildCat" ],
+      "vo_files": [
+        [ "Core.vo", null ],
+        [ "EmptyCat.vo", null ],
+        [ "Equiv.vo", null ],
+        [ "EquivGpd.vo", null ],
+        [ "Forall.vo", null ],
+        [ "FunctorCat.vo", null ],
+        [ "Induced.vo", null ],
+        [ "NatTrans.vo", null ],
+        [ "Opposite.vo", null ],
+        [ "Paths.vo", null ],
+        [ "PointedCat.vo", null ],
+        [ "Prod.vo", null ],
+        [ "Sigma.vo", null ],
+        [ "Square.vo", null ],
+        [ "Sum.vo", null ],
+        [ "TwoOneCat.vo", null ],
+        [ "Type.vo", null ],
+        [ "UnitCat.vo", null ],
+        [ "Yoneda.vo", null ]
+      ],
+      "cma_files": []
+    }
+  ],
+  "modDeps": {
+    "HoTT.Basics": [
+      "HoTT.Basics.Notations",
+      "HoTT.Basics.Overture",
+      "HoTT.Basics.UniverseLevel",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Basics.Contractible",
+      "HoTT.Basics.Equivalences",
+      "HoTT.Basics.Trunc",
+      "HoTT.Basics.Decidable",
+      "HoTT.Basics.Utf8",
+      "HoTT.Basics.Tactics",
+      "HoTT.Basics.Nat",
+      "HoTT.Basics.Numeral"
+    ],
+    "HoTT.BoundedSearch": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Truncations",
+      "HoTT.HProp",
+      "HoTT.DProp",
+      "HoTT.Spaces.Nat"
+    ],
+    "HoTT.Categories": [
+      "HoTT.Categories.Category",
+      "HoTT.Categories.Functor",
+      "HoTT.Categories.NaturalTransformation",
+      "HoTT.Categories.FunctorCategory",
+      "HoTT.Categories.GroupoidCategory",
+      "HoTT.Categories.CategoryOfGroupoids",
+      "HoTT.Categories.DiscreteCategory",
+      "HoTT.Categories.IndiscreteCategory",
+      "HoTT.Categories.NatCategory",
+      "HoTT.Categories.ChainCategory",
+      "HoTT.Categories.InitialTerminalCategory",
+      "HoTT.Categories.SetCategory",
+      "HoTT.Categories.SimplicialSets",
+      "HoTT.Categories.SemiSimplicialSets",
+      "HoTT.Categories.HomFunctor",
+      "HoTT.Categories.Profunctor",
+      "HoTT.Categories.Cat",
+      "HoTT.Categories.ExponentialLaws",
+      "HoTT.Categories.ProductLaws",
+      "HoTT.Categories.Comma",
+      "HoTT.Categories.UniversalProperties",
+      "HoTT.Categories.KanExtensions",
+      "HoTT.Categories.Adjoint",
+      "HoTT.Categories.Limits",
+      "HoTT.Categories.Pseudofunctor",
+      "HoTT.Categories.PseudonaturalTransformation",
+      "HoTT.Categories.LaxComma",
+      "HoTT.Categories.DualFunctor",
+      "HoTT.Categories.Grothendieck",
+      "HoTT.Categories.CategoryOfSections",
+      "HoTT.Categories.DependentProduct",
+      "HoTT.Categories.Yoneda",
+      "HoTT.Categories.Structure",
+      "HoTT.Categories.FundamentalPreGroupoidCategory",
+      "HoTT.Categories.HomotopyPreCategory",
+      "HoTT.Categories.Notations"
+    ],
+    "HoTT.Constant": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.Extensions",
+      "HoTT.Factorization",
+      "HoTT.Modalities.Modality",
+      "HoTT.Truncations"
+    ],
+    "HoTT.Cubical": [
+      "HoTT.Cubical.DPath",
+      "HoTT.Cubical.PathSquare",
+      "HoTT.Cubical.DPathSquare",
+      "HoTT.Cubical.PathCube",
+      "HoTT.Cubical.DPathCube"
+    ],
+    "HoTT.DProp": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.TruncType",
+      "HoTT.HProp",
+      "HoTT.Truncations"
+    ],
+    "HoTT.EquivGroupoids": [ "HoTT.Basics.Overture", "HoTT.Basics.Equivalences", "HoTT.Types.Equiv" ],
+    "HoTT.ExcludedMiddle": [ "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Extensions": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.Equiv.PathSplit",
+      "HoTT.PathAny",
+      "HoTT.Cubical.DPath",
+      "HoTT.Cubical.PathSquare",
+      "HoTT.Cubical.DPathSquare",
+      "HoTT.HIT.Coeq",
+      "HoTT.Colimits.MappingCylinder"
+    ],
+    "HoTT.Factorization": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.Extensions",
+      "HoTT.PathAny"
+    ],
+    "HoTT.Functorish": [ "HoTT.Basics", "HoTT.Types.Universe", "HoTT.TruncType" ],
+    "HoTT.FunextAxiom": [ "HoTT.Basics.Overture" ],
+    "HoTT.HFiber": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.CommutativeSquares"
+    ],
+    "HoTT.HProp": [ "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.HSet": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.Types", "HoTT.HProp" ],
+    "HoTT.HoTT": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.WildCat",
+      "HoTT.Cubical",
+      "HoTT.Pointed",
+      "HoTT.Truncations",
+      "HoTT.HFiber",
+      "HoTT.HProp",
+      "HoTT.Projective",
+      "HoTT.HSet",
+      "HoTT.EquivGroupoids",
+      "HoTT.Equiv.BiInv",
+      "HoTT.Equiv.PathSplit",
+      "HoTT.Equiv.Relational",
+      "HoTT.Extensions",
+      "HoTT.Misc",
+      "HoTT.PathAny",
+      "HoTT.Functorish",
+      "HoTT.Factorization",
+      "HoTT.Constant",
+      "HoTT.ObjectClassifier",
+      "HoTT.TruncType",
+      "HoTT.DProp",
+      "HoTT.NullHomotopy",
+      "HoTT.Idempotents",
+      "HoTT.ExcludedMiddle",
+      "HoTT.BoundedSearch",
+      "HoTT.PropResizing.PropResizing",
+      "HoTT.HIT.Interval",
+      "HoTT.HIT.Coeq",
+      "HoTT.HIT.Flattening",
+      "HoTT.HIT.FreeIntQuotient",
+      "HoTT.HIT.SetCone",
+      "HoTT.HIT.epi",
+      "HoTT.HIT.unique_choice",
+      "HoTT.HIT.iso",
+      "HoTT.HIT.quotient",
+      "HoTT.HIT.V",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Diagrams.Cone",
+      "HoTT.Diagrams.Cocone",
+      "HoTT.Diagrams.DDiagram",
+      "HoTT.Diagrams.ConstantDiagram",
+      "HoTT.Diagrams.CommutativeSquares",
+      "HoTT.Diagrams.Sequence",
+      "HoTT.Diagrams.Span",
+      "HoTT.Diagrams.ParallelPair",
+      "HoTT.Limits.Pullback",
+      "HoTT.Limits.Equalizer",
+      "HoTT.Limits.Limit",
+      "HoTT.Colimits.Pushout",
+      "HoTT.Colimits.SpanPushout",
+      "HoTT.Colimits.Quotient",
+      "HoTT.Colimits.MappingCylinder",
+      "HoTT.Colimits.Colimit",
+      "HoTT.Colimits.Colimit_Pushout",
+      "HoTT.Colimits.Colimit_Coequalizer",
+      "HoTT.Colimits.Colimit_Flattening",
+      "HoTT.Colimits.Colimit_Prod",
+      "HoTT.Colimits.Colimit_Pushout_Flattening",
+      "HoTT.Colimits.Colimit_Sigma",
+      "HoTT.Modalities.ReflectiveSubuniverse",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Accessible",
+      "HoTT.Modalities.Notnot",
+      "HoTT.Modalities.Identity",
+      "HoTT.Modalities.Localization",
+      "HoTT.Modalities.Nullification",
+      "HoTT.Modalities.Descent",
+      "HoTT.Modalities.Separated",
+      "HoTT.Modalities.Lex",
+      "HoTT.Modalities.Topological",
+      "HoTT.Modalities.Open",
+      "HoTT.Modalities.Closed",
+      "HoTT.Modalities.Fracture",
+      "HoTT.Modalities.CoreflectiveSubuniverse",
+      "HoTT.Spaces.Nat",
+      "HoTT.Spaces.Int",
+      "HoTT.Spaces.Pos",
+      "HoTT.Spaces.Cantor",
+      "HoTT.Spaces.Circle",
+      "HoTT.Spaces.TwoSphere",
+      "HoTT.Spaces.Spheres",
+      "HoTT.Spaces.BAut",
+      "HoTT.Spaces.BAut.Cantor",
+      "HoTT.Spaces.BAut.Bool",
+      "HoTT.Spaces.BAut.Bool.IncoherentIdempotent",
+      "HoTT.Spaces.BAut.Rigid",
+      "HoTT.Spaces.Finite",
+      "HoTT.Spaces.No",
+      "HoTT.Spaces.Universe",
+      "HoTT.Spaces.Torus.Torus",
+      "HoTT.Spaces.Torus.TorusEquivCircles",
+      "HoTT.Spaces.Torus.TorusHomotopy",
+      "HoTT.Algebra.ooGroup",
+      "HoTT.Algebra.Aut",
+      "HoTT.Algebra.ooAction",
+      "HoTT.Algebra.AbGroups",
+      "HoTT.Algebra.Groups",
+      "HoTT.Algebra.Rings",
+      "HoTT.Homotopy.HomotopyGroup",
+      "HoTT.Homotopy.Pi1S1",
+      "HoTT.Homotopy.WhiteheadsPrinciple",
+      "HoTT.Homotopy.BlakersMassey",
+      "HoTT.Homotopy.Freudenthal",
+      "HoTT.Homotopy.Suspension",
+      "HoTT.Homotopy.Smash",
+      "HoTT.Homotopy.Wedge",
+      "HoTT.Homotopy.Join",
+      "HoTT.Homotopy.HSpace",
+      "HoTT.Homotopy.ClassifyingSpace",
+      "HoTT.Spectra.Spectrum",
+      "HoTT.Tactics",
+      "HoTT.Tactics.BinderApply",
+      "HoTT.Tactics.EquivalenceInduction",
+      "HoTT.Tactics.EvalIn",
+      "HoTT.Tactics.Nameless",
+      "HoTT.Tactics.RewriteModuloAssociativity"
+    ],
+    "HoTT.Idempotents": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HFiber",
+      "HoTT.Constant",
+      "HoTT.Truncations",
+      "HoTT.PathAny"
+    ],
+    "HoTT.Misc": [ "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.NullHomotopy": [ "HoTT.Basics", "HoTT.Types.Sigma", "HoTT.Types.Forall" ],
+    "HoTT.ObjectClassifier": [ "HoTT.Basics", "HoTT.Types", "HoTT.HFiber", "HoTT.Limits.Pullback" ],
+    "HoTT.PathAny": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Pointed": [
+      "HoTT.Pointed.Core",
+      "HoTT.Pointed.Loops",
+      "HoTT.Pointed.pMap",
+      "HoTT.Pointed.pFiber",
+      "HoTT.Pointed.pEquiv",
+      "HoTT.Pointed.pTrunc",
+      "HoTT.Pointed.pHomotopy",
+      "HoTT.Pointed.pSusp"
+    ],
+    "HoTT.Projective": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.HFiber",
+      "HoTT.HSet",
+      "HoTT.Truncations",
+      "HoTT.Modalities.Descent",
+      "HoTT.Modalities.Separated",
+      "HoTT.Limits.Pullback"
+    ],
+    "HoTT.Tactics": [
+      "HoTT.Basics",
+      "HoTT.Types.Prod",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Paths",
+      "HoTT.Tactics.BinderApply"
+    ],
+    "HoTT.Tests": [ "HoTT.HoTT" ],
+    "HoTT.TruncType": [ "HoTT.Basics", "HoTT.Types", "HoTT.HProp" ],
+    "HoTT.Truncations": [ "HoTT.Truncations.Core", "HoTT.Truncations.Connectedness" ],
+    "HoTT.Types": [
+      "HoTT.Types.Unit",
+      "HoTT.Types.Empty",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Prod",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Arrow",
+      "HoTT.Types.Sigma",
+      "HoTT.Types.Equiv",
+      "HoTT.Types.Universe",
+      "HoTT.Types.Bool",
+      "HoTT.Types.Sum",
+      "HoTT.Types.Wtype"
+    ],
+    "HoTT.UnivalenceAxiom": [ "HoTT.Types.Universe" ],
+    "HoTT.Utf8": [
+      "HoTT.Basics.Utf8",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Modalities.Identity",
+      "HoTT.Spaces.Circle",
+      "HoTT.Spaces.TwoSphere",
+      "HoTT.Truncations",
+      "HoTT.Homotopy.Suspension"
+    ],
+    "HoTT.WildCat": [
+      "HoTT.WildCat.Core",
+      "HoTT.WildCat.Equiv",
+      "HoTT.WildCat.Opposite",
+      "HoTT.WildCat.Induced",
+      "HoTT.WildCat.EquivGpd",
+      "HoTT.WildCat.FunctorCat",
+      "HoTT.WildCat.NatTrans",
+      "HoTT.WildCat.Yoneda",
+      "HoTT.WildCat.Square",
+      "HoTT.WildCat.Type",
+      "HoTT.WildCat.Paths",
+      "HoTT.WildCat.UnitCat",
+      "HoTT.WildCat.EmptyCat",
+      "HoTT.WildCat.Prod",
+      "HoTT.WildCat.Sum",
+      "HoTT.WildCat.Forall",
+      "HoTT.WildCat.Sigma",
+      "HoTT.WildCat.TwoOneCat",
+      "HoTT.WildCat.PointedCat"
+    ],
+    "HoTT.Algebra.AbGroups": [
+      "HoTT.Algebra.AbGroups.AbelianGroup",
+      "HoTT.Algebra.AbGroups.Abelianization",
+      "HoTT.Algebra.AbGroups.AbPullback",
+      "HoTT.Algebra.AbGroups.AbPushout",
+      "HoTT.Algebra.AbGroups.Z"
+    ],
+    "HoTT.Algebra.Aut": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Truncations",
+      "HoTT.Factorization",
+      "HoTT.Algebra.ooGroup"
+    ],
+    "HoTT.Algebra.Congruence": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Classes.interfaces.abstract_algebra"
+    ],
+    "HoTT.Algebra.Groups": [
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.Algebra.Groups.Subgroup",
+      "HoTT.Algebra.Groups.QuotientGroup",
+      "HoTT.Algebra.Groups.Image",
+      "HoTT.Algebra.Groups.Kernel",
+      "HoTT.Algebra.Groups.GrpPullback",
+      "HoTT.Algebra.Groups.FreeGroup",
+      "HoTT.Algebra.Groups.ShortExactSequence"
+    ],
+    "HoTT.Algebra.Rings": [
+      "HoTT.Algebra.Rings.CRing",
+      "HoTT.Algebra.Rings.Ideal",
+      "HoTT.Algebra.Rings.QuotientRing",
+      "HoTT.Algebra.Rings.Z"
+    ],
+    "HoTT.Algebra.ooAction": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.Algebra.ooGroup" ],
+    "HoTT.Algebra.ooGroup": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed",
+      "HoTT.Truncations",
+      "HoTT.Colimits.Quotient",
+      "HoTT.Homotopy.ClassifyingSpace",
+      "HoTT.Algebra.Groups",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Algebra.AbGroups.AbPullback": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Limits.Pullback",
+      "HoTT.Cubical.PathSquare",
+      "HoTT.Algebra.Groups",
+      "HoTT.Algebra.AbGroups.AbelianGroup",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Algebra.AbGroups.AbPushout": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.WildCat",
+      "HoTT.Algebra.Groups",
+      "HoTT.Algebra.AbGroups.AbelianGroup"
+    ],
+    "HoTT.Algebra.AbGroups.AbelianGroup": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Truncations",
+      "HoTT.HIT.Coeq",
+      "HoTT.Algebra.Groups",
+      "HoTT.Cubical",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Algebra.AbGroups.Abelianization": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical",
+      "HoTT.WildCat",
+      "HoTT.Truncations",
+      "HoTT.HIT.Coeq",
+      "HoTT.Algebra.Groups",
+      "HoTT.Algebra.AbGroups.AbelianGroup"
+    ],
+    "HoTT.Algebra.AbGroups.Z": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Spaces.Int",
+      "HoTT.Algebra.AbGroups.AbelianGroup"
+    ],
+    "HoTT.Algebra.Groups.FreeGroup": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.WildCat",
+      "HoTT.Algebra.Groups.FreeGroup.ListQuotient"
+    ],
+    "HoTT.Algebra.Groups.FreeProduct": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical",
+      "HoTT.HIT.Coeq",
+      "HoTT.Spaces.List",
+      "HoTT.Colimits.Pushout",
+      "HoTT.Algebra.Groups.Group"
+    ],
+    "HoTT.Algebra.Groups.Group": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.HFiber",
+      "HoTT.PathAny",
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Classes.theory.groups",
+      "HoTT.Pointed.Core",
+      "HoTT.WildCat",
+      "HoTT.Basics.Utf8"
+    ],
+    "HoTT.Algebra.Groups.GroupCoeq": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.HIT.Coeq",
+      "HoTT.Algebra.Groups.FreeProduct"
+    ],
+    "HoTT.Algebra.Groups.GrpPullback": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Limits.Pullback",
+      "HoTT.Cubical.PathSquare",
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Algebra.Groups.Image": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.Algebra.Groups.Subgroup",
+      "HoTT.WildCat",
+      "HoTT.Truncations",
+      "HoTT.Factorization"
+    ],
+    "HoTT.Algebra.Groups.Kernel": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.Algebra.Groups.Subgroup",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Algebra.Groups.Presentation": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.Algebra.Groups.FreeGroup",
+      "HoTT.Algebra.Groups.GroupCoeq",
+      "HoTT.Spaces.Finite",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Algebra.Groups.QuotientGroup": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HSet",
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.Algebra.Groups.Subgroup",
+      "HoTT.Algebra.Congruence",
+      "HoTT.Colimits.Quotient",
+      "HoTT.Algebra.Groups.Image",
+      "HoTT.Algebra.Groups.Kernel",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Algebra.Groups.ShortExactSequence": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.WildCat",
+      "HoTT.Pointed",
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.Algebra.Groups.Subgroup",
+      "HoTT.Algebra.Groups.Kernel",
+      "HoTT.Homotopy.ExactSequence",
+      "HoTT.Modalities.Identity"
+    ],
+    "HoTT.Algebra.Groups.Subgroup": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.PathAny",
+      "HoTT.WildCat",
+      "HoTT.Algebra.Groups.Group"
+    ],
+    "HoTT.Algebra.Groups.FreeGroup.ListQuotient": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.Truncations",
+      "HoTT.HIT.Coeq"
+    ],
+    "HoTT.Algebra.Groups.FreeGroup.LoopSusp": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Algebra.Groups.Group",
+      "HoTT.Pointed",
+      "HoTT.WildCat",
+      "HoTT.Truncations",
+      "HoTT.Homotopy.Suspension",
+      "HoTT.Homotopy.ClassifyingSpace",
+      "HoTT.Homotopy.HomotopyGroup"
+    ],
+    "HoTT.Algebra.Rings.CRing": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.WildCat",
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Algebra.AbGroups",
+      "HoTT.Classes.theory.rings"
+    ],
+    "HoTT.Algebra.Rings.Ideal": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Algebra.Rings.CRing",
+      "HoTT.Algebra.AbGroups"
+    ],
+    "HoTT.Algebra.Rings.QuotientRing": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.WildCat",
+      "HoTT.Algebra.Congruence",
+      "HoTT.Algebra.AbGroups",
+      "HoTT.Algebra.Rings.CRing",
+      "HoTT.Algebra.Rings.Ideal"
+    ],
+    "HoTT.Algebra.Rings.Z": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Algebra.AbGroups",
+      "HoTT.Algebra.Rings.CRing",
+      "HoTT.Spaces.Int",
+      "HoTT.Spaces.Pos",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Algebra.Universal.Algebra": [ "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Algebra.Universal.Homomorphism": [ "HoTT.Algebra.Universal.Algebra", "HoTT.Types" ],
+    "HoTT.Algebra.Universal.Operation": [ "HoTT.Algebra.Universal.Algebra", "HoTT.Basics" ],
+    "HoTT.Analysis.Locator": [
+      "HoTT.Basics",
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Classes.orders.fields"
+    ],
+    "HoTT.Basics.Contractible": [ "HoTT.Basics.Overture", "HoTT.Basics.PathGroupoids" ],
+    "HoTT.Basics.Datatypes": [ "HoTT.Basics.Logic" ],
+    "HoTT.Basics.Decidable": [ "HoTT.Basics.Overture" ],
+    "HoTT.Basics.Decimal": [ "HoTT.Basics.Overture" ],
+    "HoTT.Basics.Equivalences": [ "HoTT.Basics.Overture" ],
+    "HoTT.Basics.Hexadecimal": [ "HoTT.Basics.Overture", "HoTT.Basics.Decimal" ],
+    "HoTT.Basics.Logic": [ "HoTT.Basics.Notations" ],
+    "HoTT.Basics.Nat": [
+      "HoTT.Basics.Overture",
+      "HoTT.Basics.Decimal",
+      "HoTT.Basics.Hexadecimal",
+      "HoTT.Basics.Numeral"
+    ],
+    "HoTT.Basics.Numeral": [ "HoTT.Basics.Overture", "HoTT.Basics.Decimal", "HoTT.Basics.Hexadecimal" ],
+    "HoTT.Basics.Overture": [ "HoTT.Basics.Notations", "HoTT.Basics.Datatypes", "HoTT.Basics.Logic" ],
+    "HoTT.Basics.PathGroupoids": [ "HoTT.Basics.Overture", "HoTT.Basics.Tactics" ],
+    "HoTT.Basics.Tactics": [ "HoTT.Basics.Overture" ],
+    "HoTT.Basics.Trunc": [ "HoTT.Basics.Overture" ],
+    "HoTT.Basics.UniverseLevel": [ "HoTT.Basics.Overture", "HoTT.Basics.PathGroupoids" ],
+    "HoTT.Basics.Utf8": [ "HoTT.Basics.Notations" ],
+    "HoTT.Categories.Adjoint": [
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.UniversalMorphisms",
+      "HoTT.Categories.Adjoint.Hom",
+      "HoTT.Categories.Adjoint.UnitCounitCoercions",
+      "HoTT.Categories.Adjoint.HomCoercions",
+      "HoTT.Categories.Adjoint.Dual",
+      "HoTT.Categories.Adjoint.Paths",
+      "HoTT.Categories.Adjoint.Composition",
+      "HoTT.Categories.Adjoint.Pointwise",
+      "HoTT.Categories.Adjoint.Functorial",
+      "HoTT.Categories.Adjoint.Notations"
+    ],
+    "HoTT.Categories.Cat": [ "HoTT.Categories.Cat.Core", "HoTT.Categories.Cat.Morphisms" ],
+    "HoTT.Categories.Category": [
+      "HoTT.Categories.Category.Notations",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Paths",
+      "HoTT.Categories.Category.Objects",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Category.Pi",
+      "HoTT.Categories.Category.Sigma",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Categories.Category.Sum",
+      "HoTT.Categories.Category.Univalent",
+      "HoTT.Categories.Category.Subcategory"
+    ],
+    "HoTT.Categories.CategoryOfGroupoids": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Categories.Cat.Core",
+      "HoTT.Categories.GroupoidCategory.Core",
+      "HoTT.Categories.Functor.Paths"
+    ],
+    "HoTT.Categories.CategoryOfSections": [ "HoTT.Categories.CategoryOfSections.Core" ],
+    "HoTT.Categories.ChainCategory": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Subcategory.Full",
+      "HoTT.Categories.Category.Sigma.Univalent",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Univalent",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.DProp",
+      "HoTT.TruncType",
+      "HoTT.Spaces.Nat"
+    ],
+    "HoTT.Categories.Comma": [
+      "HoTT.Categories.Comma.Notations",
+      "HoTT.Categories.Comma.Core",
+      "HoTT.Categories.Comma.Dual",
+      "HoTT.Categories.Comma.Projection",
+      "HoTT.Categories.Comma.InducedFunctors",
+      "HoTT.Categories.Comma.ProjectionFunctors",
+      "HoTT.Categories.Comma.Functorial"
+    ],
+    "HoTT.Categories.DependentProduct": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Cat.Core",
+      "HoTT.Categories.Grothendieck.ToCat",
+      "HoTT.Categories.CategoryOfSections.Core"
+    ],
+    "HoTT.Categories.DiscreteCategory": [
+      "HoTT.Basics",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.GroupoidCategory.Core"
+    ],
+    "HoTT.Categories.DualFunctor": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Cat.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Basics.Trunc",
+      "HoTT.Types.Sigma",
+      "HoTT.Tactics",
+      "HoTT.Types.Forall"
+    ],
+    "HoTT.Categories.ExponentialLaws": [
+      "HoTT.Categories.ExponentialLaws.Law0",
+      "HoTT.Categories.ExponentialLaws.Law1",
+      "HoTT.Categories.ExponentialLaws.Law2",
+      "HoTT.Categories.ExponentialLaws.Law3",
+      "HoTT.Categories.ExponentialLaws.Law4",
+      "HoTT.Categories.ExponentialLaws.Tactics"
+    ],
+    "HoTT.Categories.Functor": [
+      "HoTT.Categories.Functor.Notations",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.Functor.Sum",
+      "HoTT.Categories.Functor.Attributes",
+      "HoTT.Categories.Functor.Pointwise.Core",
+      "HoTT.Categories.Functor.Pointwise"
+    ],
+    "HoTT.Categories.FunctorCategory": [
+      "HoTT.Categories.FunctorCategory.Notations",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.FunctorCategory.Functorial",
+      "HoTT.Categories.FunctorCategory.Dual"
+    ],
+    "HoTT.Categories.FundamentalPreGroupoidCategory": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Truncations",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Basics",
+      "HoTT.Types"
+    ],
+    "HoTT.Categories.Grothendieck": [
+      "HoTT.Categories.Grothendieck.ToSet",
+      "HoTT.Categories.Grothendieck.PseudofunctorToCat",
+      "HoTT.Categories.Grothendieck.ToCat"
+    ],
+    "HoTT.Categories.GroupoidCategory": [
+      "HoTT.Categories.GroupoidCategory.Core",
+      "HoTT.Categories.GroupoidCategory.Morphisms",
+      "HoTT.Categories.GroupoidCategory.Dual"
+    ],
+    "HoTT.Categories.HomFunctor": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Basics.Trunc",
+      "HoTT.HSet",
+      "HoTT.TruncType"
+    ],
+    "HoTT.Categories.HomotopyPreCategory": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Basics",
+      "HoTT.Truncations",
+      "HoTT.HSet"
+    ],
+    "HoTT.Categories.IndiscreteCategory": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Categories.Category.Univalent",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Types.Unit",
+      "HoTT.Basics.Trunc",
+      "HoTT.Tactics",
+      "HoTT.Basics.Equivalences"
+    ],
+    "HoTT.Categories.InitialTerminalCategory": [
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.InitialTerminalCategory.NaturalTransformations",
+      "HoTT.Categories.InitialTerminalCategory.Pseudofunctors",
+      "HoTT.Categories.InitialTerminalCategory.Notations"
+    ],
+    "HoTT.Categories.KanExtensions": [
+      "HoTT.Categories.KanExtensions.Core",
+      "HoTT.Categories.KanExtensions.Functors"
+    ],
+    "HoTT.Categories.LaxComma": [ "HoTT.Categories.LaxComma.Notations", "HoTT.Categories.LaxComma.Core" ],
+    "HoTT.Categories.Limits": [ "HoTT.Categories.Limits.Core", "HoTT.Categories.Limits.Functors" ],
+    "HoTT.Categories.NatCategory": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.DiscreteCategory",
+      "HoTT.Categories.IndiscreteCategory",
+      "HoTT.Types.Unit",
+      "HoTT.Basics.Trunc",
+      "HoTT.Types.Sum",
+      "HoTT.Types.Empty",
+      "HoTT.Basics.Nat"
+    ],
+    "HoTT.Categories.NaturalTransformation": [
+      "HoTT.Categories.NaturalTransformation.Notations",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.NaturalTransformation.Isomorphisms",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.NaturalTransformation.Pointwise",
+      "HoTT.Categories.NaturalTransformation.Sum",
+      "HoTT.Categories.NaturalTransformation.Prod",
+      "HoTT.Categories.NaturalTransformation.Composition"
+    ],
+    "HoTT.Categories.Notations": [
+      "HoTT.Basics.Notations",
+      "HoTT.Categories.Category.Notations",
+      "HoTT.Categories.Functor.Notations",
+      "HoTT.Categories.NaturalTransformation.Notations",
+      "HoTT.Categories.FunctorCategory.Notations",
+      "HoTT.Categories.NatCategory",
+      "HoTT.Categories.InitialTerminalCategory.Notations",
+      "HoTT.Categories.Profunctor.Notations",
+      "HoTT.Categories.Comma.Notations",
+      "HoTT.Categories.Adjoint.Notations",
+      "HoTT.Categories.Structure.Notations",
+      "HoTT.Categories.ChainCategory"
+    ],
+    "HoTT.Categories.ProductLaws": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Tactics",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Prod",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Prod.Universal",
+      "HoTT.Categories.Functor.Composition.Laws",
+      "HoTT.Categories.Functor.Paths"
+    ],
+    "HoTT.Categories.Profunctor": [
+      "HoTT.Categories.Profunctor.Notations",
+      "HoTT.Categories.Profunctor.Core",
+      "HoTT.Categories.Profunctor.Identity",
+      "HoTT.Categories.Profunctor.Representable"
+    ],
+    "HoTT.Categories.Pseudofunctor": [
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Categories.Pseudofunctor.RewriteLaws",
+      "HoTT.Categories.Pseudofunctor.FromFunctor",
+      "HoTT.Categories.Pseudofunctor.Identity"
+    ],
+    "HoTT.Categories.PseudonaturalTransformation": [ "HoTT.Categories.PseudonaturalTransformation.Core" ],
+    "HoTT.Categories.SemiSimplicialSets": [
+      "HoTT.Types",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.SimplicialSets",
+      "HoTT.Categories.Category.Sigma.OnMorphisms",
+      "HoTT.Categories.Category.Subcategory.Wide"
+    ],
+    "HoTT.Categories.SetCategory": [
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.SetCategory.Morphisms",
+      "HoTT.Categories.SetCategory.Functors"
+    ],
+    "HoTT.Categories.SimplicialSets": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Spaces.Nat",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.ChainCategory",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Composition.Laws"
+    ],
+    "HoTT.Categories.Structure": [
+      "HoTT.Categories.Structure.Notations",
+      "HoTT.Categories.Structure.Core",
+      "HoTT.Categories.Structure.IdentityPrinciple"
+    ],
+    "HoTT.Categories.UniversalProperties": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Category.Objects",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.Comma.Core",
+      "HoTT.Types.Unit",
+      "HoTT.Basics.Trunc",
+      "HoTT.Types.Sigma",
+      "HoTT.HProp",
+      "HoTT.Tactics",
+      "HoTT.Basics.Equivalences",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Utf8": [
+      "HoTT.Categories.Notations",
+      "HoTT.Categories.Category.Utf8",
+      "HoTT.Categories.Functor.Utf8",
+      "HoTT.Categories.NaturalTransformation.Utf8",
+      "HoTT.Categories.Comma.Utf8",
+      "HoTT.Categories.Adjoint.Utf8",
+      "HoTT.Categories.FunctorCategory.Utf8",
+      "HoTT.Categories.Profunctor.Utf8",
+      "HoTT.Categories.Structure.Utf8",
+      "HoTT.Categories.ChainCategory",
+      "HoTT.Categories.SimplicialSets"
+    ],
+    "HoTT.Categories.Yoneda": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.SetCategory",
+      "HoTT.Categories.Functor.Attributes",
+      "HoTT.Categories.Functor.Composition.Functorial",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.ExponentialLaws.Law4.Functors",
+      "HoTT.Categories.ProductLaws",
+      "HoTT.Categories.HomFunctor",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.HSet",
+      "HoTT.Tactics"
+    ],
+    "HoTT.Categories.Adjoint.Composition": [
+      "HoTT.Categories.Adjoint.Composition.Core",
+      "HoTT.Categories.Adjoint.Composition.AssociativityLaw",
+      "HoTT.Categories.Adjoint.Composition.IdentityLaws"
+    ],
+    "HoTT.Categories.Adjoint.Core": [ "HoTT.Categories.Adjoint.UnitCounit", "HoTT.Basics.Notations" ],
+    "HoTT.Categories.Adjoint.Dual": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core"
+    ],
+    "HoTT.Categories.Adjoint.Functorial": [
+      "HoTT.Categories.Adjoint.Functorial.Parts",
+      "HoTT.Categories.Adjoint.Functorial.Laws",
+      "HoTT.Categories.Adjoint.Functorial.Core"
+    ],
+    "HoTT.Categories.Adjoint.Hom": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.HomFunctor",
+      "HoTT.Categories.NaturalTransformation.Isomorphisms",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.Functor.Identity"
+    ],
+    "HoTT.Categories.Adjoint.HomCoercions": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.UnitCounitCoercions",
+      "HoTT.Categories.Adjoint.Dual",
+      "HoTT.Categories.Adjoint.Hom",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.HomFunctor",
+      "HoTT.Categories.NaturalTransformation.Isomorphisms",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.SetCategory.Morphisms",
+      "HoTT.Basics.Trunc",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.Types.Sigma",
+      "HoTT.Tactics",
+      "HoTT.Basics.Equivalences",
+      "HoTT.TruncType"
+    ],
+    "HoTT.Categories.Adjoint.Identity": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.Core"
+    ],
+    "HoTT.Categories.Adjoint.Notations": [
+      "HoTT.Categories.Adjoint.Composition",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.Dual",
+      "HoTT.Categories.Adjoint.Identity"
+    ],
+    "HoTT.Categories.Adjoint.Paths": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Types",
+      "HoTT.Basics.Trunc",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Adjoint.Pointwise": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.UnitCounitCoercions",
+      "HoTT.Categories.Functor.Pointwise.Core",
+      "HoTT.Categories.NaturalTransformation.Pointwise",
+      "HoTT.Categories.Functor.Pointwise.Properties",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.HProp",
+      "HoTT.Types.Forall",
+      "HoTT.Tactics",
+      "HoTT.Types.Arrow"
+    ],
+    "HoTT.Categories.Adjoint.UnitCounit": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Adjoint.UnitCounitCoercions": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.Dual",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Tactics",
+      "HoTT.Basics.Trunc",
+      "HoTT.Types.Sigma",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Adjoint.UniversalMorphisms": [ "HoTT.Categories.Adjoint.UniversalMorphisms.Core" ],
+    "HoTT.Categories.Adjoint.Utf8": [
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.Dual",
+      "HoTT.Categories.Adjoint.Composition.Core",
+      "HoTT.Categories.Adjoint.Notations",
+      "HoTT.Basics.Utf8"
+    ],
+    "HoTT.Categories.Adjoint.Composition.AssociativityLaw": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Composition.Laws",
+      "HoTT.Categories.Adjoint.Composition.Core",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.Paths",
+      "HoTT.Categories.Adjoint.Identity",
+      "HoTT.Categories.Adjoint.Composition.LawsTactic",
+      "HoTT.Types.Sigma",
+      "HoTT.Tactics",
+      "HoTT.Types.Prod",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Types.Forall"
+    ],
+    "HoTT.Categories.Adjoint.Composition.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Tactics",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Adjoint.Composition.IdentityLaws": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Composition.Laws",
+      "HoTT.Categories.Adjoint.Composition.Core",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.Paths",
+      "HoTT.Categories.Adjoint.Identity",
+      "HoTT.Categories.Adjoint.Composition.LawsTactic",
+      "HoTT.Types.Sigma",
+      "HoTT.Tactics",
+      "HoTT.Types.Prod",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Types.Forall"
+    ],
+    "HoTT.Categories.Adjoint.Composition.LawsTactic": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Composition.Laws",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.Paths",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Tactics",
+      "HoTT.Types.Prod",
+      "HoTT.Types.Forall"
+    ],
+    "HoTT.Categories.Adjoint.Functorial.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Sigma.OnObjects",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.Dual",
+      "HoTT.Categories.Adjoint.Functorial.Parts",
+      "HoTT.Categories.Adjoint.Functorial.Laws",
+      "HoTT.Types.Prod"
+    ],
+    "HoTT.Categories.Adjoint.Functorial.Laws": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.UnitCounitCoercions",
+      "HoTT.Categories.Adjoint.Dual",
+      "HoTT.Categories.Adjoint.Composition.Core",
+      "HoTT.Categories.Adjoint.Functorial.Parts",
+      "HoTT.HProp",
+      "HoTT.Types.Sigma",
+      "HoTT.Tactics",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Adjoint.Functorial.Parts": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.UnitCounitCoercions",
+      "HoTT.Categories.Adjoint.Dual",
+      "HoTT.HProp",
+      "HoTT.Types.Sigma",
+      "HoTT.Tactics"
+    ],
+    "HoTT.Categories.Adjoint.UniversalMorphisms.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.Adjoint.UnitCounit",
+      "HoTT.Categories.Adjoint.UnitCounitCoercions",
+      "HoTT.Categories.Adjoint.Dual",
+      "HoTT.Categories.Comma.Core",
+      "HoTT.Categories.UniversalProperties",
+      "HoTT.Categories.Comma.Dual",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.HProp",
+      "HoTT.Types.Sigma",
+      "HoTT.Tactics"
+    ],
+    "HoTT.Categories.Cat.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Objects",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Categories.Category.Univalent",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Composition.Laws"
+    ],
+    "HoTT.Categories.Cat.Morphisms": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Morphisms"
+    ],
+    "HoTT.Categories.Category.Core": [ "HoTT.Basics.Overture", "HoTT.Basics.Notations" ],
+    "HoTT.Categories.Category.Dual": [ "HoTT.Categories.Category.Core", "HoTT.Categories.Category.Objects" ],
+    "HoTT.Categories.Category.Morphisms": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Tactics",
+      "HoTT.Basics.Trunc",
+      "HoTT.Basics.Tactics",
+      "HoTT.HProp",
+      "HoTT.Types.Sigma",
+      "HoTT.Basics.Equivalences"
+    ],
+    "HoTT.Categories.Category.Notations": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Pi",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Category.Sum",
+      "HoTT.Categories.Category.Sigma"
+    ],
+    "HoTT.Categories.Category.Objects": [ "HoTT.Categories.Category.Core", "HoTT.Categories.Category.Morphisms" ],
+    "HoTT.Categories.Category.Paths": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Basics.Equivalences",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Basics.Trunc",
+      "HoTT.Basics.Tactics",
+      "HoTT.Types.Sigma",
+      "HoTT.Types.Arrow",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Paths",
+      "HoTT.HProp",
+      "HoTT.Tactics"
+    ],
+    "HoTT.Categories.Category.Pi": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Types.Forall"
+    ],
+    "HoTT.Categories.Category.Prod": [
+      "HoTT.Basics.Tactics",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Types.Prod"
+    ],
+    "HoTT.Categories.Category.Sigma": [
+      "HoTT.Categories.Category.Sigma.Core",
+      "HoTT.Categories.Category.Sigma.OnMorphisms",
+      "HoTT.Categories.Category.Sigma.OnObjects",
+      "HoTT.Categories.Category.Sigma.Univalent"
+    ],
+    "HoTT.Categories.Category.Strict": [ "HoTT.Categories.Category.Core" ],
+    "HoTT.Categories.Category.Subcategory": [
+      "HoTT.Categories.Category.Subcategory.Full",
+      "HoTT.Categories.Category.Subcategory.Wide"
+    ],
+    "HoTT.Categories.Category.Sum": [ "HoTT.Categories.Category.Core" ],
+    "HoTT.Categories.Category.Univalent": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Tactics",
+      "HoTT.Basics.Trunc"
+    ],
+    "HoTT.Categories.Category.Utf8": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Category.Sum",
+      "HoTT.Categories.Category.Pi",
+      "HoTT.Categories.Category.Notations",
+      "HoTT.Basics.Utf8"
+    ],
+    "HoTT.Categories.Category.Sigma.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Basics.Trunc",
+      "HoTT.Types.Sigma"
+    ],
+    "HoTT.Categories.Category.Sigma.OnMorphisms": [
+      "HoTT.HSet",
+      "HoTT.Types.Unit",
+      "HoTT.Tactics",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Sigma",
+      "HoTT.Basics.Trunc",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Sigma.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Paths"
+    ],
+    "HoTT.Categories.Category.Sigma.OnObjects": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Sigma.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Paths"
+    ],
+    "HoTT.Categories.Category.Sigma.Univalent": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Univalent",
+      "HoTT.Categories.Category.Sigma.Core",
+      "HoTT.Categories.Category.Sigma.OnObjects",
+      "HoTT.Categories.Category.Sigma.OnMorphisms",
+      "HoTT.Types",
+      "HoTT.Basics",
+      "HoTT.Tactics"
+    ],
+    "HoTT.Categories.Category.Subcategory.Full": [ "HoTT.Categories.Category.Sigma.OnObjects" ],
+    "HoTT.Categories.Category.Subcategory.Wide": [ "HoTT.Categories.Category.Sigma.OnMorphisms" ],
+    "HoTT.Categories.CategoryOfSections.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Basics.Trunc",
+      "HoTT.Basics",
+      "HoTT.Types"
+    ],
+    "HoTT.Categories.Comma.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Basics.Trunc",
+      "HoTT.Tactics",
+      "HoTT.HProp"
+    ],
+    "HoTT.Categories.Comma.Dual": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.Comma.Core"
+    ],
+    "HoTT.Categories.Comma.Functorial": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.InitialTerminalCategory",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Categories.Comma.Core",
+      "HoTT.Basics.Trunc",
+      "HoTT.Tactics",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Types.Forall"
+    ],
+    "HoTT.Categories.Comma.InducedFunctors": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Cat.Core",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.Comma.Core",
+      "HoTT.Categories.Comma.Projection",
+      "HoTT.Types.Prod",
+      "HoTT.Tactics",
+      "HoTT.Types.Unit",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Comma.Notations": [ "HoTT.Categories.Comma.Core" ],
+    "HoTT.Categories.Comma.Projection": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.Comma.Core",
+      "HoTT.Types.Prod"
+    ],
+    "HoTT.Categories.Comma.ProjectionFunctors": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.NatCategory",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Cat.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.Comma.Core",
+      "HoTT.Categories.Comma.InducedFunctors",
+      "HoTT.Categories.Comma.Projection",
+      "HoTT.Categories.ProductLaws",
+      "HoTT.Categories.ExponentialLaws.Law1.Functors",
+      "HoTT.Categories.ExponentialLaws.Law4.Functors",
+      "HoTT.Types.Prod",
+      "HoTT.Types.Forall",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Tactics"
+    ],
+    "HoTT.Categories.Comma.Utf8": [
+      "HoTT.Categories.Comma.Core",
+      "HoTT.Categories.Comma.Notations",
+      "HoTT.Basics.Utf8"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law0": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.InitialTerminalCategory.NaturalTransformations",
+      "HoTT.Basics",
+      "HoTT.Types"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law1": [
+      "HoTT.Categories.ExponentialLaws.Law1.Functors",
+      "HoTT.Categories.ExponentialLaws.Law1.Law"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law2": [
+      "HoTT.Categories.ExponentialLaws.Law2.Functors",
+      "HoTT.Categories.ExponentialLaws.Law2.Law"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law3": [
+      "HoTT.Categories.ExponentialLaws.Law3.Functors",
+      "HoTT.Categories.ExponentialLaws.Law3.Law"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law4": [
+      "HoTT.Categories.ExponentialLaws.Law4.Functors",
+      "HoTT.Categories.ExponentialLaws.Law4.Law"
+    ],
+    "HoTT.Categories.ExponentialLaws.Tactics": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Tactics",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Prod"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law1.Functors": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.InitialTerminalCategory.NaturalTransformations",
+      "HoTT.Basics",
+      "HoTT.Types"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law1.Law": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.ExponentialLaws.Law1.Functors",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Basics.Trunc",
+      "HoTT.Tactics",
+      "HoTT.Categories.ExponentialLaws.Tactics",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law2.Functors": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Category.Sum",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Sum",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.NaturalTransformation.Sum",
+      "HoTT.Categories.Functor.Pointwise.Core",
+      "HoTT.Categories.InitialTerminalCategory.Core"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law2.Law": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Pointwise.Core",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.Category.Sum",
+      "HoTT.Categories.Functor.Sum",
+      "HoTT.Categories.NaturalTransformation.Sum",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Types.Prod",
+      "HoTT.Tactics",
+      "HoTT.Categories.ExponentialLaws.Tactics",
+      "HoTT.Categories.ExponentialLaws.Law2.Functors"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law3.Functors": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Prod",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Functor.Prod.Functorial",
+      "HoTT.Types.Prod"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law3.Law": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Prod",
+      "HoTT.Categories.Functor.Prod.Functorial",
+      "HoTT.Categories.Functor.Prod.Universal",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.ExponentialLaws.Law3.Functors",
+      "HoTT.Types.Prod",
+      "HoTT.Tactics",
+      "HoTT.Categories.ExponentialLaws.Tactics"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law4.Functors": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.ExponentialLaws.Law4.Law": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.ExponentialLaws.Law4.Functors",
+      "HoTT.Types.Prod",
+      "HoTT.Tactics",
+      "HoTT.Types.Forall",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Categories.ExponentialLaws.Tactics"
+    ],
+    "HoTT.Categories.Functor.Attributes": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.HomFunctor",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Prod",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Basics.Trunc",
+      "HoTT.HIT.epi",
+      "HoTT.Types.Universe",
+      "HoTT.HSet",
+      "HoTT.HIT.iso",
+      "HoTT.Truncations",
+      "HoTT.TruncType"
+    ],
+    "HoTT.Categories.Functor.Composition": [
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Composition.Functorial",
+      "HoTT.Categories.Functor.Composition.Laws"
+    ],
+    "HoTT.Categories.Functor.Core": [ "HoTT.Categories.Category.Core" ],
+    "HoTT.Categories.Functor.Dual": [
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core"
+    ],
+    "HoTT.Categories.Functor.Identity": [ "HoTT.Categories.Category.Core", "HoTT.Categories.Functor.Core" ],
+    "HoTT.Categories.Functor.Notations": [
+      "HoTT.Basics.Notations",
+      "HoTT.Categories.Functor.Composition",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Prod",
+      "HoTT.Categories.Functor.Sum"
+    ],
+    "HoTT.Categories.Functor.Paths": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Tactics",
+      "HoTT.Basics.Equivalences",
+      "HoTT.HProp"
+    ],
+    "HoTT.Categories.Functor.Pointwise": [
+      "HoTT.Categories.Functor.Pointwise.Core",
+      "HoTT.Categories.Functor.Pointwise.Properties"
+    ],
+    "HoTT.Categories.Functor.Prod": [
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.Functor.Prod.Universal",
+      "HoTT.Categories.Functor.Prod.Functorial"
+    ],
+    "HoTT.Categories.Functor.Sum": [
+      "HoTT.Categories.Category.Sum",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Tactics",
+      "HoTT.Types.Forall",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Functor.Utf8": [
+      "HoTT.Categories.Category.Notations",
+      "HoTT.Categories.Category.Utf8",
+      "HoTT.Categories.Functor.Notations",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Sum",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Basics.Utf8"
+    ],
+    "HoTT.Categories.Functor.Composition.Core": [ "HoTT.Categories.Category.Core", "HoTT.Categories.Functor.Core" ],
+    "HoTT.Categories.Functor.Composition.Functorial": [
+      "HoTT.Categories.Functor.Composition.Functorial.Core",
+      "HoTT.Categories.Functor.Composition.Functorial.Attributes"
+    ],
+    "HoTT.Categories.Functor.Composition.Laws": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Basics.Tactics",
+      "HoTT.Tactics"
+    ],
+    "HoTT.Categories.Functor.Composition.Functorial.Attributes": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Composition.Functorial.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Functorial",
+      "HoTT.Categories.NaturalTransformation.Isomorphisms",
+      "HoTT.Categories.Functor.Attributes",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.HSet",
+      "HoTT.HProp",
+      "HoTT.Truncations"
+    ],
+    "HoTT.Categories.Functor.Composition.Functorial.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Functorial",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.ExponentialLaws.Law4.Functors",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.ProductLaws"
+    ],
+    "HoTT.Categories.Functor.Pointwise.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core"
+    ],
+    "HoTT.Categories.Functor.Pointwise.Properties": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Functor.Pointwise.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Types.Forall",
+      "HoTT.Tactics",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Functor.Prod.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Types.Prod"
+    ],
+    "HoTT.Categories.Functor.Prod.Functorial": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.NaturalTransformation.Prod",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Paths"
+    ],
+    "HoTT.Categories.Functor.Prod.Universal": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Types.Prod",
+      "HoTT.Tactics",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Sigma",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.FunctorCategory.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.NaturalTransformation.Paths"
+    ],
+    "HoTT.Categories.FunctorCategory.Dual": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Tactics",
+      "HoTT.Types.Forall"
+    ],
+    "HoTT.Categories.FunctorCategory.Functorial": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Functor.Pointwise.Core",
+      "HoTT.Categories.Functor.Pointwise.Properties",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Cat.Core",
+      "HoTT.Categories.ExponentialLaws.Law4.Functors"
+    ],
+    "HoTT.Categories.FunctorCategory.Morphisms": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.FunctorCategory.Notations": [
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.FunctorCategory.Morphisms"
+    ],
+    "HoTT.Categories.FunctorCategory.Utf8": [
+      "HoTT.Categories.Category.Utf8",
+      "HoTT.Categories.Functor.Utf8",
+      "HoTT.Categories.NaturalTransformation.Utf8",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Basics.Utf8"
+    ],
+    "HoTT.Categories.Grothendieck.PseudofunctorToCat": [
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Categories.Pseudofunctor.RewriteLaws",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.NaturalTransformation.Isomorphisms",
+      "HoTT.Categories.Cat.Morphisms",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Composition.Laws",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.FunctorCategory.Core",
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Tactics",
+      "HoTT.Basics.PathGroupoids"
+    ],
+    "HoTT.Categories.Grothendieck.ToCat": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Categories.Pseudofunctor.FromFunctor",
+      "HoTT.Categories.Cat.Core",
+      "HoTT.Categories.Grothendieck.PseudofunctorToCat"
+    ],
+    "HoTT.Categories.Grothendieck.ToSet": [
+      "HoTT.Categories.Grothendieck.ToSet.Core",
+      "HoTT.Categories.Grothendieck.ToSet.Morphisms",
+      "HoTT.Categories.Grothendieck.ToSet.Univalent"
+    ],
+    "HoTT.Categories.Grothendieck.ToSet.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Basics.Trunc",
+      "HoTT.HSet",
+      "HoTT.Types.Sigma",
+      "HoTT.TruncType",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Grothendieck.ToSet.Morphisms": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.Grothendieck.ToSet.Core",
+      "HoTT.Basics",
+      "HoTT.Types"
+    ],
+    "HoTT.Categories.Grothendieck.ToSet.Univalent": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Univalent",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.Grothendieck.ToSet.Core",
+      "HoTT.Categories.Grothendieck.ToSet.Morphisms",
+      "HoTT.Basics.Equivalences",
+      "HoTT.Basics.Trunc",
+      "HoTT.Types.Universe",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Sigma"
+    ],
+    "HoTT.Categories.GroupoidCategory.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Basics.Trunc",
+      "HoTT.Types.Forall",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.GroupoidCategory.Dual": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.GroupoidCategory.Core",
+      "HoTT.Categories.Category.Paths",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Types",
+      "HoTT.Basics.Trunc",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.GroupoidCategory.Morphisms": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Category.Univalent",
+      "HoTT.Categories.GroupoidCategory.Core",
+      "HoTT.Basics.Trunc",
+      "HoTT.Basics.Equivalences",
+      "HoTT.Tactics"
+    ],
+    "HoTT.Categories.InitialTerminalCategory.Core": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.NatCategory",
+      "HoTT.Basics.Contractible"
+    ],
+    "HoTT.Categories.InitialTerminalCategory.Functors": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.NatCategory",
+      "HoTT.Basics.Contractible",
+      "HoTT.Basics",
+      "HoTT.Types"
+    ],
+    "HoTT.Categories.InitialTerminalCategory.NaturalTransformations": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.NatCategory",
+      "HoTT.Basics.Contractible"
+    ],
+    "HoTT.Categories.InitialTerminalCategory.Notations": [
+      "HoTT.Categories.InitialTerminalCategory.Functors",
+      "HoTT.Categories.InitialTerminalCategory.Pseudofunctors"
+    ],
+    "HoTT.Categories.InitialTerminalCategory.Pseudofunctors": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.NatCategory",
+      "HoTT.Basics.Contractible",
+      "HoTT.Basics.PathGroupoids"
+    ],
+    "HoTT.Categories.KanExtensions.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.ExponentialLaws.Law4.Functors",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Functor.Composition.Functorial.Core",
+      "HoTT.Categories.UniversalProperties"
+    ],
+    "HoTT.Categories.KanExtensions.Functors": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.KanExtensions.Core",
+      "HoTT.Categories.Adjoint.UniversalMorphisms.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Adjoint.Core"
+    ],
+    "HoTT.Categories.LaxComma.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.InitialTerminalCategory.Pseudofunctors",
+      "HoTT.Categories.Cat.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Pseudofunctor.Identity",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.LaxComma.CoreLaws",
+      "HoTT.Basics.Trunc",
+      "HoTT.Tactics",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Sigma",
+      "HoTT.Basics.Notations"
+    ],
+    "HoTT.Categories.LaxComma.CoreLaws": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Categories.Pseudofunctor.RewriteLaws",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.LaxComma.CoreParts",
+      "HoTT.Basics.Trunc",
+      "HoTT.Tactics",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Sigma"
+    ],
+    "HoTT.Categories.LaxComma.CoreParts": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Basics.Trunc",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Sigma",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.LaxComma.Notations": [ "HoTT.Categories.LaxComma.Core" ],
+    "HoTT.Categories.LaxComma.Utf8": [
+      "HoTT.Categories.LaxComma.Core",
+      "HoTT.Categories.LaxComma.Notations",
+      "HoTT.Basics.Utf8"
+    ],
+    "HoTT.Categories.Limits.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.ExponentialLaws.Law1.Functors",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.UniversalProperties",
+      "HoTT.Categories.KanExtensions.Core",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.NatCategory",
+      "HoTT.Categories.Functor.Paths",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Comma.Core",
+      "HoTT.Basics.Equivalences"
+    ],
+    "HoTT.Categories.Limits.Functors": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.KanExtensions.Core",
+      "HoTT.Categories.KanExtensions.Functors",
+      "HoTT.Categories.Limits.Core",
+      "HoTT.Categories.Adjoint.UniversalMorphisms.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Adjoint.Core",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Categories.NatCategory"
+    ],
+    "HoTT.Categories.NaturalTransformation.Composition": [
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Functorial",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws"
+    ],
+    "HoTT.Categories.NaturalTransformation.Core": [ "HoTT.Categories.Category.Core", "HoTT.Categories.Functor.Core" ],
+    "HoTT.Categories.NaturalTransformation.Dual": [
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core"
+    ],
+    "HoTT.Categories.NaturalTransformation.Identity": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Basics.PathGroupoids"
+    ],
+    "HoTT.Categories.NaturalTransformation.Isomorphisms": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.NaturalTransformation.Notations": [
+      "HoTT.Categories.NaturalTransformation.Composition",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.NaturalTransformation.Prod",
+      "HoTT.Categories.NaturalTransformation.Sum"
+    ],
+    "HoTT.Categories.NaturalTransformation.Paths": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Basics.Equivalences",
+      "HoTT.Types",
+      "HoTT.Basics.Trunc",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.NaturalTransformation.Pointwise": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.Functor.Pointwise.Core"
+    ],
+    "HoTT.Categories.NaturalTransformation.Prod": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.InitialTerminalCategory.Core",
+      "HoTT.Types.Prod"
+    ],
+    "HoTT.Categories.NaturalTransformation.Sum": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Sum",
+      "HoTT.Categories.Functor.Sum",
+      "HoTT.Categories.NaturalTransformation.Core"
+    ],
+    "HoTT.Categories.NaturalTransformation.Utf8": [
+      "HoTT.Categories.Category.Utf8",
+      "HoTT.Categories.Functor.Utf8",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Dual",
+      "HoTT.Basics.Utf8"
+    ],
+    "HoTT.Categories.NaturalTransformation.Composition.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Core"
+    ],
+    "HoTT.Categories.NaturalTransformation.Composition.Functorial": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws"
+    ],
+    "HoTT.Categories.NaturalTransformation.Composition.Laws": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Paths"
+    ],
+    "HoTT.Categories.Profunctor.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Basics.Notations"
+    ],
+    "HoTT.Categories.Profunctor.Identity": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.Profunctor.Core",
+      "HoTT.Categories.HomFunctor"
+    ],
+    "HoTT.Categories.Profunctor.Notations": [ "HoTT.Categories.Profunctor.Core", "HoTT.Categories.Profunctor.Identity" ],
+    "HoTT.Categories.Profunctor.Representable": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.Category.Prod",
+      "HoTT.Categories.Category.Dual",
+      "HoTT.Categories.Functor.Prod.Core",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Categories.Profunctor.Core",
+      "HoTT.Categories.Functor.Dual",
+      "HoTT.Categories.Profunctor.Identity",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.HSet"
+    ],
+    "HoTT.Categories.Profunctor.Utf8": [
+      "HoTT.Categories.Profunctor.Core",
+      "HoTT.Categories.Profunctor.Notations",
+      "HoTT.Basics.Utf8"
+    ],
+    "HoTT.Categories.Pseudofunctor.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.NaturalTransformation.Isomorphisms",
+      "HoTT.Categories.NaturalTransformation.Paths"
+    ],
+    "HoTT.Categories.Pseudofunctor.FromFunctor": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Categories.Cat.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.NaturalTransformation.Isomorphisms",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Basics.Trunc"
+    ],
+    "HoTT.Categories.Pseudofunctor.Identity": [
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.NaturalTransformation.Isomorphisms",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Cat.Core",
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Basics.PathGroupoids"
+    ],
+    "HoTT.Categories.Pseudofunctor.RewriteLaws": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.NaturalTransformation.Isomorphisms",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Tactics"
+    ],
+    "HoTT.Categories.PseudonaturalTransformation.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Pseudofunctor.Core",
+      "HoTT.Categories.Category.Pi",
+      "HoTT.Categories.FunctorCategory.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.FunctorCategory.Morphisms",
+      "HoTT.Categories.Functor.Composition.Core",
+      "HoTT.Categories.Functor.Identity",
+      "HoTT.Categories.NaturalTransformation.Composition.Core",
+      "HoTT.Categories.NaturalTransformation.Composition.Laws",
+      "HoTT.Categories.NaturalTransformation.Identity",
+      "HoTT.Categories.NaturalTransformation.Isomorphisms",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Tactics"
+    ],
+    "HoTT.Categories.SetCategory.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Strict",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.TruncType"
+    ],
+    "HoTT.Categories.SetCategory.Functors": [ "HoTT.Categories.SetCategory.Functors.SetProp" ],
+    "HoTT.Categories.SetCategory.Morphisms": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.NaturalTransformation.Core",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.NaturalTransformation.Paths",
+      "HoTT.Categories.Category.Univalent",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.Basics.Equivalences",
+      "HoTT.TruncType"
+    ],
+    "HoTT.Categories.SetCategory.Functors.SetProp": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Functor.Core",
+      "HoTT.Categories.SetCategory.Core",
+      "HoTT.Basics.Trunc",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.TruncType"
+    ],
+    "HoTT.Categories.Structure.Core": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.Basics.Trunc"
+    ],
+    "HoTT.Categories.Structure.IdentityPrinciple": [
+      "HoTT.Categories.Category.Core",
+      "HoTT.Categories.Category.Univalent",
+      "HoTT.Categories.Category.Morphisms",
+      "HoTT.Categories.Structure.Core",
+      "HoTT.HProp",
+      "HoTT.Types.Sigma",
+      "HoTT.Basics.Trunc",
+      "HoTT.Basics.Equivalences",
+      "HoTT.Basics.Tactics"
+    ],
+    "HoTT.Categories.Structure.Notations": [ "HoTT.Categories.Structure.Core" ],
+    "HoTT.Categories.Structure.Utf8": [
+      "HoTT.Categories.Structure.Core",
+      "HoTT.Categories.Structure.Notations",
+      "HoTT.Basics.Utf8"
+    ],
+    "HoTT.Classes.categories.ua_category": [ "HoTT.Basics", "HoTT.Categories.Category.Morphisms" ],
+    "HoTT.Classes.implementations.assume_rationals": [ "HoTT.Classes.interfaces.canonical_names" ],
+    "HoTT.Classes.implementations.binary_naturals": [
+      "HoTT.Spaces.Nat",
+      "HoTT.Basics.Decidable",
+      "HoTT.Classes.interfaces.abstract_algebra"
+    ],
+    "HoTT.Classes.implementations.bool": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.implementations.family_prod": [ "HoTT.Utf8" ],
+    "HoTT.Classes.implementations.field_of_fractions": [ "HoTT.HIT.quotient", "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.implementations.hprop_lattice": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.implementations.list": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.implementations.natpair_integers": [ "HoTT.HIT.quotient", "HoTT.Classes.implementations.peano_naturals" ],
+    "HoTT.Classes.implementations.ne_list": [ "HoTT.Utf8" ],
+    "HoTT.Classes.implementations.peano_naturals": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Spaces.Nat",
+      "HoTT.Classes.interfaces.abstract_algebra"
+    ],
+    "HoTT.Classes.implementations.pointwise": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.interfaces.abstract_algebra": [
+      "HoTT.Spaces.Nat",
+      "HoTT.Classes.interfaces.canonical_names",
+      "HoTT.HProp"
+    ],
+    "HoTT.Classes.interfaces.archimedean": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.interfaces.canonical_names": [ "HoTT.Basics" ],
+    "HoTT.Classes.interfaces.cauchy": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.interfaces.integers": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.interfaces.monad": [ "HoTT.Classes.interfaces.canonical_names" ],
+    "HoTT.Classes.interfaces.naturals": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.interfaces.orders": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.interfaces.rationals": [ "HoTT.Types.Universe", "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.interfaces.round": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.interfaces.ua_algebra": [ "HoTT.Utf8", "HoTT.Types" ],
+    "HoTT.Classes.interfaces.ua_congruence": [ "HoTT.Basics.Equivalences" ],
+    "HoTT.Classes.interfaces.ua_setalgebra": [ "HoTT.Classes.interfaces.ua_algebra", "HoTT.Basics.Equivalences" ],
+    "HoTT.Classes.isomorphisms.rings": [
+      "HoTT.Types.Universe",
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Classes.theory.rings"
+    ],
+    "HoTT.Classes.orders.archimedean": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.orders.dec_fields": [
+      "HoTT.Basics.Decidable",
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Classes.orders.rings",
+      "HoTT.Classes.tactics.ring_tac"
+    ],
+    "HoTT.Classes.orders.fields": [
+      "HoTT.Basics.Decidable",
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Classes.orders.rings"
+    ],
+    "HoTT.Classes.orders.integers": [
+      "HoTT.Types.Universe",
+      "HoTT.Basics.Decidable",
+      "HoTT.Classes.theory.integers",
+      "HoTT.Classes.implementations.peano_naturals",
+      "HoTT.Classes.orders.nat_int"
+    ],
+    "HoTT.Classes.orders.lattices": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.orders.maps": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.orders.nat_int": [
+      "HoTT.Types.Universe",
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Classes.orders.semirings"
+    ],
+    "HoTT.Classes.orders.naturals": [
+      "HoTT.Types.Universe",
+      "HoTT.Classes.theory.naturals",
+      "HoTT.Classes.theory.apartness",
+      "HoTT.Classes.orders.nat_int"
+    ],
+    "HoTT.Classes.orders.orders": [
+      "HoTT.Basics.Decidable",
+      "HoTT.Basics.Trunc",
+      "HoTT.Classes.interfaces.abstract_algebra"
+    ],
+    "HoTT.Classes.orders.rings": [
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Classes.orders.semirings"
+    ],
+    "HoTT.Classes.orders.semirings": [
+      "HoTT.Basics.Decidable",
+      "HoTT.Classes.theory.apartness",
+      "HoTT.Classes.orders.orders"
+    ],
+    "HoTT.Classes.orders.sum": [ "HoTT.Classes.interfaces.canonical_names" ],
+    "HoTT.Classes.tactics.ring_pol": [
+      "HoTT.Basics",
+      "HoTT.Types.Bool",
+      "HoTT.Classes.interfaces.abstract_algebra"
+    ],
+    "HoTT.Classes.tactics.ring_quote": [ "HoTT.Basics", "HoTT.Types.Bool", "HoTT.Classes.theory.rings" ],
+    "HoTT.Classes.tactics.ring_tac": [
+      "HoTT.Basics",
+      "HoTT.Types.Bool",
+      "HoTT.Classes.interfaces.abstract_algebra"
+    ],
+    "HoTT.Classes.tests.ring_tac": [
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Classes.interfaces.naturals"
+    ],
+    "HoTT.Classes.theory.additional_operations": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.theory.apartness": [
+      "HoTT.Basics.Decidable",
+      "HoTT.Truncations",
+      "HoTT.Classes.interfaces.abstract_algebra"
+    ],
+    "HoTT.Classes.theory.dec_fields": [ "HoTT.Classes.interfaces.abstract_algebra", "HoTT.Classes.theory.rings" ],
+    "HoTT.Classes.theory.fields": [
+      "HoTT.Basics.Trunc",
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Classes.theory.rings"
+    ],
+    "HoTT.Classes.theory.groups": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.theory.int_abs": [ "HoTT.Types.Universe", "HoTT.Classes.interfaces.naturals" ],
+    "HoTT.Classes.theory.integers": [
+      "HoTT.Types.Universe",
+      "HoTT.Classes.theory.nat_distance",
+      "HoTT.Classes.interfaces.integers"
+    ],
+    "HoTT.Classes.theory.lattices": [ "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.theory.nat_distance": [
+      "HoTT.Types.Universe",
+      "HoTT.Classes.orders.naturals",
+      "HoTT.Classes.interfaces.abstract_algebra"
+    ],
+    "HoTT.Classes.theory.naturals": [
+      "HoTT.Types.Universe",
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Classes.interfaces.naturals"
+    ],
+    "HoTT.Classes.theory.premetric": [ "HoTT.Types.Universe" ],
+    "HoTT.Classes.theory.rationals": [ "HoTT.Types.Universe" ],
+    "HoTT.Classes.theory.rings": [ "HoTT.Classes.theory.groups", "HoTT.Classes.interfaces.abstract_algebra" ],
+    "HoTT.Classes.theory.ua_first_isomorphism": [ "HoTT.Types.Forall" ],
+    "HoTT.Classes.theory.ua_homomorphism": [ "HoTT.Classes.interfaces.ua_setalgebra", "HoTT.Basics" ],
+    "HoTT.Classes.theory.ua_isomorphic": [ "HoTT.Classes.theory.ua_homomorphism", "HoTT.Basics" ],
+    "HoTT.Classes.theory.ua_prod_algebra": [ "HoTT.Basics.Equivalences" ],
+    "HoTT.Classes.theory.ua_quotient_algebra": [ "HoTT.Classes.interfaces.ua_congruence", "HoTT.Basics" ],
+    "HoTT.Classes.theory.ua_second_isomorphism": [ "HoTT.Types.Sigma" ],
+    "HoTT.Classes.theory.ua_subalgebra": [ "HoTT.Basics" ],
+    "HoTT.Classes.theory.ua_third_isomorphism": [ "HoTT.Types.Universe" ],
+    "HoTT.Colimits.Colimit": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Cocone",
+      "HoTT.Diagrams.ConstantDiagram"
+    ],
+    "HoTT.Colimits.Colimit_Coequalizer": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Diagrams.ParallelPair",
+      "HoTT.Diagrams.Cocone",
+      "HoTT.Colimits.Colimit",
+      "HoTT.HIT.Coeq"
+    ],
+    "HoTT.Colimits.Colimit_Flattening": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Cocone",
+      "HoTT.Diagrams.DDiagram",
+      "HoTT.Colimits.Colimit"
+    ],
+    "HoTT.Colimits.Colimit_Prod": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Colimits.Colimit",
+      "HoTT.Colimits.Colimit_Sigma"
+    ],
+    "HoTT.Colimits.Colimit_Pushout": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Span",
+      "HoTT.Diagrams.Cocone",
+      "HoTT.Colimits.Colimit",
+      "HoTT.Colimits.Pushout"
+    ],
+    "HoTT.Colimits.Colimit_Pushout_Flattening": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Diagrams.DDiagram",
+      "HoTT.Diagrams.Span",
+      "HoTT.Diagrams.Cocone",
+      "HoTT.Colimits.Colimit",
+      "HoTT.Colimits.Colimit_Pushout",
+      "HoTT.Colimits.Colimit_Flattening"
+    ],
+    "HoTT.Colimits.Colimit_Sigma": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Cocone",
+      "HoTT.Colimits.Colimit"
+    ],
+    "HoTT.Colimits.MappingCylinder": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical.DPath",
+      "HoTT.Cubical.PathSquare",
+      "HoTT.HIT.Coeq",
+      "HoTT.Colimits.Pushout"
+    ],
+    "HoTT.Colimits.Pushout": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HSet",
+      "HoTT.TruncType",
+      "HoTT.HIT.Coeq"
+    ],
+    "HoTT.Colimits.Quotient": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HSet",
+      "HoTT.HProp",
+      "HoTT.TruncType",
+      "HoTT.HIT.epi",
+      "HoTT.HIT.Coeq",
+      "HoTT.Truncations"
+    ],
+    "HoTT.Colimits.Sequential": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Diagrams.Sequence",
+      "HoTT.Diagrams.Cocone",
+      "HoTT.Colimits.Colimit",
+      "HoTT.Spaces.Nat",
+      "HoTT.HProp",
+      "HoTT.PathAny"
+    ],
+    "HoTT.Colimits.SpanPushout": [ "HoTT.Basics", "HoTT.Types", "HoTT.Colimits.Pushout" ],
+    "HoTT.Cubical.DPath": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Cubical.DPathCube": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Cubical.DPath",
+      "HoTT.Cubical.PathSquare",
+      "HoTT.Cubical.DPathSquare",
+      "HoTT.Cubical.PathCube"
+    ],
+    "HoTT.Cubical.DPathSquare": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical.DPath",
+      "HoTT.Cubical.PathSquare"
+    ],
+    "HoTT.Cubical.PathCube": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Cubical.DPath",
+      "HoTT.Cubical.PathSquare",
+      "HoTT.Cubical.DPathSquare",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Prod"
+    ],
+    "HoTT.Cubical.PathSquare": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.Types", "HoTT.Cubical.DPath" ],
+    "HoTT.Diagrams.Cocone": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Diagram"
+    ],
+    "HoTT.Diagrams.CommutativeSquares": [ "Coq.Program.Basics", "HoTT.Basics" ],
+    "HoTT.Diagrams.Cone": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Diagram"
+    ],
+    "HoTT.Diagrams.ConstantDiagram": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Cone",
+      "HoTT.Diagrams.Cocone",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Diagrams.Graph"
+    ],
+    "HoTT.Diagrams.DDiagram": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Diagram"
+    ],
+    "HoTT.Diagrams.Diagram": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Tactics",
+      "HoTT.Diagrams.CommutativeSquares",
+      "HoTT.Diagrams.Graph"
+    ],
+    "HoTT.Diagrams.Graph": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Diagrams.ParallelPair": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Diagrams.Cocone"
+    ],
+    "HoTT.Diagrams.Sequence": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Diagram"
+    ],
+    "HoTT.Diagrams.Span": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Diagram"
+    ],
+    "HoTT.Equiv.BiInv": [ "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Equiv.PathSplit": [ "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Equiv.Relational": [ "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.HIT.Coeq": [
+      "HoTT.Basics",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Sigma",
+      "HoTT.Types.Arrow",
+      "HoTT.Types.Universe",
+      "HoTT.Cubical.DPath"
+    ],
+    "HoTT.HIT.Flattening": [
+      "HoTT.Basics",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Sigma",
+      "HoTT.Types.Arrow",
+      "HoTT.Types.Universe",
+      "HoTT.HIT.Coeq"
+    ],
+    "HoTT.HIT.FreeIntQuotient": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.TruncType",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.Spaces.Int",
+      "HoTT.Spaces.Circle",
+      "HoTT.HIT.Coeq",
+      "HoTT.HIT.Flattening",
+      "HoTT.Truncations"
+    ],
+    "HoTT.HIT.Interval": [
+      "HoTT.Basics",
+      "HoTT.Types.Sigma",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Paths"
+    ],
+    "HoTT.HIT.SetCone": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HSet",
+      "HoTT.TruncType",
+      "HoTT.Colimits.Pushout",
+      "HoTT.Truncations"
+    ],
+    "HoTT.HIT.V": [
+      "HoTT.Basics",
+      "HoTT.Basics.Utf8",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.TruncType",
+      "HoTT.Colimits.SpanPushout",
+      "HoTT.Truncations",
+      "HoTT.Colimits.Quotient"
+    ],
+    "HoTT.HIT.epi": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.TruncType",
+      "HoTT.Colimits.Pushout",
+      "HoTT.Truncations",
+      "HoTT.HIT.SetCone"
+    ],
+    "HoTT.HIT.iso": [
+      "HoTT.Basics",
+      "HoTT.Types.Universe",
+      "HoTT.HSet",
+      "HoTT.TruncType",
+      "HoTT.HIT.epi",
+      "HoTT.HIT.unique_choice",
+      "HoTT.Truncations"
+    ],
+    "HoTT.HIT.quotient": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HSet",
+      "HoTT.HProp",
+      "HoTT.TruncType",
+      "HoTT.HIT.epi",
+      "HoTT.Truncations"
+    ],
+    "HoTT.HIT.surjective_factor": [ "HoTT.Types" ],
+    "HoTT.HIT.unique_choice": [ "HoTT.Basics", "HoTT.Truncations", "HoTT.HProp" ],
+    "HoTT.Homotopy.BlakersMassey": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.Colimits.Pushout",
+      "HoTT.Colimits.SpanPushout",
+      "HoTT.Homotopy.Join",
+      "HoTT.Modalities.ReflectiveSubuniverse",
+      "HoTT.Truncations",
+      "HoTT.NullHomotopy",
+      "HoTT.Extensions"
+    ],
+    "HoTT.Homotopy.CayleyDickson": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical",
+      "HoTT.Pointed",
+      "HoTT.Homotopy.HSpace",
+      "HoTT.Homotopy.Suspension",
+      "HoTT.Homotopy.Join"
+    ],
+    "HoTT.Homotopy.ClassifyingSpace": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed",
+      "HoTT.Cubical",
+      "HoTT.Algebra.AbGroups",
+      "HoTT.Homotopy.HSpace",
+      "HoTT.TruncType",
+      "HoTT.Truncations",
+      "HoTT.Homotopy.HomotopyGroup",
+      "HoTT.Homotopy.WhiteheadsPrinciple"
+    ],
+    "HoTT.Homotopy.EMSpace": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed",
+      "HoTT.Cubical.DPath",
+      "HoTT.Algebra.AbGroups",
+      "HoTT.Truncations",
+      "HoTT.Homotopy.Suspension",
+      "HoTT.Homotopy.ClassifyingSpace",
+      "HoTT.Homotopy.HSpace",
+      "HoTT.TruncType"
+    ],
+    "HoTT.Homotopy.ExactSequence": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Homotopy.SuccessorStructure",
+      "HoTT.WildCat",
+      "HoTT.Pointed",
+      "HoTT.Modalities.ReflectiveSubuniverse",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Identity",
+      "HoTT.Modalities.Descent",
+      "HoTT.Truncations",
+      "HoTT.HFiber"
+    ],
+    "HoTT.Homotopy.Freudenthal": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Colimits.Pushout",
+      "HoTT.Colimits.SpanPushout",
+      "HoTT.Truncations",
+      "HoTT.Homotopy.Join",
+      "HoTT.Homotopy.Suspension",
+      "HoTT.Homotopy.BlakersMassey"
+    ],
+    "HoTT.Homotopy.HSpace": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Truncations",
+      "HoTT.Classes.interfaces.abstract_algebra"
+    ],
+    "HoTT.Homotopy.HSpaceS1": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical",
+      "HoTT.Homotopy.Suspension",
+      "HoTT.Homotopy.HSpace",
+      "HoTT.Spaces.Spheres"
+    ],
+    "HoTT.Homotopy.HomotopyGroup": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed",
+      "HoTT.Algebra.AbGroups",
+      "HoTT.Truncations",
+      "HoTT.Spaces.Nat",
+      "HoTT.Modalities.ReflectiveSubuniverse",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Homotopy.Join": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.NullHomotopy",
+      "HoTT.Extensions",
+      "HoTT.Colimits.Pushout",
+      "HoTT.Truncations"
+    ],
+    "HoTT.Homotopy.Pi1S1": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed",
+      "HoTT.Spaces.Int",
+      "HoTT.Spaces.Circle",
+      "HoTT.Spaces.Spheres",
+      "HoTT.Algebra.AbGroups",
+      "HoTT.Homotopy.HomotopyGroup",
+      "HoTT.Truncations"
+    ],
+    "HoTT.Homotopy.Smash": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Pointed.Core",
+      "HoTT.Types",
+      "HoTT.Colimits.Pushout",
+      "HoTT.Cubical"
+    ],
+    "HoTT.Homotopy.SuccessorStructure": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Spaces.Nat",
+      "HoTT.Spaces.Int",
+      "HoTT.Spaces.Finite"
+    ],
+    "HoTT.Homotopy.Suspension": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical",
+      "HoTT.WildCat",
+      "HoTT.Colimits.Pushout",
+      "HoTT.NullHomotopy",
+      "HoTT.Truncations.Core",
+      "HoTT.Modalities.ReflectiveSubuniverse",
+      "HoTT.Modalities.Modality",
+      "HoTT.Extensions"
+    ],
+    "HoTT.Homotopy.Wedge": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Pointed.Core",
+      "HoTT.Colimits.Pushout"
+    ],
+    "HoTT.Homotopy.WhiteheadsPrinciple": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed",
+      "HoTT.HFiber",
+      "HoTT.Algebra.Groups",
+      "HoTT.Homotopy.HomotopyGroup",
+      "HoTT.Truncations"
+    ],
+    "HoTT.Limits.Equalizer": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types.Sigma",
+      "HoTT.Types.Paths"
+    ],
+    "HoTT.Limits.Limit": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Diagrams.Diagram",
+      "HoTT.Diagrams.Graph",
+      "HoTT.Diagrams.Cone",
+      "HoTT.Diagrams.ConstantDiagram"
+    ],
+    "HoTT.Limits.Pullback": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HFiber",
+      "HoTT.PathAny",
+      "HoTT.Cubical.PathSquare",
+      "HoTT.Diagrams.CommutativeSquares"
+    ],
+    "HoTT.Metatheory.Core": [ "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Metatheory.FunextVarieties": [ "HoTT.Basics", "HoTT.Types", "HoTT.Metatheory.Core" ],
+    "HoTT.Metatheory.IntervalImpliesFunext": [
+      "HoTT.Basics",
+      "HoTT.HIT.Interval",
+      "HoTT.Metatheory.Core",
+      "HoTT.Metatheory.FunextVarieties"
+    ],
+    "HoTT.Metatheory.TruncImpliesFunext": [
+      "HoTT.Basics",
+      "HoTT.Truncations",
+      "HoTT.Types.Bool",
+      "HoTT.Metatheory.Core",
+      "HoTT.Metatheory.FunextVarieties"
+    ],
+    "HoTT.Metatheory.UnivalenceImpliesFunext": [
+      "HoTT.Basics",
+      "HoTT.Types.Universe",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Unit",
+      "HoTT.Metatheory.Core",
+      "HoTT.Metatheory.FunextVarieties"
+    ],
+    "HoTT.Metatheory.UnivalenceVarieties": [ "HoTT.Basics", "HoTT.Types", "HoTT.Idempotents", "HoTT.Metatheory.Core" ],
+    "HoTT.Modalities.Accessible": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Extensions",
+      "HoTT.NullHomotopy",
+      "HoTT.Modalities.ReflectiveSubuniverse",
+      "HoTT.Modalities.Modality"
+    ],
+    "HoTT.Modalities.Closed": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.TruncType",
+      "HoTT.Extensions",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Accessible",
+      "HoTT.Modalities.Nullification",
+      "HoTT.Modalities.Lex",
+      "HoTT.Modalities.Topological",
+      "HoTT.Colimits.Pushout",
+      "HoTT.Homotopy.Join"
+    ],
+    "HoTT.Modalities.CoreflectiveSubuniverse": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Open"
+    ],
+    "HoTT.Modalities.Descent": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HFiber",
+      "HoTT.Extensions",
+      "HoTT.Limits.Pullback",
+      "HoTT.Modalities.ReflectiveSubuniverse",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Accessible",
+      "HoTT.Modalities.Localization"
+    ],
+    "HoTT.Modalities.Fracture": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Extensions",
+      "HoTT.Limits.Pullback",
+      "HoTT.NullHomotopy",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Lex",
+      "HoTT.Modalities.Open",
+      "HoTT.Modalities.Closed",
+      "HoTT.Modalities.Nullification"
+    ],
+    "HoTT.Modalities.Identity": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Accessible"
+    ],
+    "HoTT.Modalities.Lex": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HFiber",
+      "HoTT.Extensions",
+      "HoTT.Limits.Pullback",
+      "HoTT.NullHomotopy",
+      "HoTT.Factorization",
+      "HoTT.PathAny",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Accessible",
+      "HoTT.Modalities.Localization",
+      "HoTT.Modalities.Descent",
+      "HoTT.Modalities.Separated"
+    ],
+    "HoTT.Modalities.Localization": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical",
+      "HoTT.Extensions",
+      "HoTT.Modalities.ReflectiveSubuniverse",
+      "HoTT.Modalities.Accessible"
+    ],
+    "HoTT.Modalities.Modality": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HFiber",
+      "HoTT.Extensions",
+      "HoTT.Factorization",
+      "HoTT.NullHomotopy",
+      "HoTT.Limits.Pullback",
+      "HoTT.Modalities.ReflectiveSubuniverse"
+    ],
+    "HoTT.Modalities.Notnot": [ "HoTT.Basics", "HoTT.Types", "HoTT.Modalities.Modality" ],
+    "HoTT.Modalities.Nullification": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical",
+      "HoTT.Extensions",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Accessible",
+      "HoTT.Modalities.Localization",
+      "HoTT.Homotopy.Suspension"
+    ],
+    "HoTT.Modalities.Open": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.TruncType",
+      "HoTT.Extensions",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Accessible",
+      "HoTT.Modalities.Nullification",
+      "HoTT.Modalities.Lex"
+    ],
+    "HoTT.Modalities.ReflectiveSubuniverse": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Equiv.BiInv",
+      "HoTT.Extensions",
+      "HoTT.HProp",
+      "HoTT.HFiber",
+      "HoTT.NullHomotopy",
+      "HoTT.Limits.Pullback",
+      "HoTT.PathAny",
+      "HoTT.HIT.Coeq",
+      "HoTT.Colimits.Pushout"
+    ],
+    "HoTT.Modalities.Separated": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical.DPath",
+      "HoTT.HFiber",
+      "HoTT.Extensions",
+      "HoTT.Factorization",
+      "HoTT.Modalities.ReflectiveSubuniverse",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Accessible",
+      "HoTT.Modalities.Localization",
+      "HoTT.Modalities.Descent",
+      "HoTT.Truncations.Core",
+      "HoTT.Homotopy.Suspension"
+    ],
+    "HoTT.Modalities.Topological": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.Extensions",
+      "HoTT.Truncations",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Accessible",
+      "HoTT.Modalities.Lex",
+      "HoTT.Modalities.Nullification"
+    ],
+    "HoTT.Pointed.Core": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.PathAny",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Pointed.Loops": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HSet",
+      "HoTT.HFiber",
+      "HoTT.Factorization",
+      "HoTT.Truncations",
+      "HoTT.HProp",
+      "HoTT.Pointed.Core",
+      "HoTT.Pointed.pMap",
+      "HoTT.Pointed.pEquiv",
+      "HoTT.Pointed.pHomotopy",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Pointed.pEquiv": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.WildCat",
+      "HoTT.Pointed.Core",
+      "HoTT.Pointed.pMap",
+      "HoTT.Pointed.pHomotopy"
+    ],
+    "HoTT.Pointed.pFiber": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HFiber",
+      "HoTT.Pointed.Core",
+      "HoTT.Pointed.pEquiv",
+      "HoTT.Pointed.Loops"
+    ],
+    "HoTT.Pointed.pHomotopy": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed.Core",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Pointed.pMap": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.PathAny",
+      "HoTT.Pointed.Core",
+      "HoTT.Pointed.pHomotopy",
+      "HoTT.WildCat"
+    ],
+    "HoTT.Pointed.pSusp": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed.Core",
+      "HoTT.Pointed.Loops",
+      "HoTT.Pointed.pMap",
+      "HoTT.Pointed.pHomotopy",
+      "HoTT.Pointed.pTrunc",
+      "HoTT.Pointed.pEquiv",
+      "HoTT.Homotopy.Suspension",
+      "HoTT.Homotopy.Freudenthal",
+      "HoTT.Truncations"
+    ],
+    "HoTT.Pointed.pTrunc": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed.Core",
+      "HoTT.Pointed.pMap",
+      "HoTT.Pointed.pEquiv",
+      "HoTT.Pointed.Loops",
+      "HoTT.Truncations"
+    ],
+    "HoTT.PropResizing.ImpredicativeTruncation": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.PropResizing.PropResizing"
+    ],
+    "HoTT.PropResizing.Nat": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.PropResizing.PropResizing",
+      "HoTT.PropResizing.ImpredicativeTruncation"
+    ],
+    "HoTT.PropResizing.PropResizing": [ "HoTT.Basics", "HoTT.Types", "HoTT.HProp" ],
+    "HoTT.Spaces.BAut": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.Constant",
+      "HoTT.Factorization",
+      "HoTT.Modalities.Modality",
+      "HoTT.Truncations",
+      "HoTT.Algebra.ooGroup",
+      "HoTT.Algebra.Aut"
+    ],
+    "HoTT.Spaces.Cantor": [ "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Spaces.Card": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HSet",
+      "HoTT.TruncType",
+      "HoTT.Classes.interfaces.abstract_algebra",
+      "HoTT.Truncations"
+    ],
+    "HoTT.Spaces.Circle": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.HSet",
+      "HoTT.Spaces.Pos",
+      "HoTT.Spaces.Int",
+      "HoTT.HIT.Coeq",
+      "HoTT.Modalities.Modality",
+      "HoTT.Truncations",
+      "HoTT.Cubical.DPath"
+    ],
+    "HoTT.Spaces.Finite": [
+      "HoTT.Spaces.Finite.Fin",
+      "HoTT.Spaces.Finite.FinNat",
+      "HoTT.Spaces.Finite.FinInduction",
+      "HoTT.Spaces.Finite.Finite",
+      "HoTT.Spaces.Finite.Tactics"
+    ],
+    "HoTT.Spaces.Int": [
+      "HoTT.Spaces.Int.Core",
+      "HoTT.Spaces.Int.Spec",
+      "HoTT.Spaces.Int.Equiv",
+      "HoTT.Spaces.Int.LoopExp"
+    ],
+    "HoTT.Spaces.List": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Spaces.Nat": [
+      "HoTT.Basics",
+      "HoTT.Types.Bool",
+      "HoTT.TruncType",
+      "HoTT.DProp",
+      "HoTT.Basics.Nat"
+    ],
+    "HoTT.Spaces.No": [
+      "HoTT.Spaces.No.Core",
+      "HoTT.Spaces.No.Negation",
+      "HoTT.Spaces.No.Addition"
+    ],
+    "HoTT.Spaces.Pos": [ "HoTT.Spaces.Pos.Core", "HoTT.Spaces.Pos.Spec" ],
+    "HoTT.Spaces.Spheres": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.NullHomotopy",
+      "HoTT.Homotopy.Suspension",
+      "HoTT.Pointed",
+      "HoTT.Truncations",
+      "HoTT.Spaces.Circle",
+      "HoTT.Spaces.TwoSphere"
+    ],
+    "HoTT.Spaces.TwoSphere": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.Types", "HoTT.HSet" ],
+    "HoTT.Spaces.Universe": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.Modalities.Modality",
+      "HoTT.Truncations",
+      "HoTT.Spaces.BAut",
+      "HoTT.Spaces.BAut.Rigid",
+      "HoTT.ExcludedMiddle"
+    ],
+    "HoTT.Spaces.BAut.Bool": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Constant",
+      "HoTT.Factorization",
+      "HoTT.Modalities.Modality",
+      "HoTT.Truncations",
+      "HoTT.Spaces.BAut"
+    ],
+    "HoTT.Spaces.BAut.Cantor": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Idempotents",
+      "HoTT.Truncations",
+      "HoTT.Spaces.BAut",
+      "HoTT.Spaces.Cantor"
+    ],
+    "HoTT.Spaces.BAut.Rigid": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HProp",
+      "HoTT.HFiber",
+      "HoTT.Modalities.Modality",
+      "HoTT.Truncations",
+      "HoTT.Spaces.BAut"
+    ],
+    "HoTT.Spaces.BAut.Bool.IncoherentIdempotent": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Equiv.BiInv",
+      "HoTT.Idempotents",
+      "HoTT.Spaces.BAut",
+      "HoTT.Spaces.BAut.Bool"
+    ],
+    "HoTT.Spaces.Finite.Fin": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HSet",
+      "HoTT.DProp",
+      "HoTT.Spaces.Nat",
+      "HoTT.Equiv.PathSplit"
+    ],
+    "HoTT.Spaces.Finite.FinInduction": [ "HoTT.Basics" ],
+    "HoTT.Spaces.Finite.FinNat": [ "HoTT.Basics" ],
+    "HoTT.Spaces.Finite.FinSeq": [ "HoTT.Basics" ],
+    "HoTT.Spaces.Finite.Finite": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.HSet",
+      "HoTT.HProp",
+      "HoTT.DProp",
+      "HoTT.Spaces.Nat",
+      "HoTT.HFiber",
+      "HoTT.Factorization",
+      "HoTT.Equiv.PathSplit",
+      "HoTT.Truncations",
+      "HoTT.Colimits.Quotient",
+      "HoTT.Projective",
+      "Coq.Vectors.Fin",
+      "HoTT.Spaces.Finite.Fin"
+    ],
+    "HoTT.Spaces.Finite.Tactics": [ "HoTT.Basics", "Coq.Vectors.Fin", "HoTT.Spaces.Finite.Fin" ],
+    "HoTT.Spaces.Int.Core": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.Spaces.Pos" ],
+    "HoTT.Spaces.Int.Equiv": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Spaces.Pos",
+      "HoTT.Spaces.Int.Core",
+      "HoTT.Spaces.Int.Spec"
+    ],
+    "HoTT.Spaces.Int.LoopExp": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types.Universe",
+      "HoTT.Spaces.Pos",
+      "HoTT.Spaces.Int.Core",
+      "HoTT.Spaces.Int.Spec",
+      "HoTT.Spaces.Int.Equiv"
+    ],
+    "HoTT.Spaces.Int.Spec": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Spaces.Pos",
+      "HoTT.Spaces.Int.Core"
+    ],
+    "HoTT.Spaces.No.Addition": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Spaces.No.Core",
+      "HoTT.Spaces.No.Negation"
+    ],
+    "HoTT.Spaces.No.Core": [
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.TruncType",
+      "HoTT.HSet",
+      "HoTT.Truncations"
+    ],
+    "HoTT.Spaces.No.Negation": [ "HoTT.Basics", "HoTT.Types", "HoTT.Spaces.No.Core" ],
+    "HoTT.Spaces.Pos.Core": [ "Coq.Program.Basics", "HoTT.Basics" ],
+    "HoTT.Spaces.Pos.Spec": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.Spaces.Pos.Core" ],
+    "HoTT.Spaces.Torus.Torus": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical",
+      "HoTT.Spaces.Circle"
+    ],
+    "HoTT.Spaces.Torus.TorusEquivCircles": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Cubical",
+      "HoTT.Spaces.Circle",
+      "HoTT.Spaces.Torus.Torus"
+    ],
+    "HoTT.Spaces.Torus.TorusHomotopy": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed",
+      "HoTT.Algebra.AbGroups",
+      "HoTT.Homotopy.HomotopyGroup",
+      "HoTT.Homotopy.Pi1S1",
+      "HoTT.Spaces.Int",
+      "HoTT.Spaces.Circle",
+      "HoTT.Truncations",
+      "HoTT.Spaces.Torus.Torus",
+      "HoTT.Spaces.Torus.TorusEquivCircles"
+    ],
+    "HoTT.Spectra.Coinductive": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.Pointed",
+      "HoTT.Truncations",
+      "HoTT.Homotopy.Suspension"
+    ],
+    "HoTT.Spectra.Spectrum": [ "HoTT.Basics", "HoTT.Types", "HoTT.Pointed", "HoTT.Truncations" ],
+    "HoTT.Tactics.BinderApply": [ "HoTT.Basics.Overture", "HoTT.Basics.Tactics", "HoTT.Tactics.EvalIn" ],
+    "HoTT.Tactics.EquivalenceInduction": [ "HoTT.Basics", "HoTT.Types" ],
+    "HoTT.Tactics.EvalIn": [ "HoTT.Basics.Overture", "HoTT.Basics.PathGroupoids" ],
+    "HoTT.Tactics.Nameless": [ "HoTT.Basics.Overture" ],
+    "HoTT.Tactics.RewriteModuloAssociativity": [
+      "HoTT.Basics.Overture",
+      "HoTT.Basics.PathGroupoids",
+      "HoTT.Tactics.BinderApply"
+    ],
+    "HoTT.Truncations.Connectedness": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.TruncType",
+      "HoTT.HProp",
+      "HoTT.Extensions",
+      "HoTT.Factorization",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Descent",
+      "HoTT.Modalities.Separated",
+      "HoTT.Truncations.Core"
+    ],
+    "HoTT.Truncations.Core": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.Types",
+      "HoTT.TruncType",
+      "HoTT.HProp",
+      "HoTT.Modalities.Modality",
+      "HoTT.Modalities.Descent"
+    ],
+    "HoTT.Types.Arrow": [ "HoTT.Basics", "HoTT.Types.Paths", "HoTT.Types.Forall" ],
+    "HoTT.Types.Bool": [ "HoTT.Basics", "HoTT.Types.Prod", "HoTT.Types.Equiv" ],
+    "HoTT.Types.Empty": [ "HoTT.Basics" ],
+    "HoTT.Types.Equiv": [
+      "HoTT.Basics",
+      "HoTT.Types.Prod",
+      "HoTT.Types.Sigma",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Arrow",
+      "HoTT.Types.Paths"
+    ],
+    "HoTT.Types.Forall": [ "HoTT.Basics", "HoTT.Types.Paths" ],
+    "HoTT.Types.Paths": [ "HoTT.Basics" ],
+    "HoTT.Types.Prod": [ "HoTT.Basics", "HoTT.Types.Empty", "HoTT.Types.Unit" ],
+    "HoTT.Types.Sigma": [
+      "HoTT.Basics",
+      "HoTT.Types.Arrow",
+      "HoTT.Types.Prod",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Unit"
+    ],
+    "HoTT.Types.Sum": [
+      "HoTT.Basics",
+      "HoTT.Types.Empty",
+      "HoTT.Types.Unit",
+      "HoTT.Types.Prod",
+      "HoTT.Types.Sigma",
+      "HoTT.Types.Bool",
+      "HoTT.Types.Forall"
+    ],
+    "HoTT.Types.Unit": [ "HoTT.Basics" ],
+    "HoTT.Types.Universe": [
+      "HoTT.Basics",
+      "HoTT.Types.Sigma",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Arrow",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Equiv",
+      "HoTT.Types.Bool",
+      "HoTT.Types.Prod"
+    ],
+    "HoTT.Types.Wtype": [
+      "HoTT.Basics",
+      "HoTT.Types.Forall",
+      "HoTT.Types.Sigma",
+      "HoTT.Types.Paths",
+      "HoTT.Types.Unit"
+    ],
+    "HoTT.WildCat.Core": [ "Coq.Program.Basics", "HoTT.Basics" ],
+    "HoTT.WildCat.EmptyCat": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.WildCat.Core" ],
+    "HoTT.WildCat.Equiv": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.WildCat.Core" ],
+    "HoTT.WildCat.EquivGpd": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.WildCat.Core",
+      "HoTT.WildCat.NatTrans",
+      "HoTT.WildCat.Sigma"
+    ],
+    "HoTT.WildCat.Forall": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.WildCat.Core" ],
+    "HoTT.WildCat.FunctorCat": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.WildCat.Core",
+      "HoTT.WildCat.Equiv",
+      "HoTT.WildCat.Induced",
+      "HoTT.WildCat.NatTrans"
+    ],
+    "HoTT.WildCat.Induced": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.WildCat.Core",
+      "HoTT.WildCat.Equiv"
+    ],
+    "HoTT.WildCat.NatTrans": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.WildCat.Core" ],
+    "HoTT.WildCat.Opposite": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.WildCat.Core",
+      "HoTT.WildCat.Equiv",
+      "HoTT.WildCat.NatTrans"
+    ],
+    "HoTT.WildCat.Paths": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.WildCat.Core" ],
+    "HoTT.WildCat.PointedCat": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.WildCat.Core" ],
+    "HoTT.WildCat.Prod": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.WildCat.Core",
+      "HoTT.WildCat.Equiv"
+    ],
+    "HoTT.WildCat.Sigma": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.WildCat.Core" ],
+    "HoTT.WildCat.Square": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.WildCat.Core",
+      "HoTT.WildCat.Equiv"
+    ],
+    "HoTT.WildCat.Sum": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.WildCat.Core" ],
+    "HoTT.WildCat.TwoOneCat": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.WildCat.Core",
+      "HoTT.WildCat.Prod",
+      "HoTT.WildCat.NatTrans"
+    ],
+    "HoTT.WildCat.Type": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.WildCat.Core",
+      "HoTT.WildCat.Equiv"
+    ],
+    "HoTT.WildCat.UnitCat": [ "Coq.Program.Basics", "HoTT.Basics", "HoTT.WildCat.Core" ],
+    "HoTT.WildCat.Yoneda": [
+      "Coq.Program.Basics",
+      "HoTT.Basics",
+      "HoTT.WildCat.Core",
+      "HoTT.WildCat.Equiv",
+      "HoTT.WildCat.Type",
+      "HoTT.WildCat.Opposite",
+      "HoTT.WildCat.FunctorCat",
+      "HoTT.WildCat.NatTrans",
+      "HoTT.WildCat.Prod"
+    ]
+  }
+}

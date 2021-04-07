@@ -1,0 +1,376 @@
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.js:2747:25
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.js:2747:25
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.js:2747:25
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.min.js:7:5938
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.min.js:7:28802
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.min.js:7:28802
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.min.js:7:28802
+Error: Error: No available storage method found.
+    at driverPromiseLoop (http://localhost:9999/dist/localforage.js:2718:33)
+Error: Error: No available storage method found.
+    at driverPromiseLoop (http://localhost:9999/dist/localforage.js:2718:33)
+Error: Error: No available storage method found.
+    at driverPromiseLoop (http://localhost:9999/dist/localforage.js:2718:33)
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.js:2747:25
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.js:2747:25
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.browserify.js:446:13
+Error: Error: No available storage method found.
+    at http://localhost:9999/test/localforage.browserify.js:2749:25
+Error: Error: No available storage method found.
+    at http://localhost:9999/test/localforage.browserify.js:2749:25
+Error: Error: No available storage method found.
+    at http://localhost:9999/test/localforage.browserify.js:2749:25
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.js:2747:25
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.js:2747:25
+Error: Error: No available storage method found.
+    at http://localhost:9999/dist/localforage.js:2747:25
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/dist/localforage.js:444:13
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: Thrown test error
+    at throwFunc (http://localhost:9999/test/test.api.js:1624:27)
+    at http://localhost:9999/test/localforage.webpack.js:502:14
+Error: Error: No available storage method found.
+    at http://localhost:9999/test/localforage.webpack.js:2805:26
+Error: Error: No available storage method found.
+    at http://localhost:9999/test/localforage.webpack.js:2805:26
+Error: Error: No available storage method found.
+    at http://localhost:9999/test/localforage.webpack.js:2805:26

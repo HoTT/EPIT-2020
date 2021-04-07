@@ -10,8 +10,8 @@ Teaching assistants for the exercise session:
 
 ## Background reading
 
-Participants are strongly encouraged to look at the following material
-*before* the course starts:
+Participants are encouraged to look at the following material before
+the course starts:
 
 - Video recording of
   [Every proof assistant: Cubical Agda](https://vimeo.com/459020971)
@@ -22,8 +22,10 @@ Participants are strongly encouraged to look at the following material
   [Internalizing Representation Independence with Univalence](https://arxiv.org/abs/2009.05547)
 
 It is not necessary to actually learn or understand all of the above
-material. However, at least taking a look at it will definitely help a
-lot with following the course.
+material and we will not assume that everyone has looked at
+it. However, at least taking a look at it will definitely help with
+following the course and many of the examples will be taken from the
+above sources.
 
 The lecture notes
 [Cubical Methods in Homotopy Type Theory and Univalent Foundations](https://staff.math.su.se/anders.mortberg/papers/cubicalmethods.pdf)
@@ -41,7 +43,7 @@ One also needs to download and build v0.2 of the agda/cubical library:
 https://github.com/agda/cubical/releases/tag/v0.2
 
 If one has installed Agda and have the `agda` executable in ones path
-then building v0.2 of the library should work by running `make` in the
+then building the library should work by running `make` in the
 cubical-0.2 directory after unpacking the v0.2 package. If one wants
 to use the agda/cubical library in another directory one has to
 register it by following:
@@ -83,23 +85,23 @@ All times are in UTC+2 (i.e. Stockholm time).
 ### Part 2: The interval and path types
 
 * The interval in Cubical Agda
-* Path and PathP types
+* `Path` and `PathP` types
 * Function extensionality
-* Equality in Sigma types
+* Equality in Σ-types
 
 ### Part 3: Transport and composition
 
-* Cubical transport
-* Subst as a special case of cubical transport
-* Path induction from subst?
-* Homogeneous composition (hcomp)
-* Binary composition of paths as special case of hcomp
+* Cubical `transport`
+* Subst as a special case of cubical `transport`
+* Path induction from `subst`?
+* Homogeneous composition (`hcomp`)
+* Binary composition of paths as special case of `hcomp`
 
 ### Part 4: Univalence and the SIP
 
-* Univalence from ua and uabeta
-* Transporting with ua (examples: `ua not : Bool = Bool`, `ua suc : Z = Z`, ...)
-* Subst using ua
+* Univalence from `ua` and `uaβ`
+* Transporting with `ua` (examples: `ua not : Bool = Bool`, `ua suc : Z = Z`, ...)
+* Subst using `ua`
 * The SIP as a consequence of `ua`
 * Examples of using the SIP for math and programming (algebra, data structures, etc.)
 

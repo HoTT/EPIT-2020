@@ -2,13 +2,17 @@
 
 Lecturer: [Anders Mörtberg](https://staff.math.su.se/anders.mortberg/)
 
-Installation instructions for Cubical Agda and the [agda/cubical](https://github.com/agda/cubical) library
-can be found [here](https://github.com/agda/cubical/blob/master/INSTALL.md).
-It can be a bit complicated to install the development version of Agda and
-Anders uses the "cabal sandbox install instructions" solution.
+## Installation of Cubical Agda and agda/cubical
 
-It might be easier to use Agda 2.6.1 instead of the latest development
-version, you can then check out the tag v0.2 of the [agda/cubical](https://github.com/agda/cubical) library.
+In order to follow the course one needs a recent release of Agda (version >=2.6.1): https://wiki.portal.chalmers.se/agda/Main/Download
+
+One also needs to download and build v0.2 of the agda/cubical library: https://github.com/agda/cubical/releases/tag/v0.2
+
+If one has installed Agda (2.6.3) and have the `agda` executable in ones path then building v0.2 of the library should work by running `make` in the cubical-0.2 directory after unpacking the v0.2 package. If one wants to use the agda/cubical library in another directory one has to register it by following: https://github.com/agda/cubical/blob/master/INSTALL.md#registering-the-cubical-library
+
+Students with the intention to contribute to the library will need to install the development version of Agda and the latest version of the [agda/cubical](https://github.com/agda/cubical) library. Detailed instructions can be found at: https://github.com/agda/cubical/blob/master/INSTALL.md
+
+It can be a bit complicated to install the development version of Agda and Anders uses the "cabal sandbox install instructions" solution, but other solutions might work better on other systems.
 
 ## Schedule
 

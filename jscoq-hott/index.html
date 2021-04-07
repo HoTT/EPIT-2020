@@ -64,7 +64,6 @@
       <span class="jscoq-name">jsCoq</span> is an interactive,
       web-based environment for the Coq Theorem prover, that runs Coq directly in your browser  
     </p>
-    <p>
     <h4>Instructions:</h4>
     <p>
       The following document contains embedded Coq code.
@@ -104,7 +103,7 @@
       other users in a manner that is similar to Pastebin.
     </p>
 
-    <h4>A HoTT example/h4>
+    <h4>A HoTT example</h4>
     <p>
       This instance of jsCoq provides support only for the
       <a href="http://github.com/HoTT/HoTT/">HoTT library</a>. 
@@ -124,7 +123,7 @@ Open Scope nat_scope.  </textarea>
       Once the basic environment has been set up, we can proceed to
       do a simple proof:
     </p>
-  </div> <!-- panel-heading -->
+  </div>
   <div>
     <textarea id="hottlemma" >
 (* A proof that natural numbers have decidable equality. *)
@@ -158,7 +157,7 @@ Proof.
     * right. </textarea>
 <p>The proof then proceeds by case analysis over <code>y</code> in both subgoals.
    We find ourselves in a state where we must show that if <code>x, y</code> are 
-   two different successors, then the underlying numbers are themselves different.
+   two different numbers, then their successors must also be different.
    This is a common consequence of the injectivity of constructors of inductive types. 
    Let's look for a lemma to apply: </p>
 <textarea id="hottproof2">
@@ -180,11 +179,10 @@ Qed. </textarea>
         prelude: false,
         implicit_libs: false,
         focus: false,
+        base_path: './',
         init_pkgs: ['hott', 'init'],
         all_pkgs:  ['hott', 'coq'],
-        file_dialog: true,
-        editor: { mode: { 'company-coq': true }, theme: editor_theme },
-        theme: panel_theme
+        editor: { mode: { 'company-coq': true } }
     };
 
     /* Global reference */

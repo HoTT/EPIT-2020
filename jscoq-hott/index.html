@@ -59,20 +59,12 @@
   <div id="document">
   <a id="scratchpad" href="examples/scratchpad.html" title="Open scratchpad"></a>
   <div>
-    <h3>Welcome to the <span class="jscoq-name">jsCoq</span> Interactive Online System!</h3>
+    <h3>Welcome to the HoTT-Coq JsCoq Instance!</h3>
     <p>
-      Welcome to the <span class="jscoq-name">jsCoq</span> technology demo!
       <span class="jscoq-name">jsCoq</span> is an interactive,
-      web-based environment for the Coq Theorem prover, and is a collaborative
-      development effort. See the <a href="#team">list of contributors</a>
-      below.
+      web-based environment for the Coq Theorem prover, that runs Coq directly in your browser  
     </p>
     <p>
-      <span class="jscoq-name">jsCoq</span> is open source. If you find any problem or want to make
-      any contribution, you are extremely welcome! We await your
-      feedback at <a href="https://github.com/ejgallego/jscoq">GitHub</a>
-      and <a href="https://gitter.im/jscoq/Lobby">Gitter</a>.
-    </p>
     <h4>Instructions:</h4>
     <p>
       The following document contains embedded Coq code.
@@ -112,118 +104,69 @@
       other users in a manner that is similar to Pastebin.
     </p>
 
-    <h4>A First Example: The Infinitude of Primes</h4>
+    <h4>A HoTT example/h4>
     <p>
-      We don't provide a Coq tutorial (yet), but as a showcase, we
-      display a proof of the infinitude of primes in Coq.  The proof relies
-      on the Mathematical Components library by the
-      <a href="http://ssr.msr-inria.inria.fr/">MSR/Inria</a> team led
-      by Georges Gonthier, so our first step will be to load it and
-      set a few Coq options:
+      This instance of jsCoq provides support only for the
+      <a href="http://github.com/HoTT/HoTT/">HoTT library</a>. 
+      Our first step will be to load its prelude:
     </p>
   </div>
   <div>
-    <textarea id="addnC" >
-From Coq Require Import ssreflect ssrfun ssrbool.
-From mathcomp Require Import eqtype ssrnat div prime. </textarea>
+    <textarea id="imports" >
+From HoTT Require Import Overture.
+From HoTT Require Import Spaces.Nat.
+Import Decidable.
+Open Scope nat_scope.  </textarea>
   </div>
   <div>
     <h5>Ready to do Proofs!</h5>
     <p>
       Once the basic environment has been set up, we can proceed to
-      the proof:
+      do a simple proof:
     </p>
   </div> <!-- panel-heading -->
   <div>
-    <textarea id="prime_above1" >
-(* A nice proof of the infinitude of primes, by Georges Gonthier *)
-Lemma prime_above m : {p | m < p & prime p}.
-Proof. </textarea>
-    <p>
-      The lemma states that for any number <code>m</code>,
-      there is a prime number larger than <code>m</code>.
+    <textarea id="hottlemma" >
+(* A proof that natural numbers have decidable equality. *)
 
-      Coq is a <em>constructive system</em>, which among other things
-      implies that to show the existence of an object, we need to
-      actually provide an algorithm that will construct it.
+Lemma decidable_nat_eq (x y : nat) : Decidable (x = y).
+Proof.
+</textarea>
+<p>
+  The lemma states that for any two natural numbers <code>m</code> and <code>n</code>,
+  we can decide their equality.
 
-      In this case, we need to find a prime number <code>p</code>
-      that is greater than <code>m</code>.
-      What would be a suitable <code>p</code>?
+  Coq is a <em>constructive system</em>, which among other things
+  implies that to show the existence of an object, we need to
+  actually provide an algorithm that will construct it.
 
-      Choosing <code>p</code> to be the first prime divisor of <code>m! + 1</code>
-      works.
-      As we will shortly see, properties of divisibility will imply that
-      <code>p</code> must be greater than <code>m</code>.
-    </p>
-    <textarea id="prime_above2" >
-have /pdivP[p pr_p p_dv_m1]: 1 < m`! + 1
-  by rewrite addn1 ltnS fact_gt0.</textarea>
-    <p>
-      Our first step is thus to use the library-provided lemma
-      <code>pdivP</code>, which states that every number is divided by a
-      prime. Thus, we obtain a number <code>p</code> and the corresponding
-      hypotheses <code>pr_p : prime p</code> and <code>p_dv_m1</code>,
-      "p divides m! + 1".
-      The ssreflect tactic <code>have</code> provides a convenient way to
-      instantiate this lemma and discard the side proof obligation
-      <code>1 &lt; m! + 1</code>.
-    </p>
-    <textarea id="prime_above3" >
-exists p => //; rewrite ltnNge; apply: contraL p_dv_m1 => p_le_m.</textarea>
-    <p>
-      It remains to prove that <code>p</code> is greater than <code>m</code>.
-      We reason by
-      contraposition with the divisibility hypothesis, which gives us
-      the goal "if <code>p ≤ m</code> then <code>p</code> is not a prime divisor of 
-      <code>m! + 1</code>".
-    </p>
-    <textarea id="prime_above4" >
-by rewrite dvdn_addr ?dvdn_fact ?prime_gt0 // gtnNdvd ?prime_gt1.
-Qed.</textarea>
-    <p>
-      The goal follows from basic properties of divisibility, plus
-      from the fact that if <code>p ≤ m</code>, then <code>p</code> divides
-      <code>m!</code>, so that for <code>p</code> to divide
-      <code>m! + 1</code> it must also divide 1,
-      in contradiction to <code>p</code> being prime.
-    </p>
-    <hr/>
-  <p>
-    <span class="jscoq-name">jsCoq</span> provides many other packages,
-    including Coq's standard library and the
-    <a href="https://math-comp.github.io"></a>mathematical components</a>
-    library.
-    Feel free to experiment, and bear with the beta status of this demo.
-  </p>
-  <p>
-    <i>¡Salut!</i>
-  </p>
+  In this case, we need to find a proof of either <code>n = m</code>
+  or <code>m = n</code>.
+</p>
+<textarea id="hottlemmaind" >
+  induction x in y |- *.
+</textarea>
+<p>
+  We proceed by induction on <code></code>x, but we must generalize 
+  the induction hypothesis over any <code>y</code>.
+</p>
+<textarea id="hottproof">
+  - destruct y; [left; reflexivity|right; intros eq; discriminate].
+  - destruct y; [right; intros eq; discriminate|].
+    destruct (IHx y) as [|Hxy].
+    * left; apply ap. assumption.
+    * right. </textarea>
+<p>The proof then proceeds by case analysis over <code>y</code> in both subgoals.
+   We find ourselves in a state where we must show that if <code>x, y</code> are 
+   two different successors, then the underlying numbers are themselves different.
+   This is a common consequence of the injectivity of constructors of inductive types. 
+   Let's look for a lemma to apply: </p>
+<textarea id="hottproof2">
+      Search (_ <> _).
+      now apply not_eq_S.
+Qed. </textarea>
+  <hr/>
   </div> <!-- /#panel body -->
-  <div id="team">
-    <a name="team"></a>
-      <p><i>The dev team</i></p>
-    <ul>
-      <li>
-        <a href="https://www.irif.fr/~gallego/">Emilio Jesús Gallego Arias</a>
-        (<a href="https://www.inria.fr">Inria</a>,
-         <a href="https://u-paris.fr">Université de Paris</a>,
-         <a href="https://www.irif.fr">IRIF</a>)
-      </li>
-      <li>
-        <a href="https://www.cs.technion.ac.il/~shachari/">Shachar Itzhaky</a>
-        (<a href="https://cs.technion.ac.il">Technion</a>)
-      </li>
-    </ul>
-    <p><i>Contributors</i></p>
-    <ul>
-      <li>
-        Benoît Pin
-        (<a href="https://www.cri.ensmp.fr/">CRI</a>,
-         <a href="http://www.mines-paristech.eu">MINES ParisTech</a>)
-      </li>
-    </ul>
-  </div>
   </div> <!-- /#document -->
   </div> <!-- /#code-wrapper -->
   </div> <!-- /#ide-wrapper -->
@@ -231,14 +174,17 @@ Qed.</textarea>
   <script src="ui-js/jscoq-loader.js" type="text/javascript"></script>
   <script type="text/javascript">
 
-    var jscoq_ids  = ['addnC', 'prime_above1', 'prime_above2', 'prime_above3', 'prime_above4' ];
+    var jscoq_ids  = ['imports', 'hottlemma', 'hottlemmaind', 'hottproof', 'hottproof2' ];
+
     var jscoq_opts = {
+        prelude: false,
         implicit_libs: false,
         focus: false,
-        base_path: './',
-        editor: { mode: { 'company-coq': true } },
-        init_pkgs: ['init'],
-        all_pkgs:  ['coq', 'mathcomp', 'equations', 'elpi', 'quickchick', 'lf', 'plf']
+        init_pkgs: ['hott', 'init'],
+        all_pkgs:  ['hott', 'coq'],
+        file_dialog: true,
+        editor: { mode: { 'company-coq': true }, theme: editor_theme },
+        theme: panel_theme
     };
 
     /* Global reference */

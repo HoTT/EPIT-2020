@@ -4,9 +4,11 @@ Lecturer: [Anders Mörtberg](https://staff.math.su.se/anders.mortberg/)
 
 Installation instructions for Cubical Agda and the agda/cubical library
 can be found [here](https://github.com/agda/cubical/blob/master/INSTALL.md).
+It can be a bit complicated to properly install the development version of
+Agda and Anders uses the "cabal sandbox install instructions" solution.
 
-If you want to use Agda 2.6.1 instead of the latest development version,
-you can check out the tag v0.2 of the agda/cubical library.
+It might be easier to use Agda 2.6.1 instead of the latest development
+version, you can then check out the tag v0.2 of the agda/cubical library.
 
 ## Additional material
 

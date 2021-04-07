@@ -8,7 +8,7 @@ Teaching assistants for the exercise session:
 - [Loïc Pujet](https://pujet.fr/)
 - [Max Zeuner](https://www.su.se/english/profiles/maze1512-1.450461)
 
-## Background reading
+## Background material
 
 Participants are encouraged to look at the following material before
 the course starts:

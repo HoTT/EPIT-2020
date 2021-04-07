@@ -13,7 +13,7 @@ Course units are organized into folders:
 We will also have two shorter lectures on:
 
   * The Arend Proof Assistant by Valery Isaev
-  * Directed Homotopy Theory by Paige North
+  * Directed Homotopy Type Theory by Paige North
 
 **The program of the week will be lectures/exercise sessions from 2pm to 6.30pm (UTC+2). We will organize virtual social events in the evening.**
 

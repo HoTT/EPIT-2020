@@ -2,6 +2,12 @@
 
 Lecturer: [Anders Mörtberg](https://staff.math.su.se/anders.mortberg/)
 
+Teaching assistants for the exercise session:
+
+- Axel Ljungström
+- Loïc Pujet
+- Max Zeuner
+
 ## Installation of Cubical Agda and agda/cubical
 
 In order to follow the course one needs a recent release of Agda (version >=2.6.1): https://wiki.portal.chalmers.se/agda/Main/Download

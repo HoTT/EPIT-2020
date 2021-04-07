@@ -16,14 +16,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Optimize map
+      - name: Optimize main map
         uses: thecodingmachine/map-optimizer-action@master
         with:
           map-file: WorkAdventure/map.json
 
+      - name: Optimize classroom map
+        uses: thecodingmachine/map-optimizer-action@master
+        with:
+          map-file: WorkAdventure/classroom.json
+
       - name: Bash
         run: |
-          ls -al
+          ls -al WorkAdventure/
           git config --global user.email "d.negrier@thecodingmachine.com"
           git config --global user.name "David Négrier"
           git checkout main
@@ -39,4 +44,4 @@ jobs:
 
       - name: Bash2
         run: |
-          ls -al
+          ls -al WorkAdventure/

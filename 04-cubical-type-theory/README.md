@@ -1,4 +1,4 @@
-# Cubical Type Theory
+# Cubical Type Theory and Cubical Agda
 
 Lecturer: [Anders Mörtberg](https://staff.math.su.se/anders.mortberg/)
 

@@ -6,15 +6,15 @@
                 if (path.endsWith('index.html')) {
                     path = path.substr(path, path.length - 'index.html'.length);
                 }
-                var url = 'https://play.workadventu.re/_/global/'+window.location.host+path+'map.json';
+                var url = 'https://play.workadventu.re/_/global/'+window.location.host+path+'WorkAdventure/map.json';
                 document.getElementById('mapLink').href = url;
                 document.getElementById('mapLink').innerText = url;
             };
         </script>
     </head>
     <body>
-        This website contains a map for <a href="https://workadventu.re">Workadventu.re</a>.
-        <br/>
-        You can access this map at <a id="mapLink" href=""></a>
+        This website contains a <a href="https://github.com/jscoq/jscoq">jscoq</a> instance for HoTT available <a href="https://hott.github.io/EPIT-2020/jscoq-hott/">here</a>
+        and a map for <a href="https://workadventu.re">Workadventu.re</a>.
+        that you can access at <a id="mapLink" href=""></a>
     </body>
 </html>

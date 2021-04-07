@@ -2,12 +2,22 @@
 
 Lecturer: [Anders Mörtberg](https://staff.math.su.se/anders.mortberg/)
 
+Installation instructions for Cubical Agda and the agda/cubical library
+can be found [here](https://github.com/agda/cubical/blob/master/INSTALL.md).
+
+If you want to use Agda 2.6.1 instead of the latest development version,
+you can check out the tag v0.2 of the agda/cubical library.
+
+## Additional material
+
+
+- [Cubical Methods in Homotopy Type Theory and Univalent Foundations](https://staff.math.su.se/anders.mortberg/papers/cubicalmethods.pdf) - Lecture notes for the 2019 HoTT Summer School. 
+- [Cubical Agda: A dependently typed programming language with univalence and higher inductive types](https://www.doi.org/10.1017/S0956796821000034) - Paper about Cubical Agda.
+
 ## Schedule
 
 The online lectures will take place on Thursday, April 15, 2021.
 All times are in UTC+2.
-
-Very rough plan:
 
 | Time        | Topic                                      |
 |:------------|:-------------------------------------------|
@@ -49,14 +59,14 @@ Very rough plan:
 
 * TODO
 
-### Part 3: Transport and hcomp
+### Part 3: Transport and composition
 
 #### Lecture
 
 * Cubical transport
-* Subst as special case of cubical transport
+* Subst as a special case of cubical transport
 * Path induction from subst?
-* hcomp
+* Homogeneous composition (hcomp)
 * Binary composition of paths as special case of hcomp
 
 #### Exercises
@@ -89,4 +99,3 @@ Very rough plan:
 #### Exercises
 
 * TODO
-

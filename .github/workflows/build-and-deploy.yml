@@ -41,6 +41,7 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: WorkAdventure # The folder the action should deploy.
           BASE_BRANCH: main
+          TARGET_FOLDER: WorkAdventure
 
       - name: Bash2
         run: |

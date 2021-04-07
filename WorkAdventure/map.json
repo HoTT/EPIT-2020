@@ -24,7 +24,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/tableaunoir.irisa.fr\/?id=Pj3qG8g0RrqrQocKTkLfA"
+                 "value":"https:\/\/tableaunoir.irisa.fr\/?id=Pj3qG8g0RrqrQocKTkLfA"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -42,7 +42,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/tableaunoir.irisa.fr\/?id=0Nqnl38zTMqonELSnEx2Yw"
+                 "value":"https:\/\/tableaunoir.irisa.fr\/?id=0Nqnl38zTMqonELSnEx2Yw"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -60,7 +60,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/tableaunoir.irisa.fr\/?id=qFcCKLSRxabh1iqSvE-fA"
+                 "value":"https:\/\/tableaunoir.irisa.fr\/?id=qFcCKLSRxabh1iqSvE-fA"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -78,7 +78,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/tableaunoir.irisa.fr\/?id=fgKKLCdFRvidHaK24P-iw"
+                 "value":"https:\/\/tableaunoir.irisa.fr\/?id=fgKKLCdFRvidHaK24P-iw"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -96,7 +96,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/tableaunoir.irisa.fr\/?id=8S7BAEKbRm6Z-dfqRnGTtA"
+                 "value":"https:\/\/tableaunoir.irisa.fr\/?id=8S7BAEKbRm6Z-dfqRnGTtA"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -114,7 +114,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/tableaunoir.irisa.fr\/?id=-0ZBr1x6R6uYX57rNFQLFQ"
+                 "value":"https:\/\/tableaunoir.irisa.fr\/?id=-0ZBr1x6R6uYX57rNFQLFQ"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -132,7 +132,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/tableaunoir.irisa.fr\/?id=WiK25p0CT1aiSbQDT60gtQ"
+                 "value":"https:\/\/tableaunoir.irisa.fr\/?id=WiK25p0CT1aiSbQDT60gtQ"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -150,7 +150,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/tableaunoir.irisa.fr\/?id=iwLWT6RCS36jSj355tgwQ"
+                 "value":"https:\/\/tableaunoir.irisa.fr\/?id=iwLWT6RCS36jSj355tgwQ"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -168,7 +168,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/tableaunoir.irisa.fr\/?id=mOaqAcNfT8K8apQjECNxkA"
+                 "value":"https:\/\/tableaunoir.irisa.fr\/?id=mOaqAcNfT8K8apQjECNxkA"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -204,7 +204,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"https:\/\/play.workadventu.re\/_\/global\/hott.github.io\/EPIT-2020\/classroom.json"
+                 "value":"https:\/\/play.workadventu.re\/_\/global\/hott.github.io\/EPIT-2020\/WorkAdventure\/classroom.json"
                 }],
          "type":"tilelayer",
          "visible":true,

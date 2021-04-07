@@ -24,7 +24,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"https:\/\/play.workadventu.re\/_\/global\/hott.github.io\/EPIT-2020\/map.json#back"
+                 "value":"https:\/\/play.workadventu.re\/_\/global\/hott.github.io\/EPIT-2020\/WorkAdventure\/map.json#back"
                 }],
          "type":"tilelayer",
          "visible":true,

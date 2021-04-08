@@ -5,8 +5,10 @@ Lecturer: [Anders Mörtberg](https://staff.math.su.se/anders.mortberg/)
 Teaching assistants for the exercise session:
 
 - [Axel Ljungström](https://www.su.se/english/profiles/axlj4439-1.450268)
+- [Evan Cavallo](https://staff.math.su.se/evan.cavallo/)
 - [Loïc Pujet](https://pujet.fr/)
 - [Max Zeuner](https://www.su.se/english/profiles/maze1512-1.450461)
+- [Maximilian Dore](https://www.cs.ox.ac.uk/people/maximilian.dore)
 
 ## Background material
 
@@ -16,14 +18,12 @@ the course starts:
 - Video recording of
   [Every proof assistant: Cubical Agda](https://vimeo.com/459020971)
 
-- Sections 1 and 2 of the paper
-  [Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types](https://staff.math.su.se/anders.mortberg/papers/cubicalagda2.pdf)
-- Sections 1 and 2 of the paper
-  [Internalizing Representation Independence with Univalence](https://arxiv.org/abs/2009.05547)
+- Section 2 of the papers
+  [Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types](https://staff.math.su.se/anders.mortberg/papers/cubicalagda2.pdf) and [Internalizing Representation Independence with Univalence](https://arxiv.org/abs/2009.05547)
 
 It is not necessary to actually learn or understand all of the above
-material and we will not assume that everyone has looked at
-it. However, at least taking a look at it will definitely help with
+material and we will not assume that everyone has looked at it.
+However, at least taking a look at it will definitely help with
 following the course and many of the examples will be taken from the
 above sources.
 
@@ -49,16 +49,22 @@ to use the agda/cubical library in another directory one has to
 register it by following:
 https://github.com/agda/cubical/blob/master/INSTALL.md#registering-the-cubical-library
 
-Students with the intention to contribute to the library will need to
-install the development version of Agda and the latest version of the
-agda/cubical library. Detailed instructions can be found at:
-https://github.com/agda/cubical/blob/master/INSTALL.md
+Students with the intention to contribute to or trying out the latest
+version of the agda/cubical library will need to install the development version
+of Agda. Detailed instructions can be found at: https://github.com/agda/cubical/blob/master/INSTALL.md
 
-It can be a bit complicated to install the development version of Agda
-and Anders uses the "cabal sandbox install instructions" solution, but
-other solutions might work better on other systems.
+**Tip**: It can be a bit complicated to install the development version
+of Agda and Anders uses the "cabal sandbox install instructions" solution,
+but other solutions might work better on other systems.
+
+If you run into problems with installing Agda on your system you're welcome
+to ask for help on #tech-desk on Discord.
 
 ## Schedule
+
+*Everything below is under construction. The final version of
+the material and exercises will be uploaded the same day as the course
+is given, but I intend to develop the material here on Github.*
 
 The online lectures will take place on Thursday, April 15, 2021.
 All times are in UTC+2 (i.e. Stockholm time).
@@ -126,4 +132,5 @@ examples of programming and proving in cubical type theory:
 - [Cubical Synthetic Homotopy Theory](https://staff.math.su.se/anders.mortberg/papers/cubicalsynthetic.pdf) and [Synthetic Cohomology Theory in Cubical Agda](https://staff.math.su.se/anders.mortberg/papers/zcohomology.pdf) - Synthetic algebraic topology in Cubical Agda. These papers contain various results from HoTT ported to Cubical Agda which led to some proofs becoming substantially shorter. There are also some new constructions and computations which rely on univalence and HITs not being axiomatic.
 - [Three Equivalent Ordinal Notation Systems in Cubical Agda](https://arxiv.org/abs/1904.10759) - Some classical proof theory and ordinals in Cubical Agda.
 - [Congruence Closure in Cubical Type Theory](https://hott-uf.github.io/2020/HoTTUF_2020_paper_16.pdf) - A nice application of Path types to congruence closure algorithms.
+- [Formalizing 𝜋-calculus in Guarded Cubical Agda](https://dl.acm.org/doi/10.1145/3372885.3373814) - formalization of the 𝜋-calculus in an extension of Cubical Agda.
 - [Cubical Methods in Homotopy Type Theory and Univalent Foundations](https://staff.math.su.se/anders.mortberg/papers/cubicalmethods.pdf) - Lecture notes for the 2019 HoTT Summer School. The focus is more on cubical models and not so much on practical formalization in cubical type theory. Contains exercises and lots of background material. The reference list is quite extensive and contains pointers to further material and important papers (a lot of them aimed at experts).

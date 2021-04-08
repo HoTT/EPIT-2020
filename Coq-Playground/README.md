@@ -66,3 +66,9 @@ and the `coq-hott` package, available from the `extra-dev` repository of Coq, us
 
 This version of the HoTT package requires to use `hoqtop` and `hoqc` in place of
 the usual `coqtop` and `coqc`, you need to setup your interface accordingly.
+*DO NOT USE* the _CoqProject file above in that case, as putting twice the
+-noinit option (once by hoqide/hoqtop and once in the _CoqProject) breaks
+coqide. 
+
+A package `coq-hott-8.13.1` will soon appear that makes the `hoqtop`
+trick disappear, and in that case you will need the `_CoqProject` file.

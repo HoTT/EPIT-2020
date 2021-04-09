@@ -20,7 +20,12 @@ for various platforms:
     and "Open" it explicitly to bypass MacOS's safeguard about applications downloaded from the web.
 
   - For Linux distributions: a [snap](https://github.com/HoTT/EPIT-2020/releases/download/v0.1/Snap.package.zip) package is available.
-
+    To make Emacs/ProofGeneral work smoothly, you might need to add `/snap/bin` to your `PATH` environment 
+    variable if not already done, and `ln -s /snap/bin/coq-prover.coqtop /snap/bin/coqtop` and 
+    `ln -s /snap/bin/coq-prover.coqidetop /snap/bin/coqidetop` or point your interface to these 
+    executables (`coqtop` for Emacs/ProofGeneral, `coqidetop` for VSCode). 
+    You can also simply run `/snap/bin/coq-prover.coqide`.
+  
 These packages come with an Integrated Development Environment, CoqIDE for short,
 which needs to be configured to call Coq with specific arguments. This can be done
 simply by putting the following [_CoqProject](_CoqProject) file at the root of your

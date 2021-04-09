@@ -63,17 +63,12 @@ workspace *or* set the arguments to `coq` explicitely by going to `Settings`, `W
 ## Installation from `opam`
 
 If you already are an [`opam`](http://opam.ocaml.org) user, then you can simply install `coq` 
-and the `coq-hott` package, available from the `extra-dev` repository of Coq, using:
+and the `coq-hott` package, available from the `released` repository of Coq (released on April 9th,
+so do `opam update` if you don't see it). To get a fresh Coq switch with the HoTT library, simply
+use:
 
      # opam repo add coq-released http://coq.inria.fr/opam/released
-     # opam repo add coq-extra-dev http://coq.inria.fr/opam/extra-dev
-     # opam install coq.8.13.1 coq-hott.8.13.dev
+     # opam install coq.8.13.1 coq-hott.8.13
 
-This version of the HoTT package requires to use `hoqtop` and `hoqc` in place of
-the usual `coqtop` and `coqc`, you need to setup your interface accordingly.
-*DO NOT USE* the _CoqProject file above in that case, as putting twice the
--noinit option (once by hoqide/hoqtop and once in the _CoqProject) breaks
-coqide. 
-
-A package `coq-hott-8.13.1` will soon appear that makes the `hoqtop`
-trick disappear, and in that case you will need the `_CoqProject` file.
+You can then use the provided `_CoqProject` file, or set the options as described above for 
+the various interfaces.

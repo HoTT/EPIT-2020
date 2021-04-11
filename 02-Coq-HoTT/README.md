@@ -41,7 +41,7 @@ but show how to formalize these aspects in HoTT.
 ###	Part 5: Quotients and impredicativity
 ###	Part 6: Axioms
 
-
+## Exercises
 Formalize the Exercises of day 1 using the HoTT library.
 
 If you are a beginner, you will learn a lot by finding and replaying the existing lemmas.

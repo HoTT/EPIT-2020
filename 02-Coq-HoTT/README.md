@@ -9,14 +9,14 @@ All times are in UTC+2.
 
 | Time        | Topic                                      |
 |:------------|:-------------------------------------------|
-| 14:00–14:30 | Part 1:                                    |
-| 14:30–15:00 | Part 2:                                    |
+| 14:00–14:30 | Part 1: Introduction to Coq (for HoTT)     |
+| 14:30–15:00 | Part 2: HoTT library                       |
 | 15:30–16:00 | (break)                                    |
-| 16:00–16:30 | Part 3:                                    |
-| 16:30–17:00 | Part 4:                                    |
+| 16:00–16:30 | Part 3: Higher-inductive types in Coq      |
+| 16:30–17:00 | Part 4: h-Levels, images, type classes     |
 | 17:00–17:30 | (break)                                    |
-| 17:30–18:00 | Part 5:                                    |
-| 18:00–18:30 | Part 6:                                    |
+| 17:30–18:00 | Part 5: Quotients and impredicativity      |
+| 18:00–18:30 | Part 6: Axioms                             |
 
 We shall keep a strict schedule. Each part will consist of a short lecture, followed by exercises and a discussion.
 
@@ -25,10 +25,24 @@ On the second day we shall dive deeper into HoTT and, in particular, its formali
 We will use the [Coq](coq.inria.fr/) implementation of type theory, and specifically the [HoTT](https://github.com/HoTT/HoTT) library.
 There is much [tutorial](https://coq.inria.fr/documentation) material available for Coq.
 Andrej Bauers's [video tutorials](http://math.andrej.com/2011/02/22/video-tutorials-for-the-coq-proof-assistant/) 
-are perhaps the most accessible.
+are perhaps the most accessible. [Software Foundations](https://softwarefoundations.cis.upenn.edu/lf-current/) can also be useful.
 
 Please make sure you have Coq with the HoTT library [installed](https://github.com/HoTT/EPIT-2020/blob/main/Coq-Playground/README.md).
 
 ## Contents
 
-TBA
+This second lecture series will partially follow the structure of the first lecture, 
+but show how to formalize these aspects in HoTT.
+
+### Part 1: Inroduction to Coq (for HoTT)
+### Part 2: Intro to the HoTT library
+### Part 3: Higher-inductive types in Coq
+### Part 4: h-Levels, images, type classes
+###	Part 5: Quotients and impredicativity
+###	Part 6: Axioms
+
+
+Formalize the Exercises of day 1 using the HoTT library.
+
+If you are a beginner, you will learn a lot by finding and replaying the existing lemmas.
+More experienced users are encouraged to write the statements and proofs from scratch.

@@ -32,8 +32,8 @@ simply by putting the following [_CoqProject](_CoqProject) file at the root of y
 project, so that interfaces (CoqIDE, Emacs or VSCoq) can pick it up.
 
 These are stripped-down (much smaller) versions of the Coq Platform, with only support for the HoTT library.
-For a full Coq installation, see the [Coq Platform](https://github.com/coq/platform) project, whose upcoming
-release will also support the HoTT library.
+For a full Coq installation including HoTT, see [this](https://github.com/coq/platform/releases/tag/2021.02.1)
+relase of the [Coq Platform](https://github.com/coq/platform).
 
 ### Testing
 

@@ -11,6 +11,7 @@ All times are in UTC+2.
 |:------------|:-------------------------------------------|
 | 14:00–...   | Part 1: Introduction to Coq (for HoTT)     |
 | ...  –15:00 | Part 2: HoTT library                       |
+| 15:00–15:30 | exercises                                  |
 | 15:30–16:00 | (break)                                    |
 | 16:00–...   | Part 3: Higher-inductive types in Coq      |
 | ...  –17:00 | Part 4: h-Levels, images, type classes     |

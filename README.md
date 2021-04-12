@@ -19,7 +19,8 @@ We will also have two shorter lectures on:
 
 Here is the day by day program, the detailed content and timing  of each lecture can be found in the corresponding subfolder. 
 
-* Day 1. 
+* Day 1.
+  + Matthieu Sozeau and Nicolas Tabareau: [Introduction](./EPIT-Introduction.pdf)
   + Andrej Bauer: [Introduction to Homotopy Type Theory](./01-introduction-to-hott)
   + Interleaved with exercise sessions
 

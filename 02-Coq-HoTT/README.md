@@ -9,16 +9,16 @@ All times are in UTC+2.
 
 | Time        | Topic                                      |
 |:------------|:-------------------------------------------|
-| 14:00–14:30 | Part 1: Introduction to Coq (for HoTT)     |
-| 14:30–15:00 | Part 2: HoTT library                       |
+| 14:00–...   | Part 1: Introduction to Coq (for HoTT)     |
+| ...  –15:00 | Part 2: HoTT library                       |
 | 15:30–16:00 | (break)                                    |
-| 16:00–16:30 | Part 3: Higher-inductive types in Coq      |
-| 16:30–17:00 | Part 4: h-Levels, images, type classes     |
+| 16:00–...   | Part 3: Higher-inductive types in Coq      |
+| ...  –17:00 | Part 4: h-Levels, images, type classes     |
 | 17:00–17:30 | (break)                                    |
-| 17:30–18:00 | Part 5: Quotients and impredicativity      |
-| 18:00–18:30 | Part 6: Axioms                             |
+| 17:30–...   | Part 5: Quotients and impredicativity      |
+| ...  –18:30 | Part 6: Axioms                             |
 
-We shall keep a strict schedule. Each part will consist of a short lecture, followed by exercises and a discussion.
+We shall keep a strict schedule. Each block of two parts will consist of a lecture, followed by exercises and a discussion.
 
 # Background reading
 On the second day we shall dive deeper into HoTT and, in particular, its formalization in a proof assistant.

@@ -17,9 +17,11 @@ We will also have two shorter lectures on:
 
 **The program of the week will be lectures/exercise sessions from 2pm to 6.30pm (UTC+2). We will organize virtual social events in the evening.**
 
-Here is the day by day program, the detailed content and timing  of each lecture can be found in the corresponding subfolder. 
+Here is the day by day program, the detailed content and timing of each lecture can be found in the corresponding subfolder. 
+YouTube channel: https://youtu.be/Ur_dMuEVppg
 
-* Day 1. 
+* Day 1.
+  + Matthieu Sozeau and Nicolas Tabareau: [Introduction](./EPIT-Introduction.pdf)
   + Andrej Bauer: [Introduction to Homotopy Type Theory](./01-introduction-to-hott)
   + Interleaved with exercise sessions
 

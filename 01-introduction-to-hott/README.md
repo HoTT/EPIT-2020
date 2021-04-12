@@ -9,15 +9,16 @@ All times are in UTC+2.
 
 | Time        | Topic                                      |
 |:------------|:-------------------------------------------|
-| 14:00–14:05 | Opening & Introduction                     |
-| 14:05–14:35 | Part 1: Dependent type theory              |
-| 14:40–15:10 | Part 2: Identity types                     |
-| 15:10–15:40 | (break)                                    |
-| 15:40–16:10 | Part 3: Homotopy levels                    |
-| 16:15–16:55 | Part 4: Equivalences                       |
-| 16:55–17:25 | (break)                                    |
-| 17:25–17:55 | Part 5: Higher-inductive types             |
-| 18:00–18:30 | Part 6: Univalence                         |
+| 14:00–14:10 | Opening & Introduction                     |
+| 14:10–14:50 | Part 1: Dependent type theory              |
+| 14:50–15:05 | (break)                                    |
+| 15:05–15:45 | Part 2: Identity types                     |
+| 15:45–16:00 | (break)                                    |
+| 16:00–16:40 | Part 3: Homotopy levels                    |
+| 16:40–16:55 | (break)                                    |
+| 17:55–17:35 | Part 4: Equivalences                       |
+| 17:35–17:50 | (break)                                    |
+| 17:50–18:30 | Part 5: Univalence                         |
 
 We shall keep a strict schedule. Each part will consist of a short lecture, followed by exercises and a discussion.
 
@@ -47,8 +48,6 @@ accelerated pace of the lectures.
 
 ### Part 1: Dependent type theory
 
-#### Lecture
-
 * Type theory as a theory of constructions
 * The notion of a dependent type
 * Judgement forms: types, terms, and equalities
@@ -61,83 +60,37 @@ accelerated pace of the lectures.
     * basic types `unit`, `empty`, `bool`
     * natural numbers `N`
 
-#### Exercises
-
-* Given a type family `P : A → B → U`, inhabit the type `(Π (x : A) Σ (y : B) P x y) → Σ (f : A → B) Π (x : A) P x (f x)`.
-* Define addition and multiplication on `N` using recursion
 
 ### Part 2: Identity types
-
-#### Lecture
 
 * Identity types as path objects
 * Path induction
 * Iterated identity types
 * The action of a map on a path, transport
 
-#### Exercises
-
-* Inahbit the type `Π (u v : A × B) u = v → (fst u = fst v) × (snd u = snd v)`
-* Inahbit the type `Π (u v : A × B) (fst u = fst v) × (snd u = snd v) → u = v`
-* Given `a b : A` and `p : a = b` inhabit the type `(a, refl a) = (b, p)`
-* Can we use path induction to inhabit `Π (x : A) (p : x = x) p = refl x`?
-
 
 ### Part 3: Homotopy levels
 
-#### Lecture
-
 * Contractible spaces
-* Propositions, sets, and h-levels
-* Truncation as a type-theoretic construction
+* Propositions, sets, and `n`-Types
+* Truncation
 * The embedding of logic into type theory (using propositional truncation)
+* Structure vs. property in mathematics
 * Basic homotopy-theoretic constructions in terms of truncation:
     * loop space vs. fundamental group
     * path-connectedness vs. contractibility
     * surjectivity vs. split epimorphism
 
-#### Exercises
-
-* The difference between `∃`, `∨` and `Σ`, `+`.
-* `N` is a set
-
 
 ### Part 4: Equivalences
 
-#### Lecture
-
-* Structure vs. property in mathematics
-* Having an inverse is not a property
+* Notions of equivalence of types
 * Homotopy equivalences
-* Example: universal property stated as an equivalence
-
-#### Exercises
-
-* Use equivalence to state the universal property of `×`
-* Constructing `Id (A, B) → Equiv (A, B)`
+* Universal property stated as an equivalence
 
 
-
-### Part 5: Higher-inductive types
-
-#### Lecture
-
-* Inductive types, examples
-* Higher-inductive types (HITs)
-* Examples: circle, interval, suspension
-* Truncations as HITs
-
-#### Exercises
-
-
-### Part 6: Univalence
-
-#### Lecture
+### Part 5: Univalence
 
 * The idea that equivalent structures are equal
 * Univalence axiom
 * Some consequences of the univalence axiom
-
-#### Exercises
-
-* Isomorphic groups are equal

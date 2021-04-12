@@ -511,7 +511,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/github.com\/HoTT\/EPIT-2020\/blob\/main\/README.md"
+                 "value":"https:\/\/hott.github.io\/EPIT-2020\/WorkAdventure\/library.html"
                 }, 
                 {
                  "name":"openWebsiteTrigger",

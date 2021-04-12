@@ -610,11 +610,11 @@
         {
          "columns":12,
          "firstgid":1,
-         "image":"sol_inte\u0301rieur.png",
+         "image":"interior_floor.png",
          "imageheight":288,
          "imagewidth":384,
          "margin":0,
-         "name":"sol_inte\u0301rieur",
+         "name":"interior_floor",
          "spacing":0,
          "tilecount":108,
          "tileheight":32,

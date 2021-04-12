@@ -1,4 +1,4 @@
-Require Import HoTT.
+From HoTT Require Import HoTT.
 
 (* This file formalizes the exercises from the lectures "Introduction to HoTT". *)
 

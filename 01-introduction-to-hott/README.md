@@ -46,6 +46,8 @@ accelerated pace of the lectures.
 
 ## Contents
 
+[Lecture notes](./Introduction to HoTT (EPIT 2020 school).pdf) are now available.
+
 ### Part 1: Dependent type theory
 
 * Type theory as a theory of constructions

@@ -16,7 +16,7 @@ All times are in UTC+2.
 | 15:45–16:00 | (break)                                    |
 | 16:00–16:40 | Part 3: Homotopy levels                    |
 | 16:40–16:55 | (break)                                    |
-| 17:55–17:35 | Part 4: Equivalences                       |
+| 16:55–17:35 | Part 4: Equivalences                       |
 | 17:35–17:50 | (break)                                    |
 | 17:50–18:30 | Part 5: Univalence                         |
 

@@ -107,7 +107,7 @@ Section Part_4_Equivalences.
 
     Variables P Q : hProp.
 
-    Definition cow : (P -> Q) * (Q -> P) -> Equiv P Q.
+    Definition cow : (P -> Q) * (Q -> P) -> P <~> Q.
     Proof.
     Admitted.
 
@@ -117,7 +117,7 @@ Section Part_4_Equivalences.
 
     (* If X and Y are sets then (X ≃ Y) ≃ (X ≅ Y). *)
 
-    Theorem rabbit (X Y : hSet) : Equiv (Equiv X Y) { f : X -> Y & BiInv f }.
+    Theorem rabbit (X Y : hSet) : (X <~> Y) <~> { f : X -> Y & BiInv f }.
     Proof.
     Admitted.
 
@@ -154,7 +154,7 @@ Section Part_5_Univalence.
 
     (* Show that Σ (A : U) . isSet A is not a set. Hint: (2 ≃ 2) ≃ 2. *)
 
-    Lemma two_equiv_two : Equiv (Equiv Bool Bool) Bool.
+    Lemma two_equiv_two : (Bool <~> Bool) <~> Bool.
     Proof.
     Admitted.
 
@@ -165,3 +165,8 @@ Section Part_5_Univalence.
   End Exercise_5_2.
 
 End Part_5_Univalence.
+
+(* Local Variables: *)
+(* coq-prog-name: "hoqtop" *)
+(* coq-load-path: nil *)
+(* End: *)

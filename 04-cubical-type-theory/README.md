@@ -73,20 +73,21 @@ All times are in UTC+2 (i.e. Stockholm time).
 |:------------|:-------------------------------------------|
 | 14:00–14:15 | Part 1: Introduction                       |
 | 14:15–14:45 | Part 2: The interval and path types        |
-| 14:45–15:00 | (break)                                    |
-| 15:00–15:30 | Part 3: Transport and composition          |
-| 15:30–16:00 | Part 4: Univalence and the SIP             |
-| 16:00–16:15 | (break)                                    |
-| 16:15–17:00 | Part 5: Higher inductive types             |
+| 14:45–15:15 | Exercise session 1                         |
+| 15:15–15:30 | (break)                                    |
+| 15:30-16:00 | Part 3: Transport and composition          |
+| 16:00–16:30 | Part 4: Univalence and the SIP             |
+| 16:30–17:00 | Exercise session 2                         |
 | 17:00–17:15 | (break)                                    |
-| 17:15–18:30 | Exercise session                           |
+| 17:15–18:00 | Part 5: Higher inductive types             |
+| 18:00–18:30 | Exercise session 3                         |
 
 ## Contents
 
 ### Part 1: Introduction
 
 * Why Cubical Type Theory?
-* Cubical Agda demo
+* Cubical Agda
 
 ### Part 2: The interval and path types
 
@@ -109,14 +110,16 @@ All times are in UTC+2 (i.e. Stockholm time).
 * Transporting with `ua` (examples: `ua not : Bool = Bool`, `ua suc : Z = Z`, ...)
 * Subst using `ua`
 * The SIP as a consequence of `ua`
-* Examples of using the SIP for math and programming (algebra, data structures, etc.)
+* Examples of using the SIP for math and programming (algebra, data
+  structures, etc.)
 
 ### Part 5: Higher inductive types
 
 * Quotients via HITs
 * Propositional truncation for logic?
 * CS example using quotients (maybe finite multisets or queues)
-* Synthetic homotopy theory (probably `Torus = S^1 * S^1`, `pi_1(S^1) = Z`, `pi_1(Torus) = Z * Z`)
+* Synthetic homotopy theory (probably `Torus = S^1 * S^1`, `pi_1(S^1)
+  = Z`, `pi_1(Torus) = Z * Z`)
 
 ### Exercises
 

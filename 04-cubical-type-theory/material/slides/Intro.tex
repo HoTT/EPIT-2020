@@ -1,0 +1,328 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{mathpartir}
+\usepackage{cancel}
+
+\usepackage{wasysym}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows,shapes,positioning,calc,scopes,
+  fit,automata,decorations.pathmorphing,matrix}
+
+
+\usepackage{microtype}
+\DisableLigatures[-]{family=tt*}
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[tt=false,type1=true]{libertine}
+\RequirePackage[varqu]{zi4}
+\RequirePackage[libertine]{newtxmath}
+
+\setbeamertemplate{navigation symbols}{}
+
+%% Agda stuff
+\usepackage{agda}
+\newcommand{\anum}[1]{\AgdaNumber{#1}}
+\newcommand{\symb}[1]{\AgdaSymbol{#1}}
+\newcommand{\data}[1]{{\AgdaDatatype{#1}}}
+\newcommand{\record}[1]{{\AgdaRecord{#1}}}
+\newcommand{\field}[1]{{\AgdaField{\ensuremath{\mathsf{#1}}}}}
+\newcommand{\proj}[1]{\;.\field{#1}}
+\newcommand{\func}[1]{{\AgdaFunction{#1}}}
+\newcommand{\prim}[1]{{\AgdaPrimitive{#1}}}
+\newcommand{\primty}[1]{{\AgdaPrimitiveType{#1}}}
+\newcommand{\II}[0]{{\primty{\ensuremath{\mathbb{I}}}}}
+\newcommand{\iz}[0]{\con{i0}}
+\newcommand{\io}[0]{\con{i1}}
+\newcommand{\hcomp}{\prim{hcomp}}
+\newcommand{\hcompcon}{\con{hcomp}}
+\newcommand{\var}[1]{{\AgdaBound{#1}}}
+\newcommand{\keyw}[1]{{\AgdaKeyword{#1}}}
+\newcommand{\con}[1]{{\AgdaInductiveConstructor{\ensuremath{\mathsf{#1}}}}}
+\usepackage{catchfilebetweentags}
+%% \usepackage{MnSymbol}
+\usepackage{newunicodechar}
+\newunicodechar{≃}{\ensuremath{\simeq}}
+\newunicodechar{≅}{\ensuremath{\cong}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{⁻}{\ensuremath{^{-}}}
+\newunicodechar{ᴹ}{\ensuremath{_{M}}}
+\newunicodechar{ᴺ}{\ensuremath{_{N}}}
+\newunicodechar{≡}{\ensuremath{\equiv}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{⊎}{\ensuremath{\uplus}}
+\newunicodechar{∷}{\ensuremath{::}}
+\newunicodechar{ℓ}{\ensuremath{\ell}}
+%% \newunicodechar{₀}{\ensuremath{_0}}
+%% \newunicodechar{₁}{\ensuremath{_1}}
+%% \newunicodechar{₂}{\ensuremath{_2}}
+\newunicodechar{ᵢ}{\ensuremath{_i}}
+\newunicodechar{⟨}{\ensuremath{\langle}}
+\newunicodechar{⟩}{\ensuremath{\rangle}}
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{θ}{\ensuremath{\theta}}
+\newunicodechar{φ}{\ensuremath{\varphi}}
+\newunicodechar{ψ}{\ensuremath{\psi}}
+\newunicodechar{η}{\ensuremath{\eta}}
+\newunicodechar{ε}{\ensuremath{\varepsilon}}
+\newunicodechar{ι}{\ensuremath{\iota}}
+\newunicodechar{Σ}{\ensuremath{\Sigma}}
+\newunicodechar{∀}{\ensuremath{\forall}}
+\newunicodechar{ℕ}{\ensuremath{\mathbb{N}}}
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{⊎}{\ensuremath{\uplus}}
+\newunicodechar{⋆}{\ensuremath{*}}
+\newunicodechar{¬}{\ensuremath{\lnot}}
+\newunicodechar{Θ}{\ensuremath{\theta}}
+
+\newcommand{\Agda}{{\tt Agda}}
+\newcommand{\CubicalAgda}{{\tt Cubical} {\tt Agda}}
+\definecolor{Revolutionary}{RGB}{232,70,68}
+\newcommand{\redtt}{\textbf{\texttt{{\color{Revolutionary}red}tt}}}
+\newcommand{\RedPRL}{\textbf{\texttt{{\color{Revolutionary}Red}PRL}}}
+\newcommand{\cooltt}{\textbf{\texttt{{\color{blue}cool}tt}}}
+\newcommand{\coker}{\mathrm{coker}}
+\newcommand{\ie}{{\em i.e.}}
+\newcommand{\eg}{{\em e.g.}}
+\newcommand{\bigO}[1]{\mathcal{O}(#1)}
+\let\L=\lstinline
+
+\usepackage{manfnt}
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}%
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+\parskip 1ex
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\op}{\mathrm{op}}
+
+% This is a hack to allow matrices in tikz-cd diagrams
+\let\amsamp=&
+
+\begingroup
+\catcode`\&=13
+\gdef\pampmatrix{%
+  \begingroup
+  \let&=\amsamp
+  \begin{pmatrix}%
+2}
+\gdef\endpampmatrix{\end{pmatrix}\endgroup}
+\endgroup
+
+
+\setbeamertemplate{navigation symbols}{}
+
+\colorlet{beamer@blendedblue}{green!40!black}
+
+\title[\CubicalAgda{}]{Cubical Type Theory and Cubical Agda}
+
+\author[Anders Mörtberg]{{\large Anders Mörtberg}}
+
+\institute[]{\includegraphics[trim=0 2.3cm 0 0,scale=0.2]{su}\\\ \\\ \\}
+
+\date[September 17, 2020]{EPIT -- April 15, \cancel{2020} \textcolor{red}{2021}}
+
+\makeatletter
+\newcommand\MyInfo[1]{%
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}#1
+      \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+}
+\makeatother
+
+\begin{document}
+
+\begin{frame}[plain]{}
+  \titlepage
+  \addtocounter{framenumber}{-1}
+\end{frame}
+
+\begin{frame}{Identity types}
+
+  The central inductive type in HoTT is the identity type:
+  %
+  \vspace{-0.4cm}
+  \begin{flushleft}
+  \ExecuteMetaData[code.tex]{eq}
+  \end{flushleft}
+
+  \pause
+  This type is crucial to express equations and specifications:
+  %
+  \begin{mathpar}
+    \anum{1}~\func{+}~\anum{1}~\func{≡}~\anum{2}
+    \\
+    (m~n : \func{ℕ}) \to m~\func{+}~n~\func{≡}~n~\func{+}~m
+    \\
+    \{A~B : \func{Type}\} → (f : A → B) → \{x~y : A\} → x~\func{≡}~y → f~x~\func{≡}~f~y
+    \\
+    \hdots
+  \end{mathpar}
+
+  Some are provable by \con{refl} because of judgmental/definitional
+  equality, some need more elaborate arguments using the
+  induction principle \func{J}
+\end{frame}
+
+\begin{frame}[fragile]{Identity types}
+
+  \textbf{Pre-HoTT problem:} \func{\_≡\_} is not extensional enough,
+  we cannot prove:
+  %
+  \begin{flushleft}
+  \ExecuteMetaData[code.tex]{funExt}
+  \end{flushleft}
+
+  It's also impossible to prove propositional extensionality or, more
+  generally, univalence. It's also difficult to handle quotient
+  types...
+
+  \bigskip
+
+  \only<2->{\textbf{HoTT:} add them as axioms to TT\footnote{Justified by simplicial set model}} \only<3->{\hfill \textbf{breaks canonicity} \frownie{}}
+
+  \bigskip
+
+  \only<4->{\textbf{Cubical:} extend TT and make them provable\footnote{Inspired by \emph{cubical} set model}} \only<5->{\hfill \textbf{preserves canonicity} \smiley{}}
+\end{frame}
+
+\begin{frame}{Cubical type theory}
+
+  \textbf{Key idea:} take HoTT very literally and replace inductive
+  \func{\_≡\_} with paths
+
+  \pause
+  \bigskip
+
+  A path $p : x~\func{≡}~y$ is a function $\var{p} : \func{I} \to A$
+  with endpoints $x$ and $y$:
+  \begin{mathpar}
+    p~\con{i0} = x \and p~\con{i1} = y
+  \end{mathpar}
+
+  Get cubes by iteration: $p : \func{I} \to \func{I} \to A$ is a square,
+  $q : \func{I} \to \func{I} \to \func{I} \to A$ is a cube, etc...
+
+  \bigskip
+  \pause
+
+  This gives us funext, univalence, quotients without sacrificing
+  canonicity! %\footnote{But it's harder to justify the induction
+  % principle!}
+
+  \bigskip
+  \pause
+
+  This simple idea is the basis of \CubicalAgda{}
+
+\end{frame}
+
+
+\begin{frame}{Cubical proof assistants \hfill~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\manimpossiblecube}
+
+  \CubicalAgda{} was implemented by Andrea Vezzosi, building on a series
+  of experimental typecheckers developed at Chalmers: \texttt{cubical},
+  \texttt{cubicaltt}...
+
+  \bigskip
+
+  There are also many other cubical and cubically-inspired systems:
+  \texttt{Arend}, \RedPRL{}, \redtt{}, \cooltt{}, \texttt{yacctt},
+  \texttt{mlang}...
+
+  \bigskip
+  \pause
+
+  These build on various cubical models and cubical type theories
+  developed by many people over multiple years. The particular flavor
+  that \CubicalAgda{} builds on is based on the ``CCHM'' cubical type
+  theory of
+
+  \bigskip
+
+  {\small
+  \emph{Cubical Type Theory: a constructive interpretation of the
+    univalence axiom} (2015) \\
+  Cyril Cohen, Thierry Coquand, Simon Huber, Anders Mörtberg \\
+  \url{https://arxiv.org/abs/1611.02108}
+}
+
+\end{frame}
+
+\begin{frame}{\CubicalAgda{} \hfill~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\manimpossiblecube}
+
+  New features that we will look closer at today:
+  \begin{itemize}
+  \item Interval (pre-)type \func{I} with endpoints $\con{i0} :
+    \func{I}$ and $\con{i1} : \func{I}$
+  \item Kan operations (\func{transp} and \func{hcomp})
+  \item Computational univalence (via \func{Glue} types)
+  \item General schema for higher inductive types
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{\CubicalAgda{} \hfill~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\manimpossiblecube}
+
+  The cubical mode has been part of \Agda{} since version 2.6.0 (April 2019)
+
+  \bigskip
+
+  To activate it just open an \texttt{.agda} file and add
+  \[
+    \texttt{\{-\# OPTIONS --cubical \#-\}}
+  \]
+
+  \bigskip
+
+  \pause
+
+  Since October 2018 Andrea Vezzosi and I have been maintaining the
+  \texttt{agda/cubical} library:
+
+  \begin{center}
+    \url{https://github.com/agda/cubical/}
+  \end{center}
+
+  By now $52$ contributors, $56$k LOC, $500$ files
+
+\end{frame}
+
+\begin{frame}{}
+  \begin{center}
+    {\Huge \CubicalAgda{} time! \\ \ \\}
+    % {\footnotesize \url{https://github.com/agda/cubical/blob/master/Cubical/Talks/EPA2020.agda} }
+  \end{center}
+\end{frame}
+
+\end{document}

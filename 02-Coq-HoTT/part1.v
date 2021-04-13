@@ -288,7 +288,6 @@ Definition ap {A B:Type} (f:A -> B) {x y:A} (p:x = y) : f x = f y
 The composition operation on the second loop space is commutative.
 See the HoTTbook 2.1.6, where the proof takes 1.5pp!
 *)
-Print eckmann_hilton.
 
 (** hott_simpl tactic. 
 Try to rewrite with a hopefully confluent rewrite system, and then solve the remaining goal using proof search. *)

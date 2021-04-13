@@ -132,7 +132,7 @@ Higher Inductive interval : Type0 :=
   | seg : zero = one.
 
 But Coq does not support support this. (cubical now does!) 
-So, we use a Licata's trick.
+So, we use Licata's trick.
 https://homotopytypetheory.org/2011/04/23/running-circles-around-in-your-proof-assistant/ 
 
 Uses Private Inductive types in Coq. Disables pattern matching/discrimate tactic.

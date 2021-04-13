@@ -8,6 +8,7 @@
 
 Started at IAS '12. Initially based on Voevodsky's UniMath library
 And many contributions since then...
+         (Gaetan Gilbert, Andreas Lynge, Ali Caglayan, Dan Christensen, ...
 
                    https://github.com/HoTT/HoTT *)
 

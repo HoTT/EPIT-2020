@@ -6,7 +6,7 @@
   * [Alternative IDEs](#alternative-ides)
     + [Emacs](#emacs)
     + [VSCode](#vscode)
-  * [Installation from `opam`](#installation-from--opam-)
+  * [Installation from `opam`](#installation-from--opam)
 
 # Playing with Coq-HoTT in the browser
 

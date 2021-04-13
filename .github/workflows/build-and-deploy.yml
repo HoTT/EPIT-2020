@@ -1,0 +1,48 @@
+name: Optimize map and deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Optimize main map
+        uses: thecodingmachine/map-optimizer-action@master
+        with:
+          map-file: WorkAdventure/map.json
+
+      - name: Optimize classroom map
+        uses: thecodingmachine/map-optimizer-action@master
+        with:
+          map-file: WorkAdventure/classroom.json
+
+      - name: Bash
+        run: |
+          ls -al WorkAdventure/
+          git config --global user.email "d.negrier@thecodingmachine.com"
+          git config --global user.name "David Négrier"
+          git checkout main
+          git commit -am "Adding files"
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: WorkAdventure # The folder the action should deploy.
+          BASE_BRANCH: main
+          TARGET_FOLDER: WorkAdventure
+
+      - name: Bash2
+        run: |
+          ls -al WorkAdventure/

@@ -1,0 +1,210 @@
+13:51:24 From Berčič, Katja to Everyone : Hi Egbert! How's our office? :)
+13:51:36 From Rijke, Egbert to Everyone : messy all the way :D
+13:51:52 From Berčič, Katja to Everyone : I knew I could trust you!
+13:52:26 From Rijke, Egbert to Everyone : If you ever come back, announce it a few days in advance, haha
+13:52:34 From Rijke, Egbert to Everyone : whoops
+13:55:00 From Matthieu Sozeau to Bauer, Andrej(Direct Message) : I suppose I can just let you share slides/screen by stopping my screen share once I finish the intro
+13:55:15 From Bauer, Andrej to Matthieu Sozeau(Direct Message) : OK.
+13:55:22 From Bauer, Andrej to Matthieu Sozeau(Direct Message) : I will run to make a coffee fast.
+13:55:33 From Matthieu Sozeau to Bauer, Andrej(Direct Message) : Ok :)
+14:00:24 From Félix Castro to Everyone : I hear you very low. I don't know if it's my setting
+14:00:36 From El Mehdi Cherradi to Everyone : it's your setting
+14:00:39 From Petković, Anja to Everyone : I hear well enough
+14:00:40 From Félix Castro to Everyone : Thank
+14:00:51 From Tobias Schmude to Everyone : I can barely hear anything with full volume.
+14:00:56 From Marco Girardi to Everyone : try to leave and re-enter the meeting, it happens to me sometimes as well
+14:01:09 From Marco Girardi to Everyone : usually just leaving and re-entering solves it
+14:01:33 From Tom de Jong to Everyone : (On Linux: sometimes the sound for just the Zoom application is set very low)
+14:09:00 From Rijke, Egbert to Matthieu Sozeau(Direct Message) : I realize that as an ordinary participant, I will also be assigned one of the breakout rooms with the other students. That will be either fun or intimidating
+14:10:52 From Meven Lennon-Bertrand to Everyone : yes!
+14:10:59 From Elies H to Everyone : Yes
+14:17:25 From Matthieu Sozeau to Rijke, Egbert(Direct Message) : Indeed, but now we can move between rooms right?
+14:22:41 From Kartik Singhal to Everyone : In the context, are all the assumptions independent? Or is an assumption like x2:A2 can depend on x1:A1?
+14:22:52 From D.G. Berry to Everyone : The latter.
+14:23:10 From D.G. Berry to Everyone : Generally?
+14:24:15 From Kartik Singhal to Everyone : I see, so perhaps here they don't depend, but we would write something like this: x2 : A2(x1) to show dependency.
+14:24:20 From Matthieu Sozeau to Rijke, Egbert(Direct Message) : Yes, the construction of contexts makes each variable possibly dependent on the previous ones
+14:24:32 From Meven Lennon-Bertrand to Everyone : Yes, this is implicit in the use of contexts
+14:25:01 From Kartik Singhal to Everyone : Thanks for clarification Andrej!
+14:25:04 From Donald Pinckney to Everyone : in the interval, there was a dependency of a<=b on a and b
+14:29:22 From Rijke, Egbert to Everyone : In Section 4 More inductive types you can find the description of Sigma types
+14:29:56 From Kostia to Everyone : Can you have "A type" in the context, or only variable and their assigned type ?
+14:30:14 From Gabriel Scherer to Everyone : the latter
+14:30:52 From D.G. Berry to Everyone : Having x:A in the context implies A type because of the introduction and formation rules.
+14:39:22 From Cameron Calk to Everyone : Why are they called "sum" and "product"?
+14:40:00 From Léo Hubert to Everyone : Related (maybe) : is there a nice way to speak about duality in this formalism ?
+14:41:47 From Stefan Ciobaca to Everyone : Is this MLTT or HoTT?
+14:41:56 From Elies H to Everyone : MLTT so far
+14:44:45 From Warrick Macmillan to Everyone : pedagogically, why is the dependent sum presented first? can it be encoded via pi types?
+14:46:59 From Elif Uskuplu to Everyone : Here, elements mean constructors of given type, right? 
+14:47:53 From david wärn to Everyone : The induction _hypothesis_ is just Pk right
+14:48:15 From Elies H to Everyone : Yes, and P k -> P (S k) is the induction step
+14:48:52 From Martin Baillon to Everyone : Here the term « t » is the induction step
+14:50:42 From D.G. Berry to Everyone : Why is case not presented similarly to ind?
+14:53:54 From Jonathan Prieto-Cubides to Everyone : Since version 2.6.1, Agda supports optional cumulativity of universes under the --cumulativity flag.
+14:54:10 From Daniele Palombi to Everyone : Don't cumulative universes contradict the fact that elements should live in only one type?
+14:54:14 From Violeta Marques (she/her) to Everyone : do we have the type U -> A, with A: U? is it inhabited?
+14:54:38 From Matthieu Sozeau to Everyone : @Daniele, usually they still have a “smallest” type
+14:55:03 From Daniele Palombi to Everyone : Oh! Thanks for the answer!
+14:55:57 From rnollet to Everyone : @Violeta, I guess it is easy to inhabit it as soon as A is inhabited, with a constant function.
+14:56:18 From Violeta Marques (she/her) to Everyone : oh, right! thanks :)
+15:01:20 From Matthieu Sozeau to Everyone : https://cdn.discordapp.com/attachments/819217850857422888/831151548767666186/1618232144.png
+15:01:30 From Matthieu Sozeau to Everyone : Problem statements ^^
+15:06:50 From Gabriel Scherer to Everyone : Students getting lost just like in a physical summer school.
+15:07:32 From Meven Lennon-Bertrand to Everyone : What room was the course in again? :p
+15:07:37 From PMP to Everyone : I believe that you can't really solve the exercises with the slide formulation of the induction principle
+15:08:15 From PMP to Everyone : it's implicitly using a predicate (i.e. P : nat -> Type) while the statement claims it's a dependent type 
+15:08:28 From PMP to Everyone : you'd need to write a substitution instead of an application for it to make sense
+15:10:11 From Лиза Василенко to Everyone : I don’t understand… Isn’t this the solution: ind 0 (\k d -> s (s d))
+15:10:14 From PMP to Everyone : @Andrej we're also debating the fact that extensionality as written on your slides is probably not what you want
+15:10:15 From PMP to Everyone : I am
+15:11:19 From rnollet to Everyone : What is the difference between a predicate and an inductive type?
+15:12:54 From D.G. Berry to Everyone : Except the pre-publbished slides!
+15:13:22 From Gabriel Scherer to Everyone : ah
+15:13:40 From Gabriel Scherer to Everyone : it certainly helps to derive eta from it
+15:13:59 From Marco Girardi to Everyone : is that different from functional extensionality? if so, how?
+15:14:13 From Лиза Василенко to Everyone : What is the correct version of ind according to PMP?
+15:14:13 From Meven Lennon-Bertrand to Everyone : The statement that the previous rule was inter-derivable with the η-rule was false though
+15:14:37 From Ali Caglayan to Everyone : Function extensionality talks about the identity type of functions where this rule is talking about definitional equality
+15:14:41 From PMP to Everyone : @Liza you have to express the bound variable of the predicate
+15:14:51 From Petković, Anja to Everyone : yes, this is different from function extensionality, because the conclusion is judgemental equality and not the identity type
+15:15:23 From PMP to Everyone : and write P{n := 0} -> (forall n : nat, P -> P {n := S n}) -> forall n : nat, P
+15:15:31 From PMP to Everyone : assuming n : nat ⊢ P type
+15:23:40 From Stefan Ciobaca to Everyone : Does Path Ind hold in MLTT or just HoTT?
+15:23:48 From Loïc to Everyone : MLTT
+15:23:48 From PMP to Everyone : it holds in MLTT
+15:28:39 From Félix Castro to Everyone : yu should apply to q
+15:28:54 From Félix Castro to Everyone : q is free on the lest of the equality and not on the right beause you should apply it
+15:29:43 From Rijke, Egbert to Everyone : He is right, q was a free variable in the left and right expressions, but it appeared only bound in them middle expression
+15:30:10 From PMP to Everyone : it's a commutative cut
+15:30:22 From PMP to Everyone : Andrej is renaming q in the process, so there is some confusion
+15:30:23 From Rijke, Egbert to Everyone : lower
+15:30:27 From Rijke, Egbert to Everyone : go down
+15:32:07 From El Mehdi Cherradi to Everyone : You could have used a similar definition swapping the role of p and q. Would you get a judgementally equal operation ?
+15:32:51 From D.G. Berry to Everyone : The HoTT book does path induction over both paths.
+15:33:28 From nicolas tabaraeau to Everyone : Indeed, you can do path induction on both so that you don’t get any identity law judgmentally
+15:36:56 From Tom de Jong to Everyone : Also here: https://raw.githubusercontent.com/HoTT/EPIT-2020/main/01-introduction-to-hott/introduction-to-hott-notes.pdf
+15:37:02 From Jason Hu to Everyone : could you enable screen sharing in the breakout rooms?
+15:38:15 From Stefan Ciobaca to Everyone : How does equality in Coq relate to idpath?
+15:38:33 From D.G. Berry to Everyone : And, in p.
+15:38:36 From PMP to Everyone : so far it's the same (module landing in Prop)
+15:38:53 From Rijke, Egbert to Everyone : also p : pi_1 u = pi_1 v
+15:39:19 From Matthieu Sozeau to Everyone : Hopefully everyone can share its screen simultaneously now.
+15:50:35 From Donald Pinckney to Everyone : time to feed the cats during break…
+15:52:01 From Basile to Everyone : I don't understand the fixed type of `q` in exercise 3… I'm not sure how to read `p . (pi_2 u)` because pi_2 u is not a path ?
+15:52:17 From Basile to Everyone : Ah the dot is on the bottom this is transport not concatenation…
+15:54:17 From Meven Lennon-Bertrand to Everyone : Indeed, the left-hand side is a transport
+15:55:14 From Meven Lennon-Bertrand to Everyone : (Without it, π2(u) does not have the same type as π2(v), and so the equality between both cannot even be stated)
+15:57:52 From Daniele Palombi to Everyone : Phew!
+15:59:06 From Daniele Palombi to Everyone : Human assistants are just fallible proof assistants
+16:01:47 From Rijke, Egbert to Matthieu Sozeau(Direct Message) : I will leave after 5pm, so then my group will need another assistant
+16:04:06 From lemastero to Everyone : So paths behave like infinity category
+16:04:16 From lemastero to Everyone : ?
+16:04:40 From Rijke, Egbert to Everyone : Lumsdaine-Garner
+16:04:50 From nicolas tabaraeau to Everyone : benno van den berg
+16:04:53 From Rijke, Egbert to Everyone : yes
+16:09:14 From Matthieu Sozeau to Rijke, Egbert(Direct Message) : Ok, thanks for the notice
+16:12:48 From Rijke, Egbert to Everyone : The fact above is Proposition 12.4.3 in my book.
+16:12:57 From Rijke, Egbert to Everyone : yes
+16:15:16 From Violeta Marques (she/her) to Everyone : so to be true is to have a point AND all the ways it is true are equivalent?
+16:16:11 From Warrick Macmillan to Everyone : is there any way in HoTT to distinguish the unit disk in any dimension from the singleton type?
+16:16:28 From Matthieu Sozeau to Everyone : @Violeta, yes, essentially, any two proofs/ways it is true are equal
+16:17:06 From Elif Uskuplu to Everyone : Is there any example of a set in usual sense but not a set in the new sense?
+16:18:03 From Taras Kolomatski to Everyone : @Warrick I suspect that the answer is cohesive type theories. Shulman has a relevant paper on the Bouwer fixed point theorem.
+16:18:18 From Violeta Marques (she/her) to Everyone : thanks :)
+16:18:52 From Rijke, Egbert to Everyone : @Elif: In ZFC with inaccessible cardinals there are universes and they are sets. However in HoTT the universe of all sets is a 1-type, not a set.
+16:19:05 From Elif Uskuplu to Everyone : Thanks
+16:19:38 From Gabriel Scherer to Everyone : The chat is good at producing complex answers to simple questions!
+16:20:55 From Marco Girardi to Everyone : If I'm not mistaken, S^1 is not a set as well, since loop is not equal to idpath(base)
+16:21:39 From Daniele Palombi to Everyone : That's reasonable! it's more than a set, it comes with _topological information_
+16:25:37 From Daniele Palombi to Everyone : Isn't it better to not assume that S is a set and just require a proof that "isSet S" in the type?
+16:26:21 From Meven Lennon-Bertrand to Everyone : U should be S
+16:26:30 From Daniele Palombi to Everyone : Okay thanks
+16:26:46 From Rijke, Egbert to Everyone : note also that isSet S is a property
+16:30:01 From Warrick Macmillan to Everyone : do truncated types necessarily inhabit the same universe?
+16:30:28 From Daniele Palombi to Everyone : is n-type A a property?
+16:32:30 From Jonathan Prieto-Cubides to Everyone : being a n-type for a type is a property.
+16:34:23 From Basile to Everyone : What does || . ||_-2 look like?
+16:34:23 From Daniele Palombi to Everyone : So truncating something to set level is like forgetting every property of a space except for connected components?
+16:34:26 From Gabriel Scherer to Everyone : I guess ||A||-2 adds a point in addition
+16:34:32 From Violeta Marques (she/her) to Everyone : what is the (-2)-truncation of the empty set?
+16:35:00 From Gabriel Scherer to Everyone : (add a point and then a path from that point to all others)
+16:36:03 From Ali Caglayan to Everyone : ||-||_-2 is just the constant map to the Unit type
+16:36:23 From Jake Gillberg to Everyone : Why don't you need to truncate PxQ?
+16:36:36 From Ali Caglayan to Everyone : because you can show that products preserve istrunc
+16:36:42 From Jake Gillberg to Everyone : neat!
+16:36:48 From Ali Caglayan to Everyone : Think about path types in product types
+16:37:01 From Ali Caglayan to Everyone : which is just a special case of the sigma type exercise
+16:40:36 From Daniele Palombi to Everyone : Sure
+16:45:44 From Tobias Schmude to Everyone : I had to leave the meeting due to audio problems. Could you put me into some breakout room again?
+16:46:22 From Matthieu Sozeau to Everyone : Just did!
+16:46:40 From Alban to Everyone : I just connection and re-connected. I was in room 1. Can I get by to it?
+16:46:53 From Alban to Everyone : (Lost connection)
+16:51:27 From Kostia to Everyone : Which software do you use for your presentation ?
+16:52:25 From Matthieu Sozeau to Everyone : We’re having a question here about why the circle is not contractible
+16:52:37 From Matthieu Sozeau to Everyone : But you’re free to take a short break :)
+16:52:43 From Rijke, Egbert to Everyone : because it’s identity types are not contractible
+16:52:45 From Gabriel Scherer to Everyone : "We would have learned about it"
+16:53:05 From Rijke, Egbert to Everyone : so it’s by exercise 1:)
+16:53:06 From D.G. Berry to Everyone : The loop space = ZZ?
+16:53:14 From Rijke, Egbert to Everyone : yes
+16:55:23 From jure taslak to Everyone : do the universe levels have any interesting structure, similar to how large cardinals have  interesting structure?
+17:07:13 From Gabriel Scherer to Everyone : it looks like  isConstr(sigma(x:A).P)  acts like a truncation of P
+17:07:51 From Marco Girardi to Everyone : By "isBiinv equivalent to isIso" you mean that one is inhabited iff the other one is (logically equivalent in other words), right?
+17:08:32 From Marco Girardi to Everyone : My bad, I misread ^^'
+17:08:38 From Simon Forest to Everyone : is there a good topological counter-example for isIso ?
+17:09:02 From Taras Kolomatski to Everyone : @Gabriel What Egbert calls the fundamental theorem of identity types says that if that type is contractible, then P is equivalent to a pathsapce.
+17:09:16 From Nathan Corbyn to Everyone : Can you -1 truncate the two sides of the product in isIso to get an equivalent definition?
+17:10:50 From Elies H to Everyone : But if you -1-truncate all of "isIso f" then it is equivalent to "isEquiv f"
+17:11:32 From Andreas Lynge to Everyone : @Nathan Yes, but it is complicated to get inverse from the -1-truncated isiso.
+17:11:54 From Basile to Everyone : Are the pi1 the same?
+17:12:04 From Basile to Everyone : Of the iso and the equiv
+17:12:14 From Basile to Everyone : For the map you have just shown
+17:13:35 From Basile to Everyone : Right, thanks!
+17:14:46 From Gabriel Scherer to Everyone : (So Andrej's use of computer-assisted mathematics is to have a program... improve his handwriting.)
+17:16:00 From D.G. Berry to Everyone : It needs some virtual caffeine.
+17:18:21 From nicolas tabaraeau to Everyone : (Technically, the type of e_R should be dependent on h, not just a function type)
+17:20:37 From david wärn to Everyone : I don't think alpha and beta should be here?
+17:22:53 From nicolas tabaraeau to Everyone : indeed, alpha and beta should not be there, other the type is dependent, and you can not talk about equivalence
+17:48:50 From Matthieu Sozeau to Bauer, Andrej(Direct Message) : Give me a bit of time for some organization info at the end of your session!
+17:49:55 From Bauer, Andrej to Matthieu Sozeau(Direct Message) : Ok. Before we go to exercises?
+17:51:02 From Matthieu Sozeau to Bauer, Andrej(Direct Message) : Sure, yes
+17:52:54 From Gabriel Scherer to Everyone : Question: the "expanded" isContr type reads pretty much like the diagram itself. This seems simple/systematic enough. So why are we looking at that different way to express it?
+18:09:27 From Stefan Ciobaca to Everyone : How does one ensure consistency of such axioms?
+18:10:00 From Dominik Kirst to Everyone : what happens if one just assumes the axiom that every equivalence between A and B yields a path between A and B, without assuming this function to be an equivalence? does this provide meaningful extensionality while not invalidating UIP?
+18:10:48 From Dominik Kirst to Everyone : jep
+18:11:38 From Dominik Kirst to Everyone : okay, thanks :)
+18:12:26 From Valery Isaev to Everyone : You can show that concatenation of paths corresponds to composition of equivalences, but you cannot show this with the weaker assumption.
+18:12:42 From Elies H to Everyone : Not exactly the same, but exercise 2.16 of the HoTT Book states that if you assume just half of function extensionality (i.e. you just assume you have a function f ~ g -> f = g), then you can deduce the whole of function extensionality (i.e. the canonical map f = g -> f ~ g is an equivalence)
+18:17:16 From nicolas tabaraeau to Everyone : Simon Boulier has shown in hid thesis that weak univalence does not implies full univalence
+18:17:41 From nicolas tabaraeau to Everyone : https://gitlab.inria.fr/sboulier/thesis-formalizations/
+18:18:59 From Violeta Marques (she/her) to Everyone : does univalence make the fibration over U with fibre over A the type A more special in an easy to state way?
+18:19:03 From Stefan Ciobaca to Everyone : Any (known) applications of univalence to program verification (as opposed to "pure" math)?
+18:20:39 From Dominik Kirst to Everyone : thx nicolas, I’ll have a look at it!
+18:22:10 From Loïc to Everyone : Sometimes, when you do program verification, you may have two definitions of an object and one might be more practical to prove a theorem, while the other might be more practical for computation.
+Univalence tells you that any property you prove for one definition is valid for the other too.
+18:22:57 From jure taslak to Everyone : how do you define a category in hott?
+18:23:14 From Seth Chaiken to Everyone : Can univalence tell us the paths between equivalent groups?
+18:24:36 From Simon Forest to Everyone : Is there a formulation of UA for classical set theory, or UA is trivial in some sense or not required for sets ?
+18:25:41 From mayk to Everyone : is univalence constructive?
+18:26:03 From Éric Tanter to Everyone : shameless plug: for applications to program verification in Coq, you can look at https://pleiad.cl/papers/2021/tabareauAl-jacm2021.pdf
+18:28:50 From El Mehdi Cherradi to Everyone : A question on equivalences : why is the space of map equiped with quasi-inverse not the right notion for equivalence ?
+18:29:21 From Taras Kolomatski to Everyone : Great session!
+18:29:25 From Daniele Palombi to Everyone : *clap*
+18:29:25 From Rémy to Everyone : clap clap clap
+18:29:25 From Nicolas Margulies to Everyone : :clap:
+18:29:26 From lemastero to Everyone : :clap:
+18:29:26 From Matteo Capucci (he/him) to Everyone : thanks
+18:29:29 From Félix Castro to Everyone : THank you! clap, clap
+18:29:30 From mayk to Everyone : really great
+18:29:41 From Simon Forest to Everyone : Thank you that was really great !
+18:29:48 From Stefan Ciobaca to Everyone : Thank you, Andrej!
+18:29:57 From Gaïa to Everyone : Thank you !
+18:31:19 From Jonathan Prieto-Cubides to Everyone : Thank you
+18:31:20 From Daniele Palombi to Everyone : Thanks!
+18:31:22 From Philipp Jan Andries Stassen to Everyone : Thanks!
+18:31:23 From lemastero to Everyone : Marvelous tutorial. Thank you very much.
+18:31:24 From Jussi Kinnunen to Everyone : thanks!
+18:31:28 From Florian Chudigiewitsch to Everyone : Thanks!
+18:31:31 From Alban to Everyone : Thanks a lot and bye!
+18:31:34 From Marco Girardi to Everyone : Thanks!

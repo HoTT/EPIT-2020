@@ -45,7 +45,7 @@ predicative Calculus of universe polymorphic Inductive Constructions
 Let's pretend it is MLTT (as in day1)
 Logical framework *)
 
-Require Import Basics. (* HoTT disables the stdlib. Let's import some notations -> *)
+From HoTT Require Import Basics. (* HoTT disables the stdlib. Let's import some notations -> *)
 
 (* Pi-types are build-in in Coq *)
 Variable P:nat -> Type. (* -> is notation for non-dependent forall *)

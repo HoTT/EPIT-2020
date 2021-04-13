@@ -8,7 +8,7 @@
 
 Started at IAS '12. Initially based on Voevodsky's UniMath library
 And many contributions since then...
-         (Gaetan Gilbert, Andreas Lynge, Ali Caglayan, Dan Christensen, ...
+         Gaetan Gilbert, Andreas Lynge, Ali Caglayan, Dan Christensen, ...
 
                    https://github.com/HoTT/HoTT *)
 
@@ -45,7 +45,7 @@ predicative Calculus of universe polymorphic Inductive Constructions
 Let's pretend it is MLTT (as in day1)
 Logical framework *)
 
-Require Import Basics. (* HoTT disables the stdlib. Let's import some notations -> *)
+From HoTT Require Import Basics. (* HoTT disables the stdlib. Let's import some notations -> *)
 
 (* Pi-types are build-in in Coq *)
 Variable P:nat -> Type. (* -> is notation for non-dependent forall *)
@@ -132,7 +132,7 @@ No universe dependencies. @{} *)
 Print Unit.
 Print nat.
 
-Require Import Bool. (* We load Bool from the HoTT library *)
+From HoTT Require Import Bool. (* We load Bool from the HoTT library *)
 (* https://github.com/HoTT/HoTT/blob/master/theories/Types/Bool.v *)
 Print Bool.
 
@@ -202,7 +202,7 @@ End  Universes.
          https://github.com/HoTT/HoTT/blob/master/theories/Basics/Overture.v
      E.g. Notations are defined here.
  *)
-Require Import Basics.
+From HoTT Require Import Basics.
 
 (** For a good overview of the library:
     https://github.com/HoTT/HoTT/blob/master/STYLE.md
@@ -230,7 +230,7 @@ It would be interesting to link Egbert's book to the HoTT library in a similar w
     A quick guided tour.
 
 ** Path groupoids *)
-Require Import PathGroupoids.
+From HoTT Require Import PathGroupoids.
 
 (* Notations from Day1 *)
 Locate "#".
@@ -288,7 +288,6 @@ Definition ap {A B:Type} (f:A -> B) {x y:A} (p:x = y) : f x = f y
 The composition operation on the second loop space is commutative.
 See the HoTTbook 2.1.6, where the proof takes 1.5pp!
 *)
-Print eckmann_hilton.
 
 (** hott_simpl tactic. 
 Try to rewrite with a hopefully confluent rewrite system, and then solve the remaining goal using proof search. *)

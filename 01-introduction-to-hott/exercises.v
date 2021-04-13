@@ -173,8 +173,3 @@ Section Part_5_Univalence.
   End Exercise_5_2.
 
 End Part_5_Univalence.
-
-(* Local Variables: *)
-(* coq-prog-name: "hoqtop" *)
-(* coq-load-path: nil *)
-(* End: *)

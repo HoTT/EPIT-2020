@@ -14,14 +14,14 @@ Part 3: Univalence and the SIP
 {-# OPTIONS --cubical #-}
 module Part3 where
 
-open import Cubical.Foundations.Prelude hiding (transport ; subst)
+open import Cubical.Foundations.Prelude hiding (refl ; transport ; subst)
 open import Cubical.Foundations.Equiv
 open import Cubical.Foundations.Isomorphism
 open import Cubical.Foundations.Univalence
 
 open import Cubical.Data.Int
 
-open import Part2
+open import Part2 public
 
 
 -- Another key concept in HoTT/UF is the Univalence Axiom. In Cubical
@@ -29,20 +29,20 @@ open import Part2
 -- Theorem.
 
 -- The univalence theorem: equivalences of types give paths of types
-ua' : {A B : Type} → A ≃ B → A ≡ B
+ua' : {A B : Type ℓ} → A ≃ B → A ≡ B
 ua' = ua
 
 -- Any isomorphism of types gives rise to an equivalence
-isoToEquiv' : {A B : Type} → Iso A B → A ≃ B
+isoToEquiv' : {A B : Type ℓ} → Iso A B → A ≃ B
 isoToEquiv' = isoToEquiv
 
 -- And hence to a path
-isoToPath' : {A B : Type} → Iso A B → A ≡ B
+isoToPath' : {A B : Type ℓ} → Iso A B → A ≡ B
 isoToPath' e = ua' (isoToEquiv' e)
 
 -- ua satisfies the following computation rule
 -- This suffices to be able to prove the standard formulation of univalence.
-uaβ' : {A B : Type} (e : A ≃ B) (x : A)
+uaβ' : {A B : Type ℓ} (e : A ≃ B) (x : A)
      → transport (ua' e) x ≡ fst e x
 uaβ' e x = transportRefl (equivFun e x)
 
@@ -51,7 +51,7 @@ uaβ' e x = transportRefl (equivFun e x)
 -- Time for an example!
 
 -- Booleans
-data Bool : Type where
+data Bool : Type₀ where
   false true : Bool
 
 not : Bool → Bool
@@ -108,7 +108,7 @@ open import Cubical.HITs.AssocList.Base
 -- efficient, while another is efficient but difficult to work with.
 
 -- Solution: substitute using univalence
-substIso : {A B : Type} (P : Type → Type) (e : Iso A B) → P A → P B
+substIso : {A B : Type ℓ} (P : Type ℓ → Type ℓ') (e : Iso A B) → P A → P B
 substIso P e = subst P (isoToPath e)
 
 -- Can transport for example Monoid structure from FMSet to AssocList
@@ -120,13 +120,14 @@ substIso P e = subst P (isoToPath e)
 -- This is a very useful consequence of univalence
 open import Cubical.Foundations.SIP
 
+{-
 sip' : {ℓ : Level} {S : Type ℓ → Type ℓ} {ι : StrEquiv S ℓ}
        (θ : UnivalentStr S ι) (A B : TypeWithStr ℓ S) → A ≃[ ι ] B → A ≡ B
 sip' = sip
-
+-}
 -- The tricky thing is to prove that (S,ι) is a univalent structure.
 -- Luckily we provide automation for this in the library, see for example:
-open import Cubical.Algebra.Monoid.Base
+-- open import Cubical.Algebra.Monoid.Base
 
 -- Another cool application of the SIP: matrices represented as
 -- functions out of pairs of Fin's and vectors are equal as abelian

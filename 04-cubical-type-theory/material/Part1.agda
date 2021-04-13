@@ -116,12 +116,12 @@ refl {x = x} = λ i → x
 
 -- cong has a direct proof
 -- TODO: what did the others call this?
-cong : {A B : Type} (f : A → B) {x y : A} → x ≡ y → f x ≡ f y
+cong : {A B : Type ℓ} (f : A → B) {x y : A} → x ≡ y → f x ≡ f y
 cong f p i = f (p i)
 
 -- function extensionality also has a direct proof.
 -- It also has computational content: swap the arguments.
-funExt : {A B : Type} {f g : A → B} (p : (x : A) → f x ≡ g x) → f ≡ g
+funExt : {A B : Type ℓ} {f g : A → B} (p : (x : A) → f x ≡ g x) → f ≡ g
 funExt p i x = p x i
 
 -- TODO: add sym

@@ -13,7 +13,7 @@ Part 4: Higher inductive types
 {-# OPTIONS --cubical #-}
 module Part4 where
 
-open import Cubical.Foundations.Prelude
+open import Cubical.Foundations.Prelude hiding (refl ; cong ; subst)
 open import Cubical.Foundations.Isomorphism
 open import Cubical.Data.Int
 open import Cubical.Data.Prod
@@ -29,7 +29,7 @@ open import Part3
 
 infixr 5 _∷_
 
-data FMSet (A : Type) : Type where
+data FMSet (A : Type ℓ) : Type ℓ where
   [] : FMSet A
   _∷_ : (x : A) → (xs : FMSet A) → FMSet A
   comm : (x y : A) (xs : FMSet A) → x ∷ y ∷ xs ≡ y ∷ x ∷ xs
@@ -38,14 +38,14 @@ data FMSet (A : Type) : Type where
 -- We need to add the trunc constructor for FMSets to be sets, omitted
 -- here for simplicity.
 
-_++_ : ∀ {A : Type} (xs ys : FMSet A) → FMSet A
+_++_ : ∀ {A : Type ℓ} (xs ys : FMSet A) → FMSet A
 [] ++ ys = ys
 (x ∷ xs) ++ ys = x ∷ xs ++ ys
 comm x y xs i ++ ys = comm x y (xs ++ ys) i
 -- trunc xs zs p q i j ++ ys =
 --   trunc (xs ++ ys) (zs ++ ys) (cong (_++ ys) p) (cong (_++ ys) q) i j
 
-unitr-++ : {A : Type} (xs : FMSet A) → xs ++ [] ≡ xs
+unitr-++ : {A : Type ℓ} (xs : FMSet A) → xs ++ [] ≡ xs
 unitr-++ [] = refl
 unitr-++ (x ∷ xs) = cong (x ∷_) (unitr-++ xs)
 unitr-++ (comm x y xs i) j = comm x y (unitr-++ xs j) i
@@ -55,7 +55,7 @@ unitr-++ (comm x y xs i) j = comm x y (unitr-++ xs j) i
 -- This is a special case of set quotients! Very useful for
 -- programming and set level mathematics
 
-data _/_ (A : Type) (R : A → A → Type) : Type where
+data _/_ (A : Type ℓ) (R : A → A → Type ℓ') : Type (ℓ-max ℓ ℓ') where
   [_] : A → A / R
   eq/ : (a b : A) → R a b → [ a ] ≡ [ b ]
   trunc : (a b : A / R) (p q : a ≡ b) → p ≡ q
@@ -68,7 +68,7 @@ data _/_ (A : Type) (R : A → A → Type) : Type where
 -- Topological examples of things that are not sets
 
 -- We can define the circle as the following simple data declaration:
-data S¹ : Type where
+data S¹ : Type₀ where
   base : S¹
   loop : base ≡ base
 
@@ -77,11 +77,11 @@ double : S¹ → S¹
 double base = base
 double (loop i) = (loop ∙ loop) i
 
-helix : S¹ → Type
+helix : S¹ → Type₀
 helix base     = Int
 helix (loop i) = sucPathInt i
 
-ΩS¹ : Type
+ΩS¹ : Type₀
 ΩS¹ = base ≡ base
 
 winding : ΩS¹ → Int
@@ -92,7 +92,7 @@ _ = refl
 
 
 -- We can define the Torus as:
-data Torus : Type where
+data Torus : Type₀ where
   point : Torus
   line1 : point ≡ point
   line2 : point ≡ point
@@ -143,7 +143,7 @@ open import Cubical.HITs.S2
 open import Cubical.HITs.S3
 open import Cubical.HITs.Susp
 open import Cubical.HITs.Join
-open import Cubical.HITs.Wedge
+-- open import Cubical.HITs.Wedge
 open import Cubical.HITs.SmashProduct
 
 -- There's also a proof of the "3x3 lemma" for pushouts in less than
@@ -161,4 +161,4 @@ open import Cubical.ZCohomology.Everything
 -- interesting theorems: Freudenthal suspension theorem,
 -- Mayer-Vietoris sequence...
 open import Cubical.Homotopy.Freudenthal
-open import Cubical.ZCohomology.MayerVietorisUnreduced
+-- open import Cubical.ZCohomology.MayerVietorisUnreduced

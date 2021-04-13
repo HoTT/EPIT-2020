@@ -13,7 +13,7 @@ Part 3: Transport and composition
 {-# OPTIONS --cubical #-}
 module Part2 where
 
-open import Part1
+open import Part1 public
 
 -- Now we need some more levels
 variable

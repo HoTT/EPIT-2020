@@ -36,11 +36,11 @@ open import Cubical.Core.Primitives public
 --                             Agda Basic                                   --
 ------------------------------------------------------------------------------
 
--- We parametrize everything by a universe level ℓ (as opposed to Coq
--- we always have to give these explicitly unless we work with the
+-- We parametrize everything by some universe levels (as opposed to
+-- Coq we always have to give these explicitly unless we work with the
 -- lowest universe)
 variable
-  ℓ : Level
+  ℓ ℓ' ℓ'' : Level
 
 -- Universes in Agda are called "Set ℓ", but in order to avoid
 -- confusion with h-sets we rename them to "Type ℓ".
@@ -114,17 +114,45 @@ refl {x = x} = λ i → x
 -- The notation {x = x} lets us access the implicit argument x (left x)
 -- and rename it to x (right x) in the body of refl
 
--- cong has a direct proof
--- TODO: what did the others call this?
-cong : {A B : Type ℓ} (f : A → B) {x y : A} → x ≡ y → f x ≡ f y
+-- cong (often called "ap") has a direct proof
+cong : {A : Type ℓ} {B : Type ℓ'} (f : A → B) {x y : A} → x ≡ y → f x ≡ f y
 cong f p i = f (p i)
 
--- function extensionality also has a direct proof.
--- It also has computational content: swap the arguments.
-funExt : {A B : Type ℓ} {f g : A → B} (p : (x : A) → f x ≡ g x) → f ≡ g
+
+
+-- function extensionality also has a very direct proof
+-- It also has computational content: swap the arguments
+funExt : {A : Type ℓ} {B : Type ℓ'} {f g : A → B} (p : (x : A) → f x ≡ g x) → f ≡ g
 funExt p i x = p x i
 
--- TODO: add sym
+-- TODO: calculate why this has the correct type
+
+-- The interval has additional operations:
+--
+-- Minimum: _∧_ : I → I → I
+-- Maximum: _∨_ : I → I → I
+-- Symmetry: ~_ : I → I
+
+-- These satisfy the equations of a De Morgan algebra
+--
+-- i0 ∨ i    = i
+-- i  ∨ i1   = i1
+-- i  ∨ j    = j ∨ i
+-- i0 ∧ i    = i0
+-- i1 ∧ i    = i
+-- i  ∧ j    = j ∧ i
+-- ~ (~ i)   = i
+-- i0        = ~ i1
+-- ~ (i ∨ j) = ~ i ∧ ~ j
+-- ~ (i ∧ j) = ~ i ∨ ~ j
+
+-- With these operations we can define things directly:
+
+sym : {A : Type ℓ} {x y : A} → x ≡ y → y ≡ x
+sym p i = p (~ i)
+
+-- TODO: do something with _∧_ and _∨_? Maybe contrSingl and then
+-- contrSingl' as exercise...
 
 
 -- Dependent paths: PathP
@@ -135,6 +163,58 @@ funExt p i x = p x i
 -- In fact, x ≡ y is short for PathP (λ _ → A) x y
 refl' : {A : Type ℓ} (x : A) → PathP (λ _ → A) x x
 refl' x = λ _ → x
+
+
+
+-- TODO: organize the stuff below. Some of it should be exercises.
+
+-- symP : {A : I → Type ℓ} → {x : A i0} → {y : A i1} →
+--        (p : PathP A x y) → PathP (λ i → A (~ i)) y x
+-- symP p j = p (~ j)
+
+-- cong : ∀ (f : (a : A) → B a) (p : x ≡ y) →
+--        PathP (λ i → B (p i)) (f x) (f y)
+-- cong f p i = f (p i)
+
+
+-- funExt : {B : A → I → Type ℓ'}
+--   {f : (x : A) → B x i0} {g : (x : A) → B x i1}
+--   → ((x : A) → PathP (B x) (f x) (g x))
+--   → PathP (λ i → (x : A) → B x i) f g
+-- funExt p i x = p x i
+
+-- funExt⁻ : {B : A → I → Type ℓ'}
+--   {f : (x : A) → B x i0} {g : (x : A) → B x i1}
+--   → PathP (λ i → (x : A) → B x i) f g
+--   → ((x : A) → PathP (B x) (f x) (g x))
+-- funExt⁻ eq x i = eq i x
+
+-- isContr : Type ℓ → Type ℓ
+-- isContr A = Σ[ x ∈ A ] (∀ y → x ≡ y)
+
+-- isProp : Type ℓ → Type ℓ
+-- isProp A = (x y : A) → x ≡ y
+
+-- isContrΠ : (h : (x : A) → isContr (B x)) → isContr ((x : A) → B x)
+
+-- isPropΠ : (h : (x : A) → isProp (B x)) → isProp ((x : A) → B x)
+
+-- isSetΠ : (h : (x : A) → isProp (B x)) → isProp ((x : A) → B x)
+-- TODO: prove with funExt⁻?
+
+
+-- singlP : (A : I → Type ℓ) (a : A i0) → Type _
+-- singlP A a = Σ[ x ∈ A i1 ] PathP A a x
+
+-- singl : (a : A) → Type _
+-- singl {A = A} a = singlP (λ _ → A) a
+
+-- isContrSingl : (a : A) → isContr (singl a)
+-- isContrSingl a = (a , refl) , λ p i → p .snd i , λ j → p .snd (i ∧ j)
+
+-- Σ≡Prop : ((x : A) → isProp (B x)) → {u v : Σ A B}
+--        → (p : u .fst ≡ v .fst) → u ≡ v
+
 
 -- We cannot pattern-match on interval variables as I is not inductively defined
 -- foo : {A : Type} → I → A

@@ -15,11 +15,6 @@ module Part2 where
 
 open import Part1 public
 
--- Now we need some more levels
-variable
-  ℓ' ℓ'' : Level
-
-
 -- Transport is more complex as ≡ isn't inductively defined (so we
 -- can't define it by pattern-matching on p)
 transport : {A B : Type ℓ} → A ≡ B → A → B

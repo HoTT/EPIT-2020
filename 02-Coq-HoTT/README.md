@@ -7,17 +7,16 @@ Lecturer: [Bas Spitters](https://www.cs.au.dk/~spitters/)
 The online lectures will take place on Tuesday, April 13, 2021.
 All times are in UTC+2.
 
-| Time        | Topic                                      |
-|:------------|:-------------------------------------------|
-| 14:00–...   | Part 1: Introduction to Coq (for HoTT)     |
-| ...  –15:00 | Part 2: HoTT library                       |
-| 15:00–15:30 | (break)                                    |
-| 15:30–...   | Part 3: Higher-inductive types in Coq      |
-| ...  –16:30 | Part 4: h-Levels, images, type classes     |
-| 16:30–17:00 | (break)                                    |
-| 17:00–...   | Part 5: Quotients and impredicativity      |
-| ...  –18:00 | Part 6: Axioms                             |
-| 18:00–18:30 | exercises                                  |
+| Time        | Topic                                         |
+|:------------|:----------------------------------------------|
+| 14:00–14:45 | Part 1: Introduction to Coq and HoTT          |
+| 14:45-15:10 | Exercises                                     |
+| 15:10–15:30 | (break)                                       |
+| 15:30–16:15 | Part 2: h-Levels, type classes and HITs       |
+| 16:15–16:40 | Exercises                                     |
+| 16:40–17:00 | (break)                                       |
+| 17:00–17:45 | Part 3: Quotients and impredicativity, Axioms |
+| 17:45–18:30 | Exercises                                     |
 
 We shall keep a strict schedule. Each block of two parts will consist of a lecture, followed by exercises and a discussion.
 
@@ -35,15 +34,14 @@ Please make sure you have Coq with the HoTT library [installed](https://github.c
 This second lecture series will partially follow the structure of the first lecture, 
 but show how to formalize these aspects in HoTT.
 
-### Part 1: Inroduction to Coq (for HoTT)
-### Part 2: Intro to the HoTT library
-### Part 3: Higher-inductive types in Coq
-### Part 4: h-Levels, images, type classes
-###	Part 5: Quotients and impredicativity
-###	Part 6: Axioms
+### Part 1: Inroduction to Coq and HoTT library
+### Part 2: h-Levels, type classes and HITs
+### Part 3: Quotients and impredicativity, Axioms
 
 ## Exercises
 Formalize the Exercises of day 1 using the HoTT library.
+
+There are also more advanced challenges in the text.
 
 If you are a beginner, you will learn a lot by finding and replaying the existing lemmas.
 More experienced users are encouraged to write the statements and proofs from scratch.

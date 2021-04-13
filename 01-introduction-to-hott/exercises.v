@@ -85,7 +85,7 @@ Section Part_3_Homotopy_Levels.
 
     (* Is contractibility a property or a structure? *)
 
-    (* Please formalize, use "Contr", "IsHprop". *)
+    (* Please formalize, use "Contr", "IsHProp". *)
 
   End Exercise_3_2.
 

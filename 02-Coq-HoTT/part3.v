@@ -28,18 +28,18 @@ Propositional resizing holds in many models (e.g. all Grothendieck oo-toposes). 
 
 (** Let's consider the set-quotient *)
 (** https://github.com/HoTT/HoTT/blob/master/theories/HIT/quotient.v 
-   (Propositional) univalence allows us show that quotients are exact.
+   (Propositional) univalence allows us show that quotients are exact. *)
 (* Using impredicativity (resizing) we can construct the quotient as a collection of equivalence classes.
    The two definitions are equivalent (HoTT book), but a proof is still missing from the library.
    https://github.com/HoTT/HoTT/blob/master/theories/HIT/quotient.v#L214
-   Challenge: Prove this.
+   Challenge: Prove this. *)
 
 
 (** After this excursion to impredicativity, we observe that quotients make hSets into an exact category.
    This is one of the important properties of an predicative topos.
    The other properties (like image factorizations) hold too.
    The theory is image factorizations is developed at the great (generality) of modalities.
-   https://github.com/HoTT/HoTT/blob/master/theories/Modalities/Modality.v
+   https://github.com/HoTT/HoTT/blob/master/theories/Modalities/Modality.v *)
 
 (** Resizing makes hSets into a topos. *)
 

@@ -71,15 +71,15 @@ All times are in UTC+2 (i.e. Stockholm time).
 
 | Time        | Topic                                      |
 |:------------|:-------------------------------------------|
-| 14:00–14:15 | Part 1: Introduction                       |
-| 14:15–14:45 | Part 2: The interval and path types        |
+| 14:00–14:15 | Introduction                               |
+| 14:15–14:45 | Part 1: The interval and path types        |
 | 14:45–15:15 | Exercise session 1                         |
 | 15:15–15:30 | (break)                                    |
-| 15:30-16:00 | Part 3: Transport and composition          |
-| 16:00–16:30 | Part 4: Univalence and the SIP             |
+| 15:30-16:00 | Part 2: Transport and composition          |
+| 16:00–16:30 | Part 3: Univalence and the SIP             |
 | 16:30–17:00 | Exercise session 2                         |
 | 17:00–17:15 | (break)                                    |
-| 17:15–18:00 | Part 5: Higher inductive types             |
+| 17:15–18:00 | Part 4: Higher inductive types             |
 | 18:00–18:30 | Exercise session 3                         |
 
 ## Contents

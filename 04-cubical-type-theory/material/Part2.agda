@@ -1,53 +1,42 @@
 {-
 
-Part 2: The interval and path types
+Part 3: Transport and composition
 
-    The interval in Cubical Agda
-    Path and PathP types
-    Function extensionality
-    Equality in Σ-types
+- Cubical transport
+- Subst as a special case of cubical transport
+- Path induction from subst?
+- Homogeneous composition (hcomp)
+- Binary composition of paths as special case of hcomp
 
 -}
 
-
--- To make Agda cubical add the following options
 {-# OPTIONS --cubical #-}
-module Part2 where
+module Part3 where
 
--- The "Foundations" package contain a lot of important results (in
--- particular the univalence theorem)
 open import Cubical.Foundations.Prelude
+open import Part2
+
+-- Transport is more complex as ≡ isn't inductively defined (so we
+-- can't define it by pattern-matching on p)
+transport' : {A B : Type} → A ≡ B → A → B
+transport' p a = transp (λ i → p i) i0 a
+
+-- This lets us define subst (which is called "transport" in the HoTT book)
+subst' : {A : Type} (P : A → Type) {x y : A} (p : x ≡ y) → P x → P y
+subst' P p pa = transport (λ i → P (p i)) pa
+
+-- The transp operation reduces differently for different types
+-- formers. For paths it reduces to another primitive operation called
+-- hcomp.
+
+-- We can also define the J eliminator (aka path induction)
+J' : {A : Type} {B : A → Type} {x : A}
+     (P : (z : A) → x ≡ z → Type)
+     (d : P x refl) {y : A} (p : x ≡ y) → P y p
+J' P d p = transport (λ i → P (p i) (λ j → p (i ∧ j))) d
+
+-- So J is provable, but it doesn't satisfy computation rule
+-- definitionally. This is almost never a problem in practice as the
+-- cubical primitives satisfy many new definitional equalities.
 
 
--- The interval in Cubical Agda is written I and the endpoints i0 and i1.
-
-apply0 : (A : Type) (p : I → A) → A
-apply0 A p = p i0
-
--- We omit the universe level ℓ for simplicity in this talk. In the
--- library everything is maximally universe polymorphic.
-
-
--- We can write functions out of the interval using λ-abstraction:
-refl' : {A : Type} (x : A) → x ≡ x
-refl' x = λ i → x
--- In fact, x ≡ y is short for PathP (λ _ → A) x y
-
-refl'' : {A : Type} (x : A) → PathP (λ _ → A) x x
-refl'' x = λ _ → x
-
--- In general PathP A x y has A : I → Type, x : A i0 and y : A i1
--- PathP = Dependent paths (Path over a Path)
-
--- We cannot pattern-match on interval variables as I is not inductively defined
--- foo : {A : Type} → I → A
--- foo r = {!r!}   -- Try typing C-c C-c
-
--- cong has a direct proof
-cong' : {A B : Type} (f : A → B) {x y : A} → x ≡ y → f x ≡ f y
-cong' f p i = f (p i)
-
--- function extensionality also has a direct proof.
--- It also has computational content: swap the arguments.
-funExt' : {A B : Type} {f g : A → B} (p : (x : A) → f x ≡ g x) → f ≡ g
-funExt' p i x = p x i

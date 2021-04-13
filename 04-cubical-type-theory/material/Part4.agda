@@ -1,134 +1,164 @@
 {-
 
-Part 4: Univalence and the SIP
+Part 5: Higher inductive types
 
-- Univalence from ua and uaβ
-- Transporting with ua (examples: ua not : Bool = Bool, ua suc : Z = Z, ...)
-- Subst using ua
-- The SIP as a consequence of ua
-- Examples of using the SIP for math and programming (algebra, data
-  structures, etc.)
+- Quotients via HITs
+- Propositional truncation for logic?
+- CS example using quotients (maybe finite multisets or queues)
+- Synthetic homotopy theory (probably Torus = S^1 * S^1, pi_1(S^1) =
+  Z, pi_1(Torus) = Z * Z)
 
 -}
 
 {-# OPTIONS --cubical #-}
-module Part4 where
+module Part5 where
 
 open import Cubical.Foundations.Prelude
-open import Cubical.Foundations.Equiv
 open import Cubical.Foundations.Isomorphism
-open import Cubical.Foundations.Univalence
-
 open import Cubical.Data.Int
+open import Cubical.Data.Prod
 
-open import Part3
-
-
--- Another key concept in HoTT/UF is the Univalence Axiom. In Cubical
--- Agda this is provable, we hence refer to it as the Univalence
--- Theorem.
-
--- The univalence theorem: equivalences of types give paths of types
-ua' : {A B : Type} → A ≃ B → A ≡ B
-ua' = ua
-
--- Any isomorphism of types gives rise to an equivalence
-isoToEquiv' : {A B : Type} → Iso A B → A ≃ B
-isoToEquiv' = isoToEquiv
-
--- And hence to a path
-isoToPath' : {A B : Type} → Iso A B → A ≡ B
-isoToPath' e = ua' (isoToEquiv' e)
-
--- ua satisfies the following computation rule
--- This suffices to be able to prove the standard formulation of univalence.
-uaβ' : {A B : Type} (e : A ≃ B) (x : A)
-     → transport (ua' e) x ≡ fst e x
-uaβ' e x = transportRefl (equivFun e x)
+open import Part4
 
 
+-----------------------------------------------------------------------------
+-- Higher inductive types
 
--- Time for an example!
+-- The following definition of finite multisets is due to Vikraman
+-- Choudhury and Marcelo Fiore.
 
--- Booleans
-data Bool : Type where
-  false true : Bool
+infixr 5 _∷_
 
-not : Bool → Bool
-not false = true
-not true  = false
+data FMSet (A : Type) : Type where
+  [] : FMSet A
+  _∷_ : (x : A) → (xs : FMSet A) → FMSet A
+  comm : (x y : A) (xs : FMSet A) → x ∷ y ∷ xs ≡ y ∷ x ∷ xs
+--  trunc : (xs ys : FMSet A) (p q : xs ≡ ys) → p ≡ q
 
-notPath : Bool ≡ Bool
-notPath = isoToPath' (iso not not rem rem)
-  where
-  rem : (b : Bool) → not (not b) ≡ b
-  rem false = refl
-  rem true  = refl
+-- We need to add the trunc constructor for FMSets to be sets, omitted
+-- here for simplicity.
 
-_ : transport notPath true ≡ false
-_ = refl
+_++_ : ∀ {A : Type} (xs ys : FMSet A) → FMSet A
+[] ++ ys = ys
+(x ∷ xs) ++ ys = x ∷ xs ++ ys
+comm x y xs i ++ ys = comm x y (xs ++ ys) i
+-- trunc xs zs p q i j ++ ys =
+--   trunc (xs ++ ys) (zs ++ ys) (cong (_++ ys) p) (cong (_++ ys) q) i j
+
+unitr-++ : {A : Type} (xs : FMSet A) → xs ++ [] ≡ xs
+unitr-++ [] = refl
+unitr-++ (x ∷ xs) = cong (x ∷_) (unitr-++ xs)
+unitr-++ (comm x y xs i) j = comm x y (unitr-++ xs j) i
+-- unitr-++ (trunc xs ys x y i j) = {!!}
 
 
--- Another example, integers:
+-- This is a special case of set quotients! Very useful for
+-- programming and set level mathematics
 
-sucPath : Int ≡ Int
-sucPath = isoToPath' (iso sucInt predInt sucPred predSuc)
+data _/_ (A : Type) (R : A → A → Type) : Type where
+  [_] : A → A / R
+  eq/ : (a b : A) → R a b → [ a ] ≡ [ b ]
+  trunc : (a b : A / R) (p q : a ≡ b) → p ≡ q
 
-_ : transport sucPath (pos 0) ≡ pos 1
-_ = refl
-
-_ : transport (sucPath ∙ sucPath) (pos 0) ≡ pos 2
-_ = refl
-
-_ : transport (sym sucPath) (pos 0) ≡ negsuc 0
-_ = refl
-
+-- Proving that they are effective ((a b : A) → [ a ] ≡ [ b ] → R a b)
+-- requires univalence for propositions.
 
 
 -------------------------------------------------------------------------
--- The structure identity principle
+-- Topological examples of things that are not sets
 
--- A more efficient version of finite multisets based on association lists
-open import Cubical.HITs.AssocList.Base
+-- We can define the circle as the following simple data declaration:
+data S¹ : Type where
+  base : S¹
+  loop : base ≡ base
 
--- data AssocList (A : Type) : Type where
---  ⟨⟩ : AssocList A
---  ⟨_,_⟩∷_ : (a : A) (n : ℕ) (xs : AssocList A) → AssocList A
---  per : (a b : A) (m n : ℕ) (xs : AssocList A)
---      → ⟨ a , m ⟩∷ ⟨ b , n ⟩∷ xs ≡ ⟨ b , n ⟩∷ ⟨ a , m ⟩∷ xs
---  agg : (a : A) (m n : ℕ) (xs : AssocList A)
---      → ⟨ a , m ⟩∷ ⟨ a , n ⟩∷ xs ≡ ⟨ a , m + n ⟩∷ xs
---  del : (a : A) (xs : AssocList A) → ⟨ a , 0 ⟩∷ xs ≡ xs
---  trunc : (xs ys : AssocList A) (p q : xs ≡ ys) → p ≡ q
+-- We can write functions on S¹ using pattern-matching equations:
+double : S¹ → S¹
+double base = base
+double (loop i) = (loop ∙ loop) i
+
+helix : S¹ → Type
+helix base     = Int
+helix (loop i) = sucPathInt i
+
+ΩS¹ : Type
+ΩS¹ = base ≡ base
+
+winding : ΩS¹ → Int
+winding p = subst helix p (pos 0)
+
+_ : winding (λ i → double ((loop ∙ loop) i)) ≡ pos 4
+_ = refl
 
 
--- Programming and proving is more complicated with AssocList compared
--- to FMSet. This kind of example occurs everywhere in programming and
--- mathematics: one representation is easier to work with, but not
--- efficient, while another is efficient but difficult to work with.
+-- We can define the Torus as:
+data Torus : Type where
+  point : Torus
+  line1 : point ≡ point
+  line2 : point ≡ point
+  square : PathP (λ i → line1 i ≡ line1 i) line2 line2
 
--- Solution: substitute using univalence
-substIso : {A B : Type} (P : Type → Type) (e : Iso A B) → P A → P B
-substIso P e = subst P (isoToPath e)
+-- And prove that it is equivalent to two circle:
+t2c : Torus → S¹ × S¹
+t2c point        = (base , base)
+t2c (line1 i)    = (loop i , base)
+t2c (line2 j)    = (base , loop j)
+t2c (square i j) = (loop i , loop j)
 
--- Can transport for example Monoid structure from FMSet to AssocList
--- this way, but the achieved Monoid structure is not very efficient
--- to work with. A better solution is to prove that FMSet and
--- AssocList are equal *as monoids*, but how to do this?
+c2t : S¹ × S¹ → Torus
+c2t (base   , base)   = point
+c2t (loop i , base)   = line1 i
+c2t (base   , loop j) = line2 j
+c2t (loop i , loop j) = square i j
 
--- Solution: structure identity principle (SIP)
--- This is a very useful consequence of univalence
-open import Cubical.Foundations.SIP
+c2t-t2c : (t : Torus) → c2t (t2c t) ≡ t
+c2t-t2c point        = refl
+c2t-t2c (line1 _)    = refl
+c2t-t2c (line2 _)    = refl
+c2t-t2c (square _ _) = refl
 
-sip' : {ℓ : Level} {S : Type ℓ → Type ℓ} {ι : StrEquiv S ℓ}
-       (θ : UnivalentStr S ι) (A B : TypeWithStr ℓ S) → A ≃[ ι ] B → A ≡ B
-sip' = sip
+t2c-c2t : (p : S¹ × S¹) → t2c (c2t p) ≡ p
+t2c-c2t (base   , base)   = refl
+t2c-c2t (base   , loop _) = refl
+t2c-c2t (loop _ , base)   = refl
+t2c-c2t (loop _ , loop _) = refl
 
--- The tricky thing is to prove that (S,ι) is a univalent structure.
--- Luckily we provide automation for this in the library, see for example:
-open import Cubical.Algebra.Monoid.Base
+-- Using univalence we get the following equality:
+Torus≡S¹×S¹ : Torus ≡ S¹ × S¹
+Torus≡S¹×S¹ = isoToPath' (iso t2c c2t t2c-c2t c2t-t2c)
 
--- Another cool application of the SIP: matrices represented as
--- functions out of pairs of Fin's and vectors are equal as abelian
--- groups:
-open import Cubical.Algebra.Matrix
+
+windingTorus : point ≡ point → Int × Int
+windingTorus l = ( winding (λ i → proj₁ (t2c (l i)))
+                 , winding (λ i → proj₂ (t2c (l i))))
+
+_ : windingTorus (line1 ∙ sym line2) ≡ (pos 1 , negsuc 0)
+_ = refl
+
+-- We have many more topological examples, including Klein bottle, RP^n,
+-- higher spheres, suspensions, join, wedges, smash product:
+open import Cubical.HITs.KleinBottle
+open import Cubical.HITs.RPn
+open import Cubical.HITs.S2
+open import Cubical.HITs.S3
+open import Cubical.HITs.Susp
+open import Cubical.HITs.Join
+open import Cubical.HITs.Wedge
+open import Cubical.HITs.SmashProduct
+
+-- There's also a proof of the "3x3 lemma" for pushouts in less than
+-- 200LOC. In HoTT-Agda this took about 3000LOC. For details see:
+-- https://github.com/HoTT/HoTT-Agda/tree/master/theorems/homotopy/3x3
+open import Cubical.HITs.Pushout
+
+-- We also defined the Hopf fibration and proved that its total space
+-- is S³ in about 300LOC:
+open import Cubical.HITs.Hopf
+
+-- There is also some integer cohomology:
+open import Cubical.ZCohomology.Everything
+-- To compute cohomology groups of various spaces we need a bunch of
+-- interesting theorems: Freudenthal suspension theorem,
+-- Mayer-Vietoris sequence...
+open import Cubical.Homotopy.Freudenthal
+open import Cubical.ZCohomology.MayerVietorisUnreduced

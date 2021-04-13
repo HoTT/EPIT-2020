@@ -1,5 +1,15 @@
 -- Some very simple problems just to test that things work properly.
--- Solutions to all problems is written at the bottom of the file.
+-- If everything has been installed properly following
+--
+-- https://github.com/HoTT/EPIT-2020/tree/main/04-cubical-type-theory#installation-of-cubical-agda-and-agdacubical
+--
+-- then this file should load fine and one should get 4 holes which
+-- one can fill with appropriate terms. Everything should work with
+-- both Agda 2.6.1.3 and agda/cubical v0.2 as well as with the
+-- development version of both Agda and agda/cubical.
+--
+-- Solution how to fill the holes is written at the bottom of the file.
+--
 {-# OPTIONS --cubical #-}
 module Warmup where
 

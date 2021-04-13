@@ -132,7 +132,7 @@ No universe dependencies. @{} *)
 Print Unit.
 Print nat.
 
-Require Import Bool. (* We load Bool from the HoTT library *)
+From HoTT Require Import Bool. (* We load Bool from the HoTT library *)
 (* https://github.com/HoTT/HoTT/blob/master/theories/Types/Bool.v *)
 Print Bool.
 
@@ -202,7 +202,7 @@ End  Universes.
          https://github.com/HoTT/HoTT/blob/master/theories/Basics/Overture.v
      E.g. Notations are defined here.
  *)
-Require Import Basics.
+From HoTT Require Import Basics.
 
 (** For a good overview of the library:
     https://github.com/HoTT/HoTT/blob/master/STYLE.md
@@ -230,7 +230,7 @@ It would be interesting to link Egbert's book to the HoTT library in a similar w
     A quick guided tour.
 
 ** Path groupoids *)
-Require Import PathGroupoids.
+From HoTT Require Import PathGroupoids.
 
 (* Notations from Day1 *)
 Locate "#".

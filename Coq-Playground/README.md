@@ -1,3 +1,13 @@
+# Table of Contents
+
+- [Playing with Coq-HoTT in the browser](#playing-with-coq-hott-in-the-browser)
+- [Installation instructions for Coq/HoTT](#installation-instructions-for-coq-hott)
+    + [Testing](#testing)
+  * [Alternative IDEs](#alternative-ides)
+    + [Emacs](#emacs)
+    + [VSCode](#vscode)
+  * [Installation from `opam`](#installation-from-opam)
+
 # Playing with Coq-HoTT in the browser
 
 If you'd rather avoid installing Coq locally, you can run Coq with the 

@@ -85,7 +85,7 @@ Section Part_3_Homotopy_Levels.
 
     (* Is contractibility a property or a structure? *)
 
-    (* Please formalize, use "Contr", "IsHprop". *)
+    (* Please formalize, use "Contr", "IsHProp". *)
 
   End Exercise_3_2.
 
@@ -103,7 +103,7 @@ Section Part_4_Equivalences.
 
   Section Exercise_4_1.
 
-    (* If P and Q are propostions then (P → Q) × (Q → P) → P ≃ Q *)
+    (* (a) If P and Q are propostions then (P → Q) × (Q → P) → P ≃ Q *)
 
     Variables P Q : hProp.
 
@@ -111,13 +111,21 @@ Section Part_4_Equivalences.
     Proof.
     Admitted.
 
+    (* (b) The map above is an equivalence. *)
+
     Definition moo : IsEquiv cow.
     Proof.
     Admitted.
 
-    (* If X and Y are sets then (X ≃ Y) ≃ (X ≅ Y). *)
+    (* (c) If X and Y are sets then (X ≃ Y) ≃ (X ≅ Y). *)
 
-    Theorem rabbit (X Y : hSet) : (X <~> Y) <~> { f : X -> Y & BiInv f }.
+    (* The library does not seem to have an explicit definition of isIso,
+       so we include it here. *)
+
+    Definition isIso {A B} (f : A -> B) : Type :=
+      { g : B -> A & Sect g f * Sect f g }%type.
+
+    Theorem rabbit (X Y : hSet) : (X <~> Y) <~> { f : X -> Y & isIso f }.
     Proof.
     Admitted.
 

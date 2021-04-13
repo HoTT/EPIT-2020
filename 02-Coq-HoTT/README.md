@@ -41,6 +41,12 @@ but show how to formalize these aspects in HoTT.
 ## Exercises
 Formalize the Exercises of day 1 using the HoTT library.
 
+Optional exercises: 
+- Prove that the truncated logic from day1 (see part2.v) satisfies the (or some) rules of intuitionistic FOL.
+- Advanced: Prove that the truncation HIT is equivalent to [impredicative trunction](https://github.com/HoTT/HoTT/blob/master/theories/PropResizing/ImpredicativeTruncation.v). This uses resizing.
+- Advanced: Prove the equivalence of [quotients](https://github.com/HoTT/HoTT/blob/master/theories/HIT/quotient.v#L214). This uses resizing.
+
+
 There are also more advanced challenges in the text.
 
 If you are a beginner, you will learn a lot by finding and replaying the existing lemmas.

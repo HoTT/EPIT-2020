@@ -1,7 +1,7 @@
 (*** Part 2: Hlevels, type classes and HITs *)
 (** Tutorial on type classes (https://www.labri.fr/perso/casteran/CoqArt/TypeClassesTut/typeclassestut.pdf) *)
 
-Require Export Basics.
+From HoTT Require Export Basics.
 
 (** As we saw in day1. Propositions are closed under a number of constructions:
 forall, ->, *, ..., existential quantification where the domain is a proposition.

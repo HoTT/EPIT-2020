@@ -1,6 +1,6 @@
 {-
 
-Part 5: Higher inductive types
+Part 4: Higher inductive types
 
 - Quotients via HITs
 - Propositional truncation for logic?
@@ -11,14 +11,14 @@ Part 5: Higher inductive types
 -}
 
 {-# OPTIONS --cubical #-}
-module Part5 where
+module Part4 where
 
 open import Cubical.Foundations.Prelude
 open import Cubical.Foundations.Isomorphism
 open import Cubical.Data.Int
 open import Cubical.Data.Prod
 
-open import Part4
+open import Part3
 
 
 -----------------------------------------------------------------------------

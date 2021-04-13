@@ -1,6 +1,6 @@
 {-
 
-Part 4: Univalence and the SIP
+Part 3: Univalence and the SIP
 
 - Univalence from ua and uaβ
 - Transporting with ua (examples: ua not : Bool = Bool, ua suc : Z = Z, ...)
@@ -12,16 +12,16 @@ Part 4: Univalence and the SIP
 -}
 
 {-# OPTIONS --cubical #-}
-module Part4 where
+module Part3 where
 
-open import Cubical.Foundations.Prelude
+open import Cubical.Foundations.Prelude hiding (transport ; subst)
 open import Cubical.Foundations.Equiv
 open import Cubical.Foundations.Isomorphism
 open import Cubical.Foundations.Univalence
 
 open import Cubical.Data.Int
 
-open import Part3
+open import Part2
 
 
 -- Another key concept in HoTT/UF is the Univalence Axiom. In Cubical

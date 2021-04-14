@@ -184,6 +184,11 @@ isProp→isSet h a b p q j i =
                  ; (j = i0) → h a (p i) k
                  ; (j = i1) → h a (q i) k }) a
 
+isPropIsProp : isProp (isProp A)
+isPropIsProp f g i a b = isProp→isSet f a b (f a b) (g a b) i
+
+isPropIsSet : isProp (isSet A)
+isPropIsSet h1 h2 i x y = isPropIsProp (h1 x y) (h2 x y) i
 
 -- In order to understand what the second argument to hcomp is one
 -- should read about partial elements. We refer the interested reader

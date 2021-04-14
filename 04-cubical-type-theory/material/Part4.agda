@@ -52,6 +52,33 @@ unitr-++ (comm x y xs i) j = comm x y (unitr-++ xs j) i
 -- unitr-++ (trunc xs ys x y i j) = {!!}
 
 
+
+-- -- A more efficient version of finite multisets based on association lists
+-- open import Cubical.HITs.AssocList.Base
+
+-- -- data AssocList (A : Type) : Type where
+-- --  ⟨⟩ : AssocList A
+-- --  ⟨_,_⟩∷_ : (a : A) (n : ℕ) (xs : AssocList A) → AssocList A
+-- --  per : (a b : A) (m n : ℕ) (xs : AssocList A)
+-- --      → ⟨ a , m ⟩∷ ⟨ b , n ⟩∷ xs ≡ ⟨ b , n ⟩∷ ⟨ a , m ⟩∷ xs
+-- --  agg : (a : A) (m n : ℕ) (xs : AssocList A)
+-- --      → ⟨ a , m ⟩∷ ⟨ a , n ⟩∷ xs ≡ ⟨ a , m + n ⟩∷ xs
+-- --  del : (a : A) (xs : AssocList A) → ⟨ a , 0 ⟩∷ xs ≡ xs
+-- --  trunc : (xs ys : AssocList A) (p q : xs ≡ ys) → p ≡ q
+
+
+-- -- Programming and proving is more complicated with AssocList compared
+-- -- to FMSet. This kind of example occurs everywhere in programming and
+-- -- mathematics: one representation is easier to work with, but not
+-- -- efficient, while another is efficient but difficult to work with.
+
+
+-- -- Can transport for example Monoid structure from FMSet to AssocList
+-- -- this way, but the achieved Monoid structure is not very efficient
+-- -- to work with. A better solution is to prove that FMSet and
+-- -- AssocList are equal *as monoids*, but how to do this?
+
+
 -- This is a special case of set quotients! Very useful for
 -- programming and set level mathematics
 

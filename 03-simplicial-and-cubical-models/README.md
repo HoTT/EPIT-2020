@@ -29,7 +29,7 @@ All times are in UTC+2.
 | 17:15–17:30 | (break)                                              |
 | 17:30–18:30 | Valery Isaev: Arend proof assistant                  |
 
-*The above is a rough schedule. If we run overtime in the lectures, we will shorten the exercise sessions. *
+*The above is a rough schedule. If we run overtime in the lectures, we will shorten the exercise sessions.*
 
 ## Background material
 

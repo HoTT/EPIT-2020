@@ -16,7 +16,7 @@ All times are in UTC+2.
 
 | Time        | Topic                                                |
 |:------------|:-----------------------------------------------------|
-| 14:00–14:15 | Introduction                                         |
+| 14:00–14:15 | Part 0: Introduction                                 |
 | 14:15–14:35 | Part 1: What is a model of type theory?              |
 | 14:35–14:45 | (break)                                              |
 | 14:45–15:00 | Part 2: Presheaf models                              |
@@ -39,7 +39,7 @@ I will be available 10:00–13:00 on Tuesday on Discord for in-depth discussions
 
 Lecture notes will be made available before the lectures.
 
-### Introduction
+### Part 0: Introduction
 
 * Overview of existing models
 * Connections with ∞-toposes

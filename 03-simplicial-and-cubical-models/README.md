@@ -112,9 +112,9 @@ This list does not attempt to be complete.
 
 * The original connection-style model: [Cubical Type Theory: a constructive interpretation of the univalence axiom](https://arxiv.org/abs/1611.02108)
 
-* development using "extensional" type theory (ETT) as internal language of presheaves: [Axioms for Modelling Cubical Type Theory in a Topos](https://arxiv.org/abs/1712.04864)
+* Development using "extensional" type theory (ETT) as internal language of presheaves: [Axioms for Modelling Cubical Type Theory in a Topos](https://arxiv.org/abs/1712.04864)
 
-* using ETT with modalities to develop the universe internally: [Internal Universes in Models of Homotopy Type Theory](https://arxiv.org/abs/1801.07664)
+* Using ETT with modalities to develop the universe internally: [Internal Universes in Models of Homotopy Type Theory](https://arxiv.org/abs/1801.07664)
 
 * Canonicity results using a semantic technique (gluing): [Canonicity and homotopy canonicity for cubical type theory](https://arxiv.org/abs/1902.06572)
 

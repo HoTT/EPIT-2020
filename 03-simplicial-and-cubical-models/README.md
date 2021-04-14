@@ -86,4 +86,36 @@ I will be available 10:00–13:00 on Thursday on Discord for in-depth discussion
 
 ## Additional material and literature pointers
 
-To be announced.
+This list does not attempt to be complete.
+
+### Simplicial sets
+
+* [A leisurely introduction to simplicial sets](http://www.math.jhu.edu/~eriehl/ssets.pdf)
+
+* [An elementary illustrated introduction to simplicial sets](https://arxiv.org/abs/0809.4221)
+
+* A standard textbook on simplicial sets and their use in homotopy theory: Simplicial Homotopy Theory by Goerss and Jardine.
+  You can google for it.
+
+### Simplicial models
+
+* The original simplicial set model: [The Simplicial Model of Univalent Foundations (after Voevodsky)](https://arxiv.org/abs/1211.2851).
+
+* Breakthrough result: HoTT (minus HITs) can be interpreted in all (∞, 1)-toposes: [All (∞,1)-toposes have strict univalent universes](https://arxiv.org/abs/1904.07004)
+  Shulman has an extension of this to HITs forthcoming.
+
+* Categorical presentation of fibrancy of Π-types (right properness): [The Frobenius Condition, Right Properness, and Uniform Fibrations](https://arxiv.org/abs/1510.00669)
+
+* Categorical presentation of equivalence extension (univalence): [The Equivalence Extension Property and Model Structures](https://arxiv.org/abs/1704.06911) (under revision)
+
+### Cubical models
+
+* The original connection-style model: [Cubical Type Theory: a constructive interpretation of the univalence axiom](https://arxiv.org/abs/1611.02108)
+
+* development using "extensional" type theory (ETT) as internal language of presheaves: [Axioms for Modelling Cubical Type Theory in a Topos](https://arxiv.org/abs/1712.04864)
+
+* using ETT with modalities to develop the universe internally: [Internal Universes in Models of Homotopy Type Theory](https://arxiv.org/abs/1801.07664)
+
+* Canonicity results using a semantic technique (gluing): [Canonicity and homotopy canonicity for cubical type theory](https://arxiv.org/abs/1902.06572)
+
+* Cartesian-style model: [Syntax and Models of Cartesian Cubical Type Theory](http://www.cs.cmu.edu/~./cangiuli/papers/abcfhl.pdf)

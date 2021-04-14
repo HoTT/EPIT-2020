@@ -53,6 +53,11 @@ Students with the intention to contribute to or trying out the latest
 version of the agda/cubical library will need to install the development version
 of Agda. Detailed instructions can be found at: https://github.com/agda/cubical/blob/master/INSTALL.md
 
+The way to interact with Agda is via emacs and the Agda-mode. This
+mode gets installed with Agda, but you usually need to run `agda-mode
+setup` after the first time installing Agda. For details see:
+https://agda.readthedocs.io/en/v2.6.1/getting-started/installation.html#installation-from-hackage
+
 **Tip**: It can be a bit complicated to install the development version
 of Agda and Anders uses the "cabal sandbox install instructions" solution,
 but other solutions might work better on other systems.

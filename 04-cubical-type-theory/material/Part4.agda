@@ -13,7 +13,7 @@ Part 4: Higher inductive types
 {-# OPTIONS --cubical #-}
 module Part4 where
 
-open import Cubical.Foundations.Prelude hiding (refl ; cong ; subst)
+open import Cubical.Foundations.Prelude hiding (refl ; cong ; subst ; sym)
 open import Cubical.Foundations.Isomorphism
 open import Cubical.Data.Int
 open import Cubical.Data.Prod

@@ -14,7 +14,7 @@ Part 3: Univalence and the SIP
 {-# OPTIONS --cubical #-}
 module Part3 where
 
-open import Cubical.Foundations.Prelude hiding (refl ; transport ; subst)
+open import Cubical.Foundations.Prelude hiding (refl ; transport ; subst ; sym)
 open import Cubical.Foundations.Equiv
 open import Cubical.Foundations.Isomorphism
 open import Cubical.Foundations.Univalence

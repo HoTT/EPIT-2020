@@ -1,0 +1,156 @@
+\documentclass[handout]{beamer}
+
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+
+\title{EPIT Lecture 5.3\\ Homotopy pushouts and descent}
+\author{Egbert Rijke}
+\date{Friday, April 16th 2020}
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\mathchardef\usc="2D
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\brck}[1]{\|#1\|}
+\newcommand{\Brck}[1]{\left\|#1\right\|}
+\newcommand{\trunc}[2]{\|#2\|_{#1}}
+\newcommand{\Trunc}[2]{\left\|#2\right\|_{#1}}
+\newcommand{\unit}{\mathbf{1}}
+\newcommand{\sphere}[1]{S^{#1}}
+\newcommand{\isnull}{\mathsf{is\usc{}null}}
+\newcommand{\htpy}{\sim}
+\newcommand{\apbinary}{\mathsf{ap\usc{}bin}}
+\newcommand{\Glob}{\mathsf{Glob}}
+\newcommand{\typeGlob}{\mathsf{type}}
+\newcommand{\relGlob}{\mathsf{rel}}
+\newcommand{\homGlob}{\mathsf{hom}}
+\newcommand{\maphomGlob}{\mathsf{map}}
+\newcommand{\cgrhomGlob}{\mathsf{cgr}}
+\newcommand{\bihomGlob}{\mathsf{bihom}}
+\newcommand{\mapbihomGlob}{\mathsf{map}}
+\newcommand{\cgrbihomGlob}{\mathsf{cgr}}
+\newcommand{\ct}{\bullet}
+\newcommand{\isconstant}[2]{\mathsf{is\usc{}}(#1,#2)\mathsf{\usc{}constant}}
+\newcommand{\ap}{\mathsf{ap}}
+\newcommand{\interchange}{\mathsf{interchange}}
+\newcommand{\refl}{\mathsf{refl}}
+\newcommand{\eh}{\mathsf{eckmann\usc{}hilton}}
+\newcommand{\blank}{\mathord{\hspace{1pt}\text{--}\hspace{1pt}}}
+\newcommand{\EM}{\mathsf{EM}}
+\newcommand{\baseS}{\mathsf{base}}
+\newcommand{\loopS}{\mathsf{loop}}
+\newcommand{\apd}{\mathsf{apd}}
+\newcommand{\tr}{\mathsf{tr}}
+\newcommand{\idfunc}{\mathsf{id}}
+\newcommand{\mulcircle}{\mu}
+\newcommand{\basemulcircle}{\mathsf{base\usc{}mul}_{\sphere{1}}}
+\newcommand{\loopmulcircle}{\mathsf{loop\usc{}mul}_{\sphere{1}}}
+\newcommand{\htpyidcircle}{H}
+\newcommand{\basehtpyidcircle}{\alpha}
+\newcommand{\loophtpyidcircle}{\beta}
+\newcommand{\invcircle}{\mathsf{inv}_{\sphere{1}}}
+\newcommand{\evbase}{\mathsf{ev\usc{}base}}
+\newcommand{\eqhtpy}{\mathsf{eq\usc{}htpy}}
+\newcommand{\apply}[2]{#1(#2)}
+\newcommand{\equiveq}{\mathsf{equiv\usc{}eq}}
+\newcommand{\succZ}{\mathsf{succ}}
+\newcommand{\bool}{\mathsf{bool}}
+\newcommand{\const}{\mathsf{const}}
+\newcommand{\btrue}{\mathsf{true}}
+\newcommand{\bfalse}{\mathsf{false}}
+\newcommand{\ttt}{\mathsf{pt}}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]{}
+
+\begin{document}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{frame}
+  Many spaces in topology are constructed by attaching cells, i.e., they are defined as CW-complexes.
+  \begin{example}
+    We can define a sphere by gluing the boundary of a disk to a single point.
+  \end{example}
+  Such constructions satisfy universal properties. In type theory, we can define many of them as higher inductive type.\\[1em]
+
+  In this lecture we will see basic constructions of types such as spheres and suspensions, and we will study their basic properties.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Homotopy pushouts}
+  Given $A \stackrel{f}{\leftarrow} S \stackrel{g}{\rightarrow} B$, the pushout of $f$ and $g$ is a type $A\sqcup^S B$ that fits in a commuting square
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&]
+      S \arrow[d,swap,"f"] \arrow[r,"g"] \& B \arrow[d,"j"] \\
+      A \arrow[r,swap,"i"] \& A\sqcup^C B
+    \end{tikzcd}
+  \end{equation*}
+  that satisfies the universal property of a pushout.
+\end{frame}
+
+\begin{frame}
+  \begin{example}
+    The circle fits in a pushout square
+    \begin{equation*}
+      \begin{tikzcd}[ampersand replacement=\&]
+        \mathbf{2} \arrow[r] \arrow[d] \& \mathbf{1} \arrow[d] \\
+        \mathbf{1} \arrow[r] \& \sphere{1}
+      \end{tikzcd}
+    \end{equation*}
+    in whith the homotopy $H:\const_\baseS\circ\const_\ttt\htpy\const\baseS\circ\const_\ttt$ is given by
+    \begin{align*}
+      H(\btrue) & := \loopS \\
+      H(\bfalse) & := \refl
+    \end{align*}    
+  \end{example}
+\end{frame}
+
+\begin{frame}
+  \begin{example}
+    The spheres can be defined recursively as pushouts:
+    \begin{equation*}
+      \begin{tikzcd}[ampersand replacement=\&]
+        \sphere{n} \arrow[r] \arrow[d] \& \mathbf{1} \arrow[d] \\
+        \mathbf{1} \arrow[r] \& \sphere{n+1}
+      \end{tikzcd}
+    \end{equation*}
+  \end{example}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Homotopy pullbacks}
+  Given $A\stackrel{f}{\rightarrow} X \stackrel{g}{\leftarrow} B$, the pullback of $f$ and $g$ is a type $A\times_X B$ that fits in a commuting square
+  \begin{equation*}
+    \begin{tikzcd}
+      A\times_XB \arrow[d] \arrow[r] \& B \arrow[d,"g"] \\
+      A \arrow[r,swap,"f"] & X,
+    \end{tikzcd}
+  \end{equation*}
+  that satisfies the universal property of a pullback.
+\end{frame}
+
+\begin{frame}
+  \begin{theorem}[Descent for pushouts]
+    Consider a commuting cube
+    \begin{equation*}
+      \begin{tikzcd}[ampersand replacement=\&]
+        \& S' \arrow[dl] \arrow[d] \arrow[dr] \\
+        A' \arrow[d] \& S \arrow[dl] \arrow[dr] \& B' \arrow[dl,crossing over] \arrow[d] \\
+        A \arrow[dr] \& X' \arrow[from=ul,crossing over] \arrow[d] \& B \arrow[dl] \\
+        \& X
+      \end{tikzcd}
+    \end{equation*}
+    In which the bottom square is a pushout square and the two vertical squares in the back are pullback squares. The following are equivalent:
+    \begin{enumerate}
+    \item The two vertical squares in the front are pullback squares.
+    \item The top square is a pushout square.
+    \end{enumerate}
+  \end{theorem}
+\end{frame}
+
+\end{document}

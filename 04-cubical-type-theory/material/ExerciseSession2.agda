@@ -61,7 +61,7 @@ toPathP {A = A} {x = x} p i =
 -- (hint: the second component can be given by a suitable higher
 -- dimensional hcomp)
 isPropIsContr : isProp (isContr A)
-isPropIsContr z0 z1 j = {!!}
+isPropIsContr = {!!}
 
 
 

@@ -6,8 +6,6 @@ Part 3: Univalence and the SIP
 • Transporting with ua
 • Subst using ua
 • The SIP as a consequence of ua
-• Examples of using the SIP for math and programming (algebra, data
-  structures, etc.)
 
 -}
 
@@ -110,8 +108,8 @@ _ = refl
 substEquiv : (S : Type ℓ → Type ℓ') (e : A ≃ B) → S A → S B
 substEquiv S e = subst S (ua e)
 
--- This lets us transport any structure on A to get a structure on
--- B. Example with binary numbers:
+-- This lets us transport any structure on A to get a structure on B.
+-- Example with binary numbers:
 
 -- Warning: the following doesn't work with development version?
 open import Cubical.Data.BinNat.BinNat renaming (ℕ≃binnat to ℕ≃Bin ; binnat to Bin)
@@ -131,19 +129,21 @@ _+Bin_  = fst TBin
 +Bin-assoc = snd TBin
 
 
--- This is however not always what we want was _+Bin_ will translate
+-- This is however not always what we want as _+Bin_ will translate
 -- its input to unary numbers, add, and then translate back. Instead
 -- we want to use efficient addition on binary numbers, but get the
--- associativity proof for free. For details see Section 2.1.1 of:
---
--- https://www.doi.org/10.1017/S0956796821000034
--- (Can be downloaded from: https://staff.math.su.se/anders.mortberg/papers/cubicalagda2.pdf)
-
-
--- Another paper which discusses similar things with many more examples is:
+-- associativity proof for free. So what we really want is to
+-- characterize the equality of T-structured types, i.e. we want a
+-- proof that two types with T-structure are equal if there is a
+-- T-structure preserving equivalence between them. We achieve this
+-- and much more using a cubical version of the SIP in:
 --
 -- Internalizing Representation Independence with Univalence
 -- Carlo Angiuli, Evan Cavallo, Anders Mörtberg, Max Zeuner
 -- https://arxiv.org/abs/2009.05547
-
-
+--
+-- The binary numbers example is spelled out in detail in Section
+-- 2.1.1 of:
+--
+-- https://www.doi.org/10.1017/S0956796821000034
+-- (Can be downloaded from: https://staff.math.su.se/anders.mortberg/papers/cubicalagda2.pdf)

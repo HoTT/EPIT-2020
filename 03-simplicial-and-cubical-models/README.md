@@ -33,7 +33,7 @@ All times are in UTC+2.
 
 Due to the tight schedule, we might have to skip over some aspects.
 We can certainly not go into all the details.
-I will be available 10:00–13:00 on Tuesday on Discord for in-depth discussions.
+I will be available 10:00–13:00 on Thursday on Discord for in-depth discussions.
 
 ## Contents
 

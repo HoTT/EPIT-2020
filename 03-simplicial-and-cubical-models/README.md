@@ -37,7 +37,7 @@ I will be available 10:00–13:00 on Tuesday on Discord for in-depth discussions
 
 ## Contents
 
-Lecture notes will be made available before the lectures.
+[Lecture notes](notes-start.pdf)
 
 ### Part 0: Introduction
 

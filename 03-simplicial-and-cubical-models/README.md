@@ -60,6 +60,7 @@ Lecture notes will be made available before the lectures.
 
 ### Part 2: Presheaf models
 
+* Coreflection of discrete fibrations
 * `Π`-types (via coreflection)
 * Hofmann-Streicher universe (via coreflection)
 * Type formers internally to presheaves over contexts

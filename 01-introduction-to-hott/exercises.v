@@ -127,7 +127,7 @@ Section Part_4_Equivalences.
 
     (* (a) If P and Q are propostions then (P → Q) × (Q → P) → P ≃ Q *)
 
-    Variables P Q : hProp.
+    Variables P Q : HProp.
 
     Definition cow : (P -> Q) * (Q -> P) -> P <~> Q.
     Proof.
@@ -147,7 +147,7 @@ Section Part_4_Equivalences.
      Definition isIso {A B} (f : A -> B) : Type :=
       { g : B -> A & (g o f == idmap) * (f o g == idmap) }%type.
 
-    Theorem rabbit (X Y : hSet) : (X <~> Y) <~> { f : X -> Y & isIso f }.
+    Theorem rabbit (X Y : HSet) : (X <~> Y) <~> { f : X -> Y & isIso f }.
     Proof.
     Admitted.
 
@@ -174,7 +174,7 @@ Section Part_5_Univalence.
 
     (* Show that the type of true propositions is contractible. *)
 
-    Theorem weasel : Contr { A : hProp & A }.
+    Theorem weasel : Contr { A : HProp & A }.
     Proof.
     Admitted.
 
@@ -188,7 +188,7 @@ Section Part_5_Univalence.
     Proof.
     Admitted.
 
-    Lemma set_not_set : IsHSet hSet -> Empty.
+    Lemma set_not_set : IsHSet HSet -> Empty.
     Proof.
     Admitted.
 

@@ -57,7 +57,6 @@ toPathP {A = A} {x = x} p i =
        → (p : fst u ≡ fst v) → u ≡ v
 Σ≡Prop {B = B} {u = u} {v = v} h p = {!!}
 
-
 -- Exercice 7 (harder): prove that being contractible is a proposition.
 -- (hint: the second component can be given by a suitable higher
 -- dimensional hcomp)
@@ -69,32 +68,26 @@ isPropIsContr z0 z1 j = {!!}
 
 -- Exercises about Part 3:
 
--- Exercise 8 (a bit longer, but very good):
+-- Exercise 8 (a bit longer, but very good): compose sucPathInt with
+-- itself n times. Transporting along this will be addition,
+-- transporting with it backwards will be subtraction.
 
 open import Cubical.Data.Nat
 open import Cubical.Data.Int hiding (addEq ; subEq)
 
--- Compose sucPathInt with itself n times. Transporting along this
--- will be addition, transporting with it backwards will be subtraction.
-
--- a) Define a path "addEq n" by composing sucPathInt with itself n
--- times.
+-- a) Define a path "addEq n" by composing sucPathInt with itself n times.
 addEq : ℕ → Int ≡ Int
-addEq zero = refl
-addEq (suc n) = (addEq n) ∙ sucPathInt
+addEq n = {!!}
 
 -- b) Define another path "subEq n" by composing "sym sucPathInt" with
 -- itself n times.
 subEq : ℕ → Int ≡ Int
-subEq zero = refl
-subEq (suc n) = (subEq n) ∙ sym sucPathInt
-
+subEq n = {!!}
 
 -- c) Define addition on integers by pattern-matching and transporting
 -- along addEq/subEq appropriately.
 _+Int_ : Int → Int → Int
-m +Int pos n    = transport (addEq n) m
-m +Int negsuc n = transport (subEq (suc n)) m
+m +Int n = {!!}
 
 -- d) Do some concrete computations using _+Int_ (this would not work
 -- in HoTT as the transport would be stuck!)
@@ -113,12 +106,15 @@ hSet = Σ[ A ∈ Type₀ ] isSet A
 BoolSet : hSet
 BoolSet = Bool , isSetBool
 
+-- (hint: use a suitable nested transport)
 notPath≢refl : (notPath ≡ refl) → ⊥
-notPath≢refl e = true≢false (transport (λ i → transport (e i) true ≡ false) refl)
+notPath≢refl e = true≢false {!!}
 
+-- (hint: use notPath≢refl and define two elements of BoolSet ≡
+-- BoolSet, one based on notPath and one based on refl. Σ≡Prop and
+-- isPropIsSet is probably handy)
 ¬isSet-hSet : isSet hSet → ⊥
-¬isSet-hSet h = notPath≢refl {!!}
-
+¬isSet-hSet h = {!!}
 
 
 

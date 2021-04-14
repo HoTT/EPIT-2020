@@ -193,7 +193,9 @@ funExt p i x = p x i
 -- Minimum: _∧_ : I → I → I
 -- Maximum: _∨_ : I → I → I
 -- Symmetry: ~_ : I → I
-
+--
+-- Agda remark: the _ indicate where arguments should go.
+--
 -- These satisfy the equations of a De Morgan algebra (i.e. a
 -- distributive lattice (_∧_ , _∨_ , i0 , i1) with an involution
 -- ~). So we have the following kinds of equations definitionally:
@@ -290,6 +292,10 @@ isContrSingl x = ctr , prf
   prf : (s : singl x) → ctr ≡ s
   prf (y , pax) i = (pax i) , λ j → pax (i ∧ j)
 
+  -- Agda tip: in order to automatically destruct an argument
+  -- (like (y , pax) in prf) write it in the hole and type
+  -- C-c C-c. Agda might pick silly names, but it's still very
+  -- convenient.
 
 -- As we saw in the second component of prf we often need squares when
 -- proving things. In fact, pax (i ∧ j) is a path relating refl to pax

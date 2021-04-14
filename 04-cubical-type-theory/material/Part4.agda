@@ -2,11 +2,9 @@
 
 Part 4: Higher inductive types
 
-- Quotients via HITs
-- Propositional truncation for logic?
-- CS example using quotients (maybe finite multisets or queues)
-- Synthetic homotopy theory (probably Torus = S^1 * S^1, pi_1(S^1) =
-  Z, pi_1(Torus) = Z * Z)
+- Set quotients via HITs
+- Propositional truncation
+- A little synthetic homotopy theory
 
 -}
 
@@ -29,29 +27,25 @@ open import Part3
 -- defining set quotiented types as well as higher dimensional types
 -- quotiented by some relations.
 
-
--- Example 1: finite multisets
---
 -- The following definition of finite multisets is due to Vikraman
 -- Choudhury and Marcelo Fiore.
 
 infixr 5 _∷_
 
-data FMSet {ℓ : Level} (A : Type ℓ) : Type ℓ where
+data FMSet (A : Type ℓ) : Type ℓ where
   [] : FMSet A
   _∷_ : (x : A) → (xs : FMSet A) → FMSet A
   comm : (x y : A) (xs : FMSet A) → x ∷ y ∷ xs ≡ y ∷ x ∷ xs
   trunc : (xs ys : FMSet A) (p q : xs ≡ ys) → p ≡ q
 
--- We need to add the trunc constructor for FMSets to be sets, omitted
--- here for simplicity.
+infixr 30 _++_
 
-_++_ : ∀ {A : Type ℓ} (xs ys : FMSet A) → FMSet A
+_++_ : ∀ (xs ys : FMSet A) → FMSet A
 [] ++ ys = ys
 (x ∷ xs) ++ ys = x ∷ xs ++ ys
 comm x y xs i ++ ys = comm x y (xs ++ ys) i
 trunc xs zs p q i j ++ ys =
-  trunc (xs ++ ys) (zs ++ ys) (cong (_++ ys) p) (cong (_++ ys) q) i j
+  trunc (xs ++ ys) (zs ++ ys) (λ k → p k ++ ys) (λ k → q k ++ ys) i j
 
 unitl-++ : (xs : FMSet A) → [] ++ xs ≡ xs
 unitl-++ xs = refl
@@ -62,7 +56,7 @@ unitr-++ (x ∷ xs) = cong (x ∷_) (unitr-++ xs)
 unitr-++ (comm x y xs i) j = comm x y (unitr-++ xs j) i
 unitr-++ (trunc xs ys p q i k) j =
   trunc (unitr-++ xs j) (unitr-++ ys j)
-        (cong (λ zs → unitr-++ zs j) p) (cong (λ zs → unitr-++ zs j) q) i k
+        (λ k → unitr-++ (p k) j) (λ k → unitr-++ (q k) j) i k
 
 
 -- Filling the goals for comm and trunc quickly gets tiresome and
@@ -194,10 +188,10 @@ _ = refl
 --   Cubical.HITs.S1.Base
 
 -- Complex multiplication on S¹, used in the Hopf fibration
-_·_ : S¹ → S¹ → S¹
-base     · x = x
-loop i · base = loop i
-loop i · loop j =
+_⋆_ : S¹ → S¹ → S¹
+base   ⋆ x = x
+loop i ⋆ base = loop i
+loop i ⋆ loop j =
   hcomp (λ k → λ { (i = i0) → loop (j ∨ ~ k)
                  ; (i = i1) → loop (j ∧ k)
                  ; (j = i0) → loop (i ∨ ~ k)

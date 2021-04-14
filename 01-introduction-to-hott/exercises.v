@@ -124,8 +124,8 @@ Section Part_4_Equivalences.
     (* The library does not seem to have an explicit definition of isIso,
        so we include it here. *)
 
-    Definition isIso {A B} (f : A -> B) : Type :=
-      { g : B -> A & Sect g f * Sect f g }%type.
+     Definition isIso {A B} (f : A -> B) : Type :=
+      { g : B -> A & (g o f == idmap) * (f o g == idmap) }%type.
 
     Theorem rabbit (X Y : hSet) : (X <~> Y) <~> { f : X -> Y & isIso f }.
     Proof.

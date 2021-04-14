@@ -37,7 +37,7 @@ funExt⁻ p = {!!}
 
 
 -- Exercise 7: use funExt⁻ to prove isSetΠ
-isSetΠ : {B : A → Type ℓ'} (h : (x : A) → isSet (B x)) → isSet ((x : A) → B x)
+isSetΠ : (h : (x : A) → isSet (B x)) → isSet ((x : A) → B x)
 isSetΠ h = {!!}
 
 

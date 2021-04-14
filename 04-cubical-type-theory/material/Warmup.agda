@@ -10,13 +10,13 @@
 --
 -- Solution how to fill the holes is written at the bottom of the file.
 --
-{-# OPTIONS --cubical #-}
+{-# OPTIONS --cubical --allow-unsolved-metas #-}
 module Warmup where
 
 open import Part1
 
 variable
-  A B C : Type ℓ
+  C : Type ℓ
 
 -- Cong/ap satisfies a lot of nice equations:
 

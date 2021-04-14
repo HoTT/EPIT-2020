@@ -1,10 +1,11 @@
 {-# OPTIONS --cubical --allow-unsolved-metas #-}
 module ExerciseSession2 where
 
+open import Part1
 open import Part2
-open import Part3 hiding (Bool ; notPath)
-open import ExerciseSession1 hiding (B)
+open import ExerciseSession1
 
+open import Cubical.Foundations.Equiv
 
 -- Exercises about Part 2:
 
@@ -68,9 +69,9 @@ isPropIsContr = {!!}
 
 -- Exercises about Part 3:
 
--- Exercise 8 (a bit longer, but very good): compose sucPathInt with
--- itself n times. Transporting along this will be addition,
--- transporting with it backwards will be subtraction.
+-- Exercise 8 (a bit longer, but fun): compose sucPathInt with itself
+-- n times. Transporting along this will be addition, transporting
+-- with it backwards will be subtraction.
 
 open import Cubical.Data.Nat
 open import Cubical.Data.Int hiding (addEq ; subEq)
@@ -92,10 +93,22 @@ m +Int n = {!!}
 -- d) Do some concrete computations using _+Int_ (this would not work
 -- in HoTT as the transport would be stuck!)
 
+-- e) Use isEquivTransport from
+
+open import Cubical.Foundations.Transport
+
+-- to prove that +Int with a fixed number is an equivalence.
+--
+-- Note that proving this for the usual _+_ function would be a lot
+-- longer, but now we get it for free as addition is defined using
+-- transport which we already know is an equivalence.
 
 -- Exercise 9: prove that hSet is not an hSet
 
+-- Let's import Bool instead so that we get everything from the library
 open import Cubical.Data.Bool renaming (notEq to notPath)
+
+-- The empty type ⊥ (written \bot)
 open import Cubical.Data.Empty
 
 -- Just define hSets of level 0 for simplicity
@@ -122,6 +135,7 @@ notPath≢refl e = true≢false {!!}
 -- and hence equal. Transport some functions and proofs between the
 -- two.
 
+-- Orderings on ℕ
 open import Cubical.Data.Nat.Order
 
 data FinData : ℕ → Type₀ where

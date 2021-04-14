@@ -1,6 +1,8 @@
 {-# OPTIONS --cubical --allow-unsolved-metas #-}
 module ExerciseSession3 where
 
+open import Part1
+open import Part2
 open import Part3
 open import Part4
 open import ExerciseSession1 hiding (B)
@@ -59,6 +61,3 @@ S¹≡SuspBool : S¹ ≡ Susp Bool
 S¹≡SuspBool = {!!}
 
 -- Hint: define maps back and forth and prove that they cancel.
-
-
-

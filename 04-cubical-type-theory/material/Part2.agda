@@ -13,7 +13,7 @@ Part 3: Transport and composition
 {-# OPTIONS --cubical #-}
 module Part2 where
 
-open import Part1 public
+open import Part1
 
 -- While path types are great for reasoning about equality they don't
 -- let us transport along paths between types or even compose

@@ -10,7 +10,7 @@ Part 4: Higher inductive types
 
 -}
 
-{-# OPTIONS --cubical --allow-unsolved-metas #-}
+{-# OPTIONS --cubical #-}
 module Part4 where
 
 open import Cubical.Foundations.Isomorphism
@@ -18,6 +18,8 @@ open import Cubical.Data.Int hiding (_+_)
 open import Cubical.Data.Nat hiding (elim)
 open import Cubical.Data.Prod hiding (map)
 
+open import Part1
+open import Part2
 open import Part3
 
 -- Another thing that Cubical Agda adds is the possibility to define

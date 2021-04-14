@@ -15,11 +15,11 @@ module Part3 where
 open import Cubical.Core.Glue public
   using ( Glue ; glue ; unglue ; lineToEquiv )
 
-open import Cubical.Foundations.Prelude hiding (refl ; transport ; subst ; sym ; transportRefl ; _∙_)
 open import Cubical.Foundations.Equiv
 open import Cubical.Foundations.Isomorphism
 
-open import Part2 public
+open import Part1
+open import Part2
 
 
 -- A key concept in HoTT/UF is univalence. As we have seen earlier in

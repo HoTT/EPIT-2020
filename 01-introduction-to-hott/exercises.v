@@ -1,5 +1,3 @@
-(* If loading this file in emacs, remove first the last few lines that force to call `hoqtop` and rather use the `_CoqProject` method described in the installation instructions *)
-
 From HoTT Require Import HoTT.
 
 (* This file formalizes the exercises from the lectures "Introduction to HoTT". *)

@@ -68,6 +68,26 @@ Section Part_2_Identity_Types.
 
   End Exercise_2_2.
 
+  Section Exercise_2_3.
+
+    (* Suppose
+
+         u, v : Σ (x : A) . B(x)
+         p : π₁ u = π₁ v
+         q : p . (π₂ u) = π₂ v
+
+       are given. Construct a path u = v. *)
+    Theorem Exercise_2_3
+              {A : Type} {B : A -> Type}
+              {u v : {x : A & B x}}
+              (p : u.1 = v.1)
+              (q : p # u.2 = v.2)
+              : u = v.
+    Proof.
+    Admitted.
+
+  End Exercise_2_3.
+
 End Part_2_Identity_Types.
 
 Section Part_3_Homotopy_Levels.

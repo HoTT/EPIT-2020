@@ -90,7 +90,7 @@ All times are in UTC+2 (i.e. Stockholm time).
 * Why Cubical Type Theory?
 * Cubical Agda
 
-See [Introduction.pdf](Introduction.pdf).
+See [Introduction.pdf](material/Introduction.pdf).
 
 ### Part 1: The interval and path types
 

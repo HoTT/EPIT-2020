@@ -266,6 +266,13 @@ Section Part_4_Equivalences.
        the fact that q : A → Q is the propositional truncation of A.
     *)
 
+    Definition IsPropTrunc (A Q : Type) (q : A -> Q) :=
+        forall  P : hProp, IsEquiv (fun f : Q -> P => f ∘ q).
+
+    Theorem univ_trunc (A : Type) : (IsPropTrunc A (Trunc (-1) A) tr).
+    Proof.
+    Admitted.
+
   End Exercise_4_2.
 
 End Part_4_Equivalences.

@@ -1,3 +1,7 @@
+-- Exercises for session 3
+--
+-- If unsure which exercises to do start with those marked with *
+--
 {-# OPTIONS --cubical --allow-unsolved-metas #-}
 module ExerciseSession3 where
 
@@ -11,7 +15,7 @@ open import Cubical.Foundations.Isomorphism
 open import Cubical.Data.Nat
 open import Cubical.Data.Int hiding (neg)
 
--- Exercise 1: prove associativity of _++_ for FMSet.
+-- Exercise* 1: prove associativity of _++_ for FMSet.
 -- (hint: mimic the proof of unitr-++)
 
 -- Exercise 2: define the integers as a HIT with a pos and neg
@@ -22,7 +26,7 @@ open import Cubical.Data.Int hiding (neg)
 -- above definition of the integers is equal to the ones in
 -- Cubical.Data.Int. Deduce that they form a set.
 
--- Exercise 4: we can define the notion of a surjection as:
+-- Exercise* 4: we can define the notion of a surjection as:
 isSurjection : (A → B) → Type _
 isSurjection {A = A} {B = B} f = (b : B) → ∃ A (λ a → f a ≡ b)
 
@@ -34,7 +38,7 @@ isSurjection {A = A} {B = B} f = (b : B) → ∃ A (λ a → f a ≡ b)
 --    (hint: use rec for ∥_∥)
 
 
--- Exercise 5: define
+-- Exercise* 5: define
 
 intLoop : Int → ΩS¹
 intLoop = {!!}

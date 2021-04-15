@@ -1,6 +1,6 @@
 {-
 
-Part 3: Transport and composition
+Part 2: Transport and composition
 
 • Cubical transport
 • Subst as a special case of cubical transport
@@ -16,15 +16,15 @@ module Part2 where
 open import Part1
 
 -- While path types are great for reasoning about equality they don't
--- let us transport along paths between types or even compose
--- paths. Furthermore, as paths are not inductively defined we don't
+-- let us transport along paths between types or even compose paths.
+-- Furthermore, as paths are not inductively defined we don't
 -- automatically get an induction principle for them. In order to
 -- remedy this Cubical Agda also has a built-in (generalized)
 -- transport operation and homogeneous composition operation from
 -- which the induction principle (and much more!) is derivable.
 
 -- The basic operation is called transp and we will soon explain it,
--- but let's first focus on a special case of cubical transport:
+-- but let's first focus on the special case of cubical transport:
 transport : A ≡ B → A → B
 transport p a = transp (λ i → p i) i0 a
 
@@ -44,10 +44,10 @@ subst B p pa = transport (λ i → B (p i)) pa
 -- There is an additional side condition which to be satisfied for
 -- Cubical Agda to typecheck "transp A r a". This is that A has to be
 -- "constant" on r. This means that A should be a constant function
--- whenever r is i1 is satisfied. This side condition is vacuously
--- true when r is i0, so there is nothing to check when writing
--- transportas above. However, when r is equal to i1 the transp
--- function will compute as the identity function.
+-- whenever r = i1 is satisfied. This side condition is vacuously true
+-- when r = i0, so there is nothing to check when writing transport as
+-- above. However, when r is equal to i1 the transp function will
+-- compute as the identity function.
 --
 --   transp A i1 a = a
 --
@@ -82,13 +82,14 @@ J : {x : A} (P : (z : A) → x ≡ z → Type ℓ'')
 J {x = x} P d p = subst (λ X → P (fst X) (snd X)) (isContrSingl x .snd (_ , p)) d
 
 -- Unfolded version:
+--
 -- transport (λ i → P (p i) (λ j → p (i ∧ j))) d
 
--- So J is provable, but it doesn't satisfy computation rule
--- definitionally as _≡_ is not inductively defined. See exercises for
--- how to prove it. Not having this hold definitionally is almost
--- never a problem in practice as the cubical primitives satisfy many
--- new definitional equalities (c.f. cong).
+-- So J is provable, but it doesn't satisfy the computation rule of
+-- refl definitionally as _≡_ is not inductively defined. See
+-- exercises for how to prove it. Not having this hold definitionally
+-- is almost never a problem in practice as the cubical primitives
+-- satisfy many new definitional equalities (c.f. cong).
 
 -- As we now have J we can define path concatenation and many more
 -- things, however this is not the way to do things in Cubical
@@ -96,12 +97,11 @@ J {x = x} P d p = subst (λ X → P (fst X) (snd X)) (isContrSingl x .snd (_ , p
 -- transp primitive reduces differently for different types formers
 -- (see CCHM or the Cubical Agda paper for details). For paths it
 -- reduces to another primitive operation called hcomp. This primitive
--- is much better suited for concatenating paths and more generally,
--- for composing multiple higher dimensional cubes. We will explain it
--- by example.
+-- is much better suited for concatenating paths than J as it is much
+-- more general. In particular, it lets us compose multiple higher
+-- dimensional cubes directly. We will explain it by example.
 
 -- In order to compose two paths we write:
-
 compPath : {x y z : A} → x ≡ y → y ≡ z → x ≡ z
 compPath {x = x} p q i = hcomp (λ j → λ { (i = i0) → x
                                         ; (i = i1) → q j })
@@ -152,8 +152,9 @@ _∙_ : {x y z : A} → x ≡ y → y ≡ z → x ≡ z
 p ∙ q = refl ∙∙ p ∙∙ q
 
 -- To prove algebraic properties of this operation (in particular that
--- it's a groupoid) we need to talk about filling. There is no time
--- for this today, but the interested reader can consult
+-- it's a groupoid) we need to talk about filling using the hfill
+-- operation. There is no time for this today, but the interested
+-- reader can consult
 --
 --    Cubical.Foundations.GroupoidLaws
 
@@ -184,6 +185,10 @@ isProp→isSet h a b p q j i =
                  ; (j = i0) → h a (p i) k
                  ; (j = i1) → h a (q i) k }) a
 
+-- Geometric picture: start with a square with a everywhere as base,
+-- then change its sides so that they connect p with q over refl_a and
+-- refl_b.
+
 isPropIsProp : isProp (isProp A)
 isPropIsProp f g i a b = isProp→isSet f a b (f a b) (g a b) i
 
@@ -195,3 +200,20 @@ isPropIsSet h1 h2 i x y = isPropIsProp (h1 x y) (h2 x y) i
 -- to the Cubical Agda documentation:
 --
 -- https://agda.readthedocs.io/en/v2.6.1.3/language/cubical.html#partial-elements
+--
+-- However, for beginners one doesn't need to write hcomp to prove
+-- thing as the library provide many basic lemmas. In particular, the
+-- library provides equational reasoning combinators as in regular
+-- Agda which let us write things like:
+--
+-- inverseUniqueness : (r : R) → isProp (Σ[ r' ∈ R ] r · r' ≡ 1r)
+-- inverseUniqueness r (r' , rr'≡1) (r'' , rr''≡1) = Σ≡Prop (λ _ → is-set _ _) path
+--  where
+--  path : r' ≡ r''
+--  path = r'             ≡⟨ sym (·Rid _) ⟩
+--         r' · 1r        ≡⟨ cong (r' ·_) (sym rr''≡1) ⟩
+--         r' · (r · r'') ≡⟨ ·Assoc _ _ _ ⟩
+--         (r' · r) · r'' ≡⟨ cong (_· r'') (·-comm _ _) ⟩
+--         (r · r') · r'' ≡⟨ cong (_· r'') rr'≡1 ⟩
+--         1r · r''       ≡⟨ ·Lid _ ⟩
+--         r''            ∎

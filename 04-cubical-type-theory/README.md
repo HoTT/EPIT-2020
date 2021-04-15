@@ -90,6 +90,8 @@ All times are in UTC+2 (i.e. Stockholm time).
 * Why Cubical Type Theory?
 * Cubical Agda
 
+See [Introduction.pdf](Introduction.pdf).
+
 ### Part 1: The interval and path types
 
 * The interval in Cubical Agda
@@ -129,7 +131,7 @@ See [ExerciseSession2](material/ExerciseSession2.agda).
 
 * Set quotients via HITs
 * Propositional truncation
-* Synthetic homotopy theory
+* A little synthetic homotopy theory
 
 See [Part4](material/Part4.agda).
 

@@ -213,7 +213,7 @@
 
   \bigskip
 
-  \only<4->{\textbf{Cubical:} extend TT and make them provable\footnote{Inspired by \emph{cubical} set model}} \only<5->{\hfill \textbf{preserves canonicity} \smiley{}}
+  \only<4->{\textbf{Cubical:} extend TT and make them provable\footnote{Inspired by \emph{cubical} set models}} \only<5->{\hfill \textbf{preserves canonicity} \smiley{}}
 \end{frame}
 
 \begin{frame}{Cubical type theory}
@@ -225,7 +225,7 @@
   \bigskip
 
   A path $p : x~\func{≡}~y$ is a function $\var{p} : \func{I} \to A$
-  with endpoints $x$ and $y$:
+  with endpoints $x$ and $y$:\footnote{We write $x \func{≡} y$ for path-equality and $x = y$ for definitonal/judgmental equality}
   \begin{mathpar}
     p~\con{i0} = x \and p~\con{i1} = y
   \end{mathpar}
@@ -279,19 +279,6 @@
 
 \end{frame}
 
-\begin{frame}{\CubicalAgda{} \hfill~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\manimpossiblecube}
-
-  New features that we will look closer at today:
-  \begin{itemize}
-  \item Interval (pre-)type \func{I} with endpoints $\con{i0} :
-    \func{I}$ and $\con{i1} : \func{I}$
-  \item Kan operations (\func{transp} and \func{hcomp})
-  \item Computational univalence (via \func{Glue} types)
-  \item General schema for higher inductive types
-  \end{itemize}
-
-\end{frame}
-
 \begin{frame}{\CubicalAgda{} \hfill~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\manimpossiblecube}
 
   The cubical mode has been part of \Agda{} since version 2.6.0 (April 2019)
@@ -315,6 +302,19 @@
   \end{center}
 
   By now $52$ contributors, $56$k LOC, $500$ files
+
+\end{frame}
+
+\begin{frame}{\CubicalAgda{} \hfill~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\manimpossiblecube}
+
+  New features that we will look closer at today:
+  \begin{itemize}
+  \item Interval (pre-)type \func{I} with endpoints $\con{i0} :
+    \func{I}$ and $\con{i1} : \func{I}$
+  \item Kan operations (\func{transp} and \func{hcomp})
+  \item Computational univalence (via \func{Glue} types)
+  \item General schema for higher inductive types
+  \end{itemize}
 
 \end{frame}
 

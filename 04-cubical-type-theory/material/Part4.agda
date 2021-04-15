@@ -2,18 +2,17 @@
 
 Part 4: Higher inductive types
 
-- Set quotients via HITs
-- Propositional truncation
-- A little synthetic homotopy theory
+• Set quotients via HITs
+• Propositional truncation
+• A little synthetic homotopy theory
 
 -}
-
 {-# OPTIONS --cubical #-}
 module Part4 where
 
 open import Cubical.Foundations.Isomorphism
-open import Cubical.Data.Int hiding (_+_)
-open import Cubical.Data.Nat hiding (elim)
+open import Cubical.Data.Int  hiding (_+_)
+open import Cubical.Data.Nat  hiding (elim)
 open import Cubical.Data.Prod hiding (map)
 
 open import Part1
@@ -23,12 +22,13 @@ open import Part3
 -- Another thing that Cubical Agda adds is the possibility to define
 -- higher inductive types. These are just like normal Agda datatypes,
 -- but they have also "higher" constructors specifying non-trivial
- -- paths, square, cubes, etc. in a type. These give a nice way of
+-- paths, square, cubes, etc. in the type. These give a nice way of
 -- defining set quotiented types as well as higher dimensional types
--- quotiented by some relations.
+-- quotiented by some arbitrary relation.
 
--- The following definition of finite multisets is due to Vikraman
--- Choudhury and Marcelo Fiore.
+-- Let's start by looking at some set quotient examples. The following
+-- definition of finite multisets is due to Vikraman Choudhury and
+-- Marcelo Fiore.
 
 infixr 5 _∷_
 
@@ -60,19 +60,21 @@ unitr-++ (trunc xs ys p q i k) j =
 
 
 -- Filling the goals for comm and trunc quickly gets tiresome and
--- useful lemmas are proved in Cubical.HITs.FiniteMultiset. The idea
--- is to prove a general lemma about eliminating into propositions. As
--- we're proving an equality of a set truncated type we can prove the
--- trunc and comm cases once and for all so that we only have to give
--- cases for [] and _∷_. This is a very common pattern when working
--- with set truncated HITs: first define the HIT, then prove special
--- purpose recursors and eliminators for eliminating into types of
--- different h-levels. All definitions are then written using these
--- recursors and eliminators and one get very short proofs.
+-- useful lemmas about eliminating into propositions are proved in
+-- Cubical.HITs.FiniteMultiset. As we're proving an equality of a set
+-- truncated type we can prove the trunc and comm cases once and for
+-- all so that we only have to give cases for [] and _∷_ when
+-- constructing a family of propositions. This is a very common
+-- pattern when working with set truncated HITs: first define the HIT,
+-- then prove special purpose recursors and eliminators for
+-- eliminating into types of different h-levels. All definitions are
+-- then written using these recursors and eliminators and one get very
+-- short proofs.
 
 
 -- A more efficient version of finite multisets based on association
--- lists open import Cubical.HITs.AssocList.Base
+-- lists can be found in Cubical.HITs.AssocList.Base. It looks like
+-- this:
 
 data AssocList (A : Type ℓ) : Type ℓ where
   ⟨⟩ : AssocList A
@@ -88,13 +90,14 @@ data AssocList (A : Type ℓ) : Type ℓ where
 -- to FMSet. This kind of example occurs everywhere in programming and
 -- mathematics: one representation is easier to work with, but not
 -- efficient, while another is efficient but difficult to work with.
--- Using the SIP we can get the best of both worlds.
+-- Using the SIP we can get the best of both worlds (see
+-- https://arxiv.org/abs/2009.05547 for details).
 
--- Another nice example of a HITs in CS can be found in
--- Cubical.Data.Queue where we define a Queue datastructure based on
--- two lists as a HIT. These examples are all special cases of set
--- quotients. Very useful for programming and set level mathematics.
--- We can define the general form as:
+-- Another nice CS example of a HIT can be found in Cubical.Data.Queue
+-- where we define a queue datastructure based on two lists. These
+-- examples are all special cases of set quotients and are very useful
+-- for programming and set level mathematics. We can define the
+-- general form as:
 
 data _/_ (A : Type ℓ) (R : A → A → Type ℓ') : Type (ℓ-max ℓ ℓ') where
   [_] : A → A / R
@@ -103,10 +106,10 @@ data _/_ (A : Type ℓ) (R : A → A → Type ℓ') : Type (ℓ-max ℓ ℓ') wh
 
 -- It's sometimes easier to work directly with _/_ instead of defining
 -- special HITs as one can reuse lemmas for _/_ instead of reproving
--- things. For example general lemmas about eliminating into
+-- things. For example, general lemmas about eliminating into
 -- propositions have already been proved for _/_.
 
--- Proving that _/_ is "effective", i.e. that
+-- Proving that _/_ is "effective" (for prop-valued relation), i.e. that
 --
 --    ((a b : A) → [ a ] ≡ [ b ] → R a b)
 --
@@ -130,9 +133,11 @@ data ∥_∥ (A : Type ℓ) : Type ℓ where
 -- This lets us define mere existence:
 ∃ : ∀ {ℓ ℓ'} (A : Type ℓ) (B : A → Type ℓ') → Type (ℓ-max ℓ ℓ')
 ∃ A B = ∥ Σ A B ∥
--- Very useful to specify things where existence is weaker than Σ.
--- This lets us define things like surjective functions or the image
--- of a map.
+
+-- This is very useful to specify things where existence is weaker
+-- than Σ. This lets us define things like surjective functions or the
+-- image of a map which we cannot define properly in pre-HoTT type
+-- theory.
 
 -- We can define the recursor by pattern-matching
 rec : {P : Type ℓ} → isProp P → (A → P) → ∥ A ∥ → P
@@ -150,9 +155,9 @@ elim {P = P} Pprop f a =
 -- extract interesting information from them. A fun example is the
 -- "cost monad" which can be found in Cubical.HITs.Cost. There we pair
 -- A with ∥ ℕ ∥ and use the truncated number to count the number of
--- recursive calls in functions. As the number is truncated it doesn't
--- affect any properties of the functions, but by running concrete
--- computations we can extract the number of calls.
+-- recursive calls in various functions. As the number is truncated it
+-- doesn't affect any properties of the functions, but by running
+-- concrete computations we can extract the number of calls.
 
 
 -------------------------------------------------------------------------
@@ -163,25 +168,43 @@ data S¹ : Type₀ where
   base : S¹
   loop : base ≡ base
 
--- We can write functions on S¹ using pattern-matching equations:
+-- We can write functions on S¹ using pattern-matching:
 double : S¹ → S¹
 double base = base
 double (loop i) = (loop ∙ loop) i
 
+-- Note that loop takes an i : I argument. This is not very surprising
+-- as it's a path base ≡ base, but it's an important difference to
+-- HoTT. Having the native notion of equality be heterogeneous makes
+-- it possible to quite directly define a general schema for a large
+-- class of HITs (more or less all in the HoTT book, with the
+-- exception for the Cauchy reals (I think?)).
+
+-- Let's use univalence to compute some winding numbers on the
+-- circle. We first define a family of types over the circle whos
+-- fibers are the integers.
 helix : S¹ → Type₀
 helix base     = Int
-helix (loop i) = sucPathInt i
+helix (loop i) = sucPath i
 
+-- The loopspace of the circle
 ΩS¹ : Type₀
 ΩS¹ = base ≡ base
 
+-- We can then define a function computing how many times we've looped
+-- around the circle by:
 winding : ΩS¹ → Int
 winding p = subst helix p (pos 0)
 
+-- This reduces just fine:
 _ : winding (λ i → double ((loop ∙ loop) i)) ≡ pos 4
 _ = refl
 
--- We can in fact prove that this is an equivalence, this relies on
+-- This would not reduce in HoTT as univalence is an axiom. Having
+-- things compute makes it possible to substantially simplify many
+-- proofs from HoTT in Cubical Agda, more about this later.
+
+-- We can in fact prove that winding is an equivalence, this relies on
 -- the encode-decode method and Egbert will go through the proof in
 -- detail. For details about how this proof looks in Cubical Agda see:
 --
@@ -205,9 +228,18 @@ data Torus : Type₀ where
   line2 : point ≡ point
   square : PathP (λ i → line1 i ≡ line1 i) line2 line2
 
--- The square corresponds to the normal folding diagram
+-- The square corresponds to the usual folding diagram from topology:
+--
+--              line1
+--         p ----------> p
+--         ^             ^
+--         ¦             ¦
+--   line2 ¦             ¦ line2
+--         ¦             ¦
+--         p ----------> p
+--              line1
 
--- And prove that it is equivalent to two circle:
+-- Proving that it is equivalent to two circles is pretty much trivial:
 t2c : Torus → S¹ × S¹
 t2c point        = (base , base)
 t2c (line1 i)    = (loop i , base)
@@ -244,8 +276,14 @@ windingTorus l = ( winding (λ i → proj₁ (t2c (l i)))
 _ : windingTorus (line1 ∙ sym line2) ≡ (pos 1 , negsuc 0)
 _ = refl
 
--- We have many more topological examples, including Klein bottle, RP^n,
--- higher spheres, suspensions, join, wedges, smash product:
+-- This proof turned out to be much more complicated in HoTT as
+-- eliminators out of HITs don't compute definitionally for higher
+-- constructors. In Cubical Agda this is not a problem as all cases
+-- reduce definitionally.
+
+-- We have many more topological examples in the library, including
+-- Klein bottle, RP^n, higher spheres, suspensions, join, wedges,
+-- smash product:
 open import Cubical.HITs.KleinBottle
 open import Cubical.HITs.RPn
 open import Cubical.HITs.S2
@@ -270,3 +308,17 @@ open import Cubical.ZCohomology.Everything
 -- interesting theorems: Freudenthal suspension theorem,
 -- Mayer-Vietoris sequence...
 
+
+-- For further references about doing synthetic algebraic topology in
+-- Cubical Agda see:
+
+-- Cubical Synthetic Homotopy Theory
+-- Anders Mörtberg, Loïc Pujet
+-- https://staff.math.su.se/anders.mortberg/papers/cubicalsynthetic.pdf
+
+-- Synthetic Cohomology Theory in Cubical Agda
+-- Guillaume Brunerie, Anders Mörtberg, Axel Ljungström.
+-- https://staff.math.su.se/anders.mortberg/papers/zcohomology.pdf
+
+
+--- The end! ---

@@ -9,7 +9,7 @@ Part 1: The interval and path types
 
 -}
 
--- To make Agda cubical add the following options
+-- To make Agda cubical add the following option
 {-# OPTIONS --cubical #-}
 module Part1 where
 
@@ -24,8 +24,8 @@ open import Cubical.Core.Primitives public
 -- The "Foundations" package of agda/cubical contains a lot of
 -- important results (in particular the univalence theorem). As we
 -- will develop many things from scratch we don't import it here, but
--- a typical file in the library would import the relevant files from
--- Foundations which it uses. To get everything in Foundations write:
+-- a typical file in the library would import various files from
+-- Foundations. To get everything in Foundations write:
 --
 -- open import Cubical.Foundations.Everything
 
@@ -38,7 +38,7 @@ open import Cubical.Core.Primitives public
 
 
 ------------------------------------------------------------------------------
---                             Agda Basic                                   --
+--                             Agda Basics                                  --
 ------------------------------------------------------------------------------
 
 -- We parametrize everything by some universe levels (as opposed to
@@ -48,26 +48,27 @@ variable
   ℓ ℓ' ℓ'' : Level
 
 -- Universes in Agda are called "Set", but in order to avoid confusion
--- with h-sets we rename them to "Type".
+-- with h-sets we rename them to "Type" in agda/cubical.
 
 -- Functions in Agda are written using equations:
 id : {A : Type ℓ} → A → A
 id x = x
--- The {A : Type} notation says that A is an implicit argument of Type ℓ.
+-- The {A : Type ℓ} notation says that A is an implicit argument of Type ℓ.
 
--- The notation (x : A) → B and {x : A} → B introduces a dependent
--- function (so B might mention B), in other words an element of a
--- Π-type.
+-- The notation (x : A) → B and {x : A} → B denotes dependent
+-- functions (so B might mention x : A), in other words, Π-types
 
--- We could also write this using a λ-abstraction:
+-- We could also write this using λ-abstraction:
 id' : {A : Type ℓ} → A → A
 id' = λ x → x
--- To input a nice symbol for the lambda write "\lambda". Agda support
--- Unicode symbols natively:
+-- To write the nice symbol for the lambda type in "\lambda". To write
+--  "ℓ" type in "\ell"
+-- Agda supports Unicode symbols natively:
 -- https://agda.readthedocs.io/en/latest/tools/emacs-mode.html#unicode-input
--- To input the "ℓ" write "\ell"
 
--- We can build Agda terms interactively in emacs by writing a ? as RHS:
+
+-- Agda has no tactics (as opposed to Coq), but we can build Agda
+-- terms interactively in emacs by writing a ? as RHS:
 --
 -- id'' : {A : Type ℓ} → A → A
 -- id'' = ?
@@ -87,12 +88,12 @@ id' = λ x → x
 -- pressing "C-c C-SPACE" Agda will then fill the hole with "x" for us.
 --
 -- Agda has lots of handy commands like this for manipulating goals:
+--
 -- https://agda.readthedocs.io/en/latest/tools/emacs-mode.html#commands-in-context-of-a-goal
 
 -- A good resource to get start with Agda is the documentation:
+--
 -- https://agda.readthedocs.io/en/latest/getting-started/index.html
-
-
 
 
 
@@ -117,27 +118,27 @@ apply0 A p = p i0
 -- instead it's a builtin primitive. An element of x ≡ y consists of a
 -- function p : I → A such that p i0 is definitionally x and p i1 is
 -- definitionally y. The check that the endpoints are correct when we
--- provide a p : I → A is automatically checked by Agda during
+-- provide a p : I → A is automatically performed by Agda during
 -- typechecking, so introducing an element of x ≡ y is done just like
 -- how we introduce elements of I → A but Agda will check the side
 -- conditions.
 --
--- So we can write paths using λ-abstraction:
+-- We can hence write paths using λ-abstraction:
 path1 : {A : Type ℓ} (x : A) → x ≡ x
 path1 x = λ i → x
---
+
 -- As explained above Agda checks that whatever we write as definition
 -- matches the path that we have written (so the endpoints have to be
 -- correct). In this case everything is fine and path1 can be thought
 -- of as a proof reflexivity. Let's give it a nicer name and more
 -- implicit arguments:
---
+
 refl : {A : Type ℓ} {x : A} → x ≡ x
 refl {x = x} = λ i → x
---
+
 -- The notation {x = x} lets us access the implicit argument x (the x
--- in the LHS) and rename it to x (the x in the RHS) in the body of refl.
--- We could just as well have written:
+-- in the LHS of x = x) and rename it to x (the x in the RHS x = x) in
+-- the body of refl. We could just as well have written:
 --
 -- refl : {A : Type ℓ} {x : A} → x ≡ x
 -- refl {x = y} = λ i → y
@@ -165,8 +166,8 @@ cong f p i = f (p i)
 
 -- Note that the definition differs from the HoTT definition in that
 -- it is not defined by J or pattern-matching on p, but rather it's
--- just a direct definition as a composition fo functions. Agda treats
--- p : x ≡ y as a function, so we can just apply it to i to get an
+-- just a direct definition as a composition of functions. Agda treats
+-- p : x ≡ y like any function, so we can apply it to i to get an
 -- element of A which at i0 is x and at i1 is y. By applying f to this
 -- element we hence get an element of B which at i0 is f x and at i1
 -- is f y.
@@ -178,27 +179,29 @@ cong f p i = f (p i)
 -- In HoTT function extensionality is proved as a consequence of
 -- univalence using a rather ingenious proof due to Voevodsky, but in
 -- cubical systems it has a much more direct proof. As paths are just
--- functions we can get it by just swapping the arguments to p:
+-- functions we can get it by swapping the arguments to p:
 funExt : {f g : A → B} (p : (x : A) → f x ≡ g x) → f ≡ g
 funExt p i x = p x i
 
--- To see that this has the correct type not that when i is i0 we have
--- "p x i0 = f x" and when i is i1 we have "p x i1 = g x", so by η for
--- functions we have a path f ≡ g as desired.
+-- To see that this has the correct type, note that when i is i0 we
+-- have "p x i0 = f x" and when i is i1 we have "p x i1 = g x", so by
+-- η for function types we have a path f ≡ g as desired.
 
 
 
 -- The interval has additional operations:
 --
--- Minimum: _∧_ : I → I → I
--- Maximum: _∨_ : I → I → I
--- Symmetry: ~_ : I → I
+-- Minimum:     _∧_ : I → I → I             (corresponds to min(i,j))
+-- Maximum:     _∨_ : I → I → I             (corresponds to max(i,j))
+-- Symmetry:     ~_ : I → I                 (corresponds to 1 - i)
 --
--- Agda remark: the _ indicate where arguments should go.
+-- Agda remark: the _ in the operator names indicates where arguments
+-- should go.
 --
 -- These satisfy the equations of a De Morgan algebra (i.e. a
--- distributive lattice (_∧_ , _∨_ , i0 , i1) with an involution
--- ~). So we have the following kinds of equations definitionally:
+-- distributive lattice (_∧_ , _∨_ , i0 , i1) with an "De Morgan"
+-- involution ~). This just means that we have the following kinds of
+-- equations definitionally:
 --
 -- i0 ∨ i    = i
 -- i  ∨ i1   = i1
@@ -210,14 +213,19 @@ funExt p i x = p x i
 -- i0        = ~ i1
 -- ~ (i ∨ j) = ~ i ∧ ~ j
 -- ~ (i ∧ j) = ~ i ∨ ~ j
+--
+-- However, we do not have i ∨ ~ i = i1 and i ∧ ~ i = i0. The reason
+-- is that I represents an abstract interval, so we if we think of it
+-- as the real interval [0,1] ⊂ ℝ we clearly don't always have
+-- "max(i,1-i) = 1" or "min(i,1-i) = 0)" for all i ∈ [0,1].
 
--- These operations are very useful as they let us define even more
--- things directly. For example symmetry of paths is easily defined
--- using ~:
+-- These operations on I are very useful as they let us define even
+-- more things directly. For example symmetry of paths is easily
+-- defined using ~_
 sym : {x y : A} → x ≡ y → y ≡ x
 sym p i = p (~ i)
 
--- The operations _∧_ and _∨_ are called "connections" and lets us
+-- The operations _∧_ and _∨_ are called "connections" and let us
 -- build higher dimensional cubes from lower dimensional ones, for
 -- example if we have a path p : x ≡ y then
 --
@@ -231,7 +239,7 @@ sym p i = p (~ i)
 --    sq i i0 = p (i ∧ i0) = p i0 = x
 --    sq i i1 = p (i ∧ i1) = p i
 --
--- So if we draw this we get:
+-- If we draw this we get:
 --
 --              p
 --        x --------> y
@@ -243,8 +251,9 @@ sym p i = p (~ i)
 --        x --------> x
 --            refl
 --
--- These operations are very useful, for example let's prove that
--- singletons are contractible (aka based path induction).
+-- Being able to make this square directly is very useful. It for
+-- example let's prove that singletons are contractible (aka based
+-- path induction).
 --
 -- We first need the notion of contractible types. For this we need
 -- to use a Σ-type:
@@ -252,7 +261,6 @@ isContr : Type ℓ → Type ℓ
 isContr A = Σ[ x ∈ A ] ((y : A) → x ≡ y)
 
 -- Σ-types are introduced in the file Agda.Builtin.Sigma as the record
--- (modulo some renaming):
 --
 -- record Σ {ℓ ℓ'} (A : Type ℓ) (B : A → Type ℓ') : Type (ℓ-max ℓ ℓ') where
 --   constructor _,_
@@ -287,13 +295,14 @@ isContrSingl x = ctr , prf
   -- We then need to prove that ctr is equal to any element s : singl x.
   -- This is an equality in a Σ-type, so the first component is a path
   -- and the second is a path over the path we pick as first argument,
-  -- so the second component is a square. In fact, we need a square
-  -- relating refl and pax, so we can use an _∧_ connection.
+  -- i.e. the second component is a square. In fact, we need a square
+  -- relating refl and pax over a path between refl and pax, so we can
+  -- use an _∧_ connection.
   prf : (s : singl x) → ctr ≡ s
   prf (y , pax) i = (pax i) , λ j → pax (i ∧ j)
 
-  -- Agda tip: in order to automatically destruct an argument
-  -- (like (y , pax) in prf) write it in the hole and type
+  -- Agda tip: in order to automatically destruct an argument x
+  -- (like (y , pax) in prf) write x in the hole and type
   -- C-c C-c. Agda might pick silly names, but it's still very
   -- convenient.
 
@@ -303,15 +312,15 @@ isContrSingl x = ctr , prf
 -- path is very useful when working in HoTT as well as cubically. In
 -- HoTT these are called path-overs and are defined using transport,
 -- but in Cubical Agda they are a primitive notion called PathP ("Path
--- of a Path"). In general PathP A x y has
+-- over a Path"). In general PathP A x y has
 --
 --    A : I → Type ℓ
 --    x : A i0
 --    y : A i1
 --
 -- So PathP lets us natively define heteorgeneous paths, i.e. paths
--- where the endpoints lie in different types. This lets us specify
--- the type of the second component of prf:
+-- where the endpoints are in different types. This allows us to
+-- specify the type of the second component of prf:
 prf' : (x : A) (s : singl x) → (x , refl) ≡ s
 prf' x (y , pax) i = (pax i) , λ j → goal i j
   where
@@ -322,7 +331,7 @@ prf' x (y , pax) i = (pax i) , λ j → goal i j
 -- Just like _×_ is a special case of Σ-types we have that _≡_ is a
 -- special case of PathP. In fact, x ≡ y is just short for PathP (λ _ → A) x y:
 reflP : {x : A} → PathP (λ _ → A) x x
-reflP {x = x} = λ _ → x
+reflP = refl
 
 
 -- Having the primitive notion of equality be heterogeneous is an
@@ -358,5 +367,5 @@ isSet A = (x y : A) → isProp (x ≡ y)
 
 -- In the agda/cubical library we call these h-levels following
 -- Voevodsky instead of n-types and index by natural numbers instead
--- of ℕ₋₂. So isContr is h-level 0, isProp is h-level 1, isSet is
--- h-level 2, etc. For details see Cubical/Foundations/HLevels.agda
+-- of ℕ₋₂. So isContr is isOfHLevel 0, isProp is isOfHLevel 1, isSet
+-- is isOfHLevel 2, etc. For details see Cubical/Foundations/HLevels.agda

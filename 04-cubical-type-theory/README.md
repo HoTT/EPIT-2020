@@ -67,10 +67,6 @@ to ask for help on #tech-desk on Discord.
 
 ## Schedule
 
-*Everything below is under construction. The final version of
-the material and exercises will be uploaded the same day as the course
-is given, but I intend to develop the material here on Github.*
-
 The online lectures will take place on Thursday, April 15, 2021.
 All times are in UTC+2 (i.e. Stockholm time).
 
@@ -89,46 +85,57 @@ All times are in UTC+2 (i.e. Stockholm time).
 
 ## Contents
 
-### Part 1: Introduction
+### Introduction
 
 * Why Cubical Type Theory?
 * Cubical Agda
 
-### Part 2: The interval and path types
+### Part 1: The interval and path types
 
 * The interval in Cubical Agda
 * `Path` and `PathP` types
 * Function extensionality
 * Equality in Σ-types
 
-### Part 3: Transport and composition
+See [Part1](material/Part1.agda).
+
+### Exercise session 1
+
+See [ExerciseSession1](material/ExerciseSession1.agda).
+
+### Part 2: Transport and composition
 
 * Cubical `transport`
 * Subst as a special case of cubical `transport`
-* Path induction from `subst`?
+* Path induction from `subst`
 * Homogeneous composition (`hcomp`)
 * Binary composition of paths as special case of `hcomp`
 
-### Part 4: Univalence and the SIP
+See [Part2](material/Part2.agda).
+
+### Part 3: Univalence and the SIP
 
 * Univalence from `ua` and `uaβ`
-* Transporting with `ua` (examples: `ua not : Bool = Bool`, `ua suc : Z = Z`, ...)
-* Subst using `ua`
+* Transporting with `ua`
 * The SIP as a consequence of `ua`
-* Examples of using the SIP for math and programming (algebra, data
-  structures, etc.)
 
-### Part 5: Higher inductive types
+See [Part3](material/Part3.agda).
 
-* Quotients via HITs
-* Propositional truncation for logic?
-* CS example using quotients (maybe finite multisets or queues)
-* Synthetic homotopy theory (probably `Torus = S^1 * S^1`, `pi_1(S^1)
-  = Z`, `pi_1(Torus) = Z * Z`)
+### Exercise session 2
 
-### Exercises
+See [ExerciseSession2](material/ExerciseSession2.agda).
 
-*TODO*
+### Part 4: Higher inductive types
+
+* Set quotients via HITs
+* Propositional truncation
+* Synthetic homotopy theory
+
+See [Part4](material/Part4.agda).
+
+### Exercise session 3
+
+See [ExerciseSession3](material/ExerciseSession3.agda).
 
 ## Additional material
 

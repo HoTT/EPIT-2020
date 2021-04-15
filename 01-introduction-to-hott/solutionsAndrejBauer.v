@@ -300,7 +300,19 @@ Section Part_5_Univalence.
 
     Theorem weasel : Contr { A : Type & IsHProp A * A }%type.
     Proof.
-    Admitted.
+      srapply Build_Contr.
+      - exists Unit.
+        split.
+        + apply istrunc_succ.
+        + exact tt.
+      - intros [A [HA a]].
+        srapply path_sigma.
+        + apply equiv_path_universe.
+          srapply symmetric_equiv.
+          srapply equiv_contr_unit.
+          now apply contr_inhabited_hprop.
+        + apply path_prod ; apply path_ishprop.
+    Defined.
 
   End Exercise_5_1.
 
@@ -308,11 +320,14 @@ Section Part_5_Univalence.
 
     (* Show that Σ (A : U) . isSet A is not a set. Hint: (2 ≃ 2) ≃ 2. *)
 
-    Lemma two_equiv_two : (Bool <~> Bool) <~> Bool.
+    Definition two_equiv_two `{UA : Univalence} : Bool <~> (Bool = Bool).
     Proof.
-    Admitted.
+      apply transitive_equiv with (y := (Bool <~> Bool)).
+      - apply equiv_bool_aut_bool.
+      - apply (equiv_path_universe Bool Bool).
+    Defined.
 
-    Lemma set_not_set : IsHSet HSet -> Empty.
+    Lemma set_not_set : IsHSet { A : Type & IsHSet A } -> Empty.
     Proof.
     Admitted.
 

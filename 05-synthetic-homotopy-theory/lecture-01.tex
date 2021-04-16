@@ -3,7 +3,7 @@
 \usepackage{graphicx}
 \usepackage{tikz-cd}
 
-\title{EPIT Lecture 5.1 The Circle}
+\title{EPIT Lecture 5.1\\ The Circle}
 \author{Egbert Rijke}
 \date{Friday, April 16th 2020}
 
@@ -65,17 +65,37 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Planning for this afternoon}
+  \begin{description}
+  \item[14:05-14:30] Part 1. The circle
+  \item[14:35-15:00] Part 2. The universal cover of the circle
+  \item[15:05-15:30] Part 3. Homotopical constructions of types
+  \item[15:35-16:00] Exercise session
+  \item[16:05-16:30] Part 4. Homotopy groups of types
+  \item[16:35-17:00] Part 5. The real projective spaces
+  \item[17:00-17:30] Break
+  \item[17:30-18:30] Lecture by Paige North on Directed type theory
+  \end{description}
+\end{frame}
+
+\begin{frame}[plain]
+  \begin{center}
+    \includegraphics[width=.6\paperwidth]{thierry}
+  \end{center}
+\end{frame}
+
+\begin{frame}
   The idea of higher inductive types
   \begin{itemize}
   \item Generate types by points and identifications.
     \begin{itemize}
     \item Point constructors
-    \item Path constructors
+    \item Identity constructors
     \end{itemize}\pause
   \item Equip the type with an induction principle
     \begin{itemize}
     \item Cases for the point constructors
-    \item Cases for the path constructors
+    \item Cases for the identity constructors
     \end{itemize}\pause 
   \item This allows us to study many spaces in type theory that weren't accessible in ordinary MLTT:
     \begin{itemize}
@@ -108,7 +128,7 @@
       \begin{equation*}
         f:\prod_{(x:X)}\apply{P}{x}.  
       \end{equation*}
-      What structure do I get when I apply $f$ to the point constructors and to the path constructors?}
+      What structure do I get when I apply $f$ to the point constructors and to the identity constructors?}
   \end{itemize}
 \end{frame}
 

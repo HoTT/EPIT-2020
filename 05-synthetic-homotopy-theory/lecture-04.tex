@@ -1,0 +1,502 @@
+\documentclass[handout]{beamer}
+
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+
+\title{EPIT Lecture 5.4\\ Homotopy groups of types}
+\author{Egbert Rijke}
+\date{Friday, April 16th 2020}
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\mathchardef\usc="2D
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\brck}[1]{\|#1\|}
+\newcommand{\Brck}[1]{\left\|#1\right\|}
+\newcommand{\trunc}[2]{\|#2\|_{#1}}
+\newcommand{\Trunc}[2]{\left\|#2\right\|_{#1}}
+\newcommand{\unit}{\mathbf{1}}
+\newcommand{\sphere}[1]{S^{#1}}
+\newcommand{\isnull}{\mathsf{is\usc{}null}}
+\newcommand{\htpy}{\sim}
+\newcommand{\apbinary}{\mathsf{ap\usc{}bin}}
+\newcommand{\Glob}{\mathsf{Glob}}
+\newcommand{\typeGlob}{\mathsf{type}}
+\newcommand{\relGlob}{\mathsf{rel}}
+\newcommand{\homGlob}{\mathsf{hom}}
+\newcommand{\maphomGlob}{\mathsf{map}}
+\newcommand{\cgrhomGlob}{\mathsf{cgr}}
+\newcommand{\bihomGlob}{\mathsf{bihom}}
+\newcommand{\mapbihomGlob}{\mathsf{map}}
+\newcommand{\cgrbihomGlob}{\mathsf{cgr}}
+\newcommand{\ct}{\bullet}
+\newcommand{\isconstant}[2]{\mathsf{is\usc{}}(#1,#2)\mathsf{\usc{}constant}}
+\newcommand{\ap}{\mathsf{ap}}
+\newcommand{\interchange}{\mathsf{interchange}}
+\newcommand{\refl}{\mathsf{refl}}
+\newcommand{\eh}{\mathsf{eckmann\usc{}hilton}}
+\newcommand{\blank}{\mathord{\hspace{1pt}\text{--}\hspace{1pt}}}
+\newcommand{\EM}{\mathsf{EM}}
+\newcommand{\baseS}{\mathsf{base}}
+\newcommand{\loopS}{\mathsf{loop}}
+\newcommand{\apd}{\mathsf{apd}}
+\newcommand{\tr}{\mathsf{tr}}
+\newcommand{\idfunc}{\mathsf{id}}
+\newcommand{\mulcircle}{\mu}
+\newcommand{\basemulcircle}{\mathsf{base\usc{}mul}_{\sphere{1}}}
+\newcommand{\loopmulcircle}{\mathsf{loop\usc{}mul}_{\sphere{1}}}
+\newcommand{\htpyidcircle}{H}
+\newcommand{\basehtpyidcircle}{\alpha}
+\newcommand{\loophtpyidcircle}{\beta}
+\newcommand{\invcircle}{\mathsf{inv}_{\sphere{1}}}
+\newcommand{\evbase}{\mathsf{ev\usc{}base}}
+\newcommand{\eqhtpy}{\mathsf{eq\usc{}htpy}}
+\newcommand{\apply}[2]{#1(#2)}
+\newcommand{\equiveq}{\mathsf{equiv\usc{}eq}}
+\newcommand{\succZ}{\mathsf{succ}}
+\newcommand{\bool}{\mathsf{bool}}
+\newcommand{\const}{\mathsf{const}}
+\newcommand{\btrue}{\mathsf{true}}
+\newcommand{\bfalse}{\mathsf{false}}
+\newcommand{\ttt}{\mathsf{pt}}
+\newcommand{\Prop}{\mathsf{Prop}}
+\newcommand{\eh}{\mathsf{eckmann\usc{}hilton}}
+\newcommand{\fib}{\mathsf{fib}}
+\newcommand{\im}{\mathsf{im}}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]{}
+
+\begin{document}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{frame}
+  \huge{Part 1. Homotopy groups}
+\end{frame}
+
+\begin{frame}
+  \begin{definition}
+    Let $\UU_\ast:=\sum_{(X:\UU)}X$ be the type of pointed types in $\UU$. We define an operation
+    \begin{equation*}
+      \Omega : \UU_\ast\to\UU_\ast
+    \end{equation*}
+    by $\Omega(X,x):=(x=x,\refl)$. Furthermore, we define $\Omega^k(X,x)$ for $k:\N$ by
+    \begin{align*}
+      \Omega^0(X,x) & :=(X,x) \\
+      \Omega^{k+1}(X,x) & := \Omega(\Omega^k(X,x)).
+    \end{align*}
+  \end{definition}
+  
+  \begin{definition}
+    Consider a poited type $(X,x)$ and a natural number $k$. Then we define
+    \begin{equation*}
+      \pi_k(X,x):=\trunc{0}{\Omega^k(X,x)}
+    \end{equation*}
+  \end{definition}
+\end{frame}
+
+\begin{frame}
+  Recall that any type can be set-truncated, i.e., for any type $X$ there is a type $\trunc{0}{X}$ equipped with a map
+  \begin{equation*}
+    \eta : X \to \trunc{0}{X}
+  \end{equation*}
+  that satisfies the universal property that the map
+  \begin{equation*}
+    (\trunc{0}{X}\to Y)\to (X\to Y)
+  \end{equation*}
+  is an equivalence, for any set $Y$.\\[\baselineskip]\pause
+
+  In other words, for any map $f:X\to Y$ into a set $Y$ there is a unique map $g:\trunc{0}{X}\to Y$ equipped with a homotopy witnessing that the triangle
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&]
+      X \arrow[d,swap,"\eta"] \arrow[dr,"f"] \\
+      \trunc{0}{X} \arrow[r,swap,"g"] \& Y
+    \end{tikzcd}
+  \end{equation*}
+  commutes.
+\end{frame}
+
+\begin{frame}
+  \begin{lemma}
+    The type $\pi_{k+1}(X,x)$ comes equipped with the structure of a group.
+  \end{lemma}\pause
+
+  \begin{proof}
+    We define $1:=\eta(\refl)$. The group multiplication is the unique map
+    \begin{equation*}
+      \blank\cdot\blank : \pi_{k+1}(X,x)\to (\pi_{k+1}(X,x)\to \pi_{k+1}(X,x))
+    \end{equation*}
+    such that
+    \begin{equation*}
+      \eta(p)\cdot\eta(q)=\eta(p\bullet q).
+    \end{equation*}
+    We need to verify the group laws. E.g., to prove $1\cdot \omega = \omega$, it suffices to show that $1\cdot\eta(p)=\eta(p)$. By definition, this is equivalent to showing that
+    \begin{equation*}
+      \eta(\refl\bullet p)=\eta(p),
+    \end{equation*}
+    which follows by the unit law for concatenation.
+  \end{proof}
+\end{frame}
+
+\begin{frame}
+  \huge{Part 2. The Eckmann-Hilton argument}
+\end{frame}
+
+\begin{frame}
+  \begin{theorem}
+    For any $k\geq 2$ and any pointed type $X$, the homotopy group
+    \begin{equation*}
+      \pi_k(X)
+    \end{equation*}
+    is abelian.
+  \end{theorem}
+\end{frame}
+
+\begin{frame}
+  \begin{definition}
+    For any binary operation $f:A\to B\to C$ there is a binary action on paths
+    \begin{equation*}
+      \apbinary_f:(x=x')\to (y=y')\to (f(x,y)=f(x',y')).
+    \end{equation*}
+    defined by $\apbinary_f(\refl,\refl):=\refl$.
+  \end{definition}\pause
+
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&,column sep=6em]
+      x \arrow[r,bend left=30,equals,"p",""{name=A,below}]
+        \arrow[r,bend right=30,equals,swap,"{p'}",""{name=B,above}]
+      \&
+      y \arrow[r,bend left=30,equals,"q",""{name=C,below}]
+        \arrow[r,bend right=30,equals,"{q'}"',""{name=D,above}]
+      \&
+      z
+      \arrow[from=A,to=B,phantom,"\Downarrow"]
+      \arrow[from=C,to=D,phantom,"\Downarrow"]
+    \end{tikzcd}
+  \end{equation*}\pause
+
+  \begin{definition}
+    For any $x,y,z:A$ and any $p,p':x=y$ and $q,q':y=z$ we define
+    \begin{equation*}
+      \blank\circ\blank : (p=p')\to (q=q')\to (p \bullet q=p' \bullet q')
+    \end{equation*}
+    by $\blank\circ\blank := \apbinary_{\blank\bullet\blank}$. 
+  \end{definition}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The interchange law}
+  \begin{lemma}
+    Suppose we have the following:
+    \begin{equation*}
+      \begin{tikzcd}[ampersand replacement=\&,column sep=6em]
+        x \arrow[r,bend left=60,equals,""{name=A,below},"{p}"]
+        \arrow[r,equals,""{name=B,above},""{name=C,below},"{p'}"{near end}]
+        \arrow[r,bend right=60,equals,""{name=D,above},"{p''}"']
+        \& y
+        \arrow[r,bend left=60,equals,""{name=AA,below},"{q}"]
+        \arrow[r,equals,""{name=BA,above},""{name=CA,below},"{q'}"{near end}]
+        \arrow[r,bend right=60,equals,""{name=DA,above},"{q''}"']
+        \& z
+        \arrow[from=A,to=B,phantom,"s\Downarrow"]
+        \arrow[from=C,to=D,phantom,"t\Downarrow"]
+        \arrow[from=AA,to=BA,phantom,"u\Downarrow"]
+        \arrow[from=CA,to=DA,phantom,"v\Downarrow"]
+      \end{tikzcd}
+    \end{equation*}
+    Then there is an identification
+    \begin{equation*}
+      (s\bullet t)\circ (u\bullet v)=(s\circ u)\bullet (t\circ v).
+    \end{equation*}
+  \end{lemma}\pause
+  
+  \begin{proof}
+    By path induction on $s$, $t$, $u$, and $v$. We have
+    \begin{equation*}
+      refl : (\refl\bullet\refl)\circ(\refl\bullet\refl)=(\refl\circ\refl)\bullet(\refl\circ\refl).\qedhere
+    \end{equation*}
+  \end{proof}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Eckmann-Hilton argument}
+  \begin{theorem}
+    For any pointed type $X$, the homotopy group
+    \begin{equation*}
+      \pi_{k+2}(X)
+    \end{equation*}
+    is abelian.
+  \end{theorem}
+  \begin{proof}
+    In order to show that $\eta(s)\cdot\eta(t)=\eta(t)\cdot\eta(s)$, it suffices to construct an identification
+    \begin{equation*}
+      s\ct t = t \ct s
+    \end{equation*}
+    for any $s,t:\Omega^{k+2}(X,x)$. This follows by the following calculation:
+    \begin{align*}
+      s\ct t & = (s \circ \refl) \ct (\refl \circ t) & \cdots & = (\refl \ct s) \circ (t \ct \refl) \\
+             & = (s \ct \refl) \circ (\refl \ct t) & & = (\refl \circ t) \ct (s \circ \refl) \\
+             & = s \circ t & & = t \ct s. \qedhere
+    \end{align*}
+  \end{proof}
+\end{frame}
+
+\begin{frame}
+  \huge{Part 3. The long exact sequence}
+\end{frame}
+
+\begin{frame}
+  \begin{definition}
+    Consider a short sequence
+    \begin{equation*}
+      \begin{tikzcd}[ampersand replacement=\&]
+        X \arrow[r,"f"] \& Y \arrow[r,"g"] \& Z
+      \end{tikzcd}
+    \end{equation*}
+    of base point preserving maps between pointed sets. We say that this short sequence is \textbf{exact} at $Y$ if we have
+    \begin{equation*}
+      \left\|\sum\nolimits_{(x:X)}f(x)=y\right\|_{-1}\leftrightarrow (g(y)=z_0).
+    \end{equation*}\\[\baselineskip]\pause
+
+    In other words, the short sequence $X\to Y\to Z$ is exact at $Y$ if
+    \begin{equation*}
+      \im(f)=\fib_{g}(z_0)
+    \end{equation*}
+    as subtypes of $Y$. 
+  \end{definition}
+\end{frame}
+
+\begin{frame}
+  The set truncation $\trunc{0}{X}$ can be thought of as a quotient
+  \begin{equation*}
+    X/(x,y\mapsto\brck{x=y}).
+  \end{equation*}
+  The following lemma shows that this intuition is right\footnote{A similar idea works for the higher truncations}:\\[\baselineskip]
+  \begin{lemma}
+    For any $x,y:X$, there is an equivalence
+    \begin{equation*}
+      (\eta(x)=\eta(y))\simeq \trunc{-1}{x=y}.
+    \end{equation*}
+  \end{lemma}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Proof}
+    The proof is by the encode-decode method. Let $x:X$. By the universal property of $\trunc{0}{X}$ there is a unique map $E:\trunc{0}{X}\to\Prop$ for which the triangle
+    \begin{equation*}
+      \begin{tikzcd}[ampersand replacement=\&]
+        X \arrow[d,swap,"\eta"] \arrow[dr,"\lambda y.\trunc{-1}{x=y}"] \\
+        \trunc{0}{X} \arrow[r,swap,"E"] \& \Prop
+      \end{tikzcd}
+    \end{equation*}
+    commutes. In other words, $E$ is the unique family of propositions over $\trunc{0}{X}$ equipped with a family of equivalences
+    \begin{equation*}
+      E(\eta(y))\simeq \trunc{-1}{x=y}.
+    \end{equation*}
+    It remains to show that the type $\sum_{z:\trunc{0}{X}}E(z)$ is contractible with center of contraction $(\eta(x),\eta(\refl{}))$.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Proof (Cont).}
+  To construct the contraction, we have to show
+  \begin{equation*}
+    \prod_{(z:\trunc{0}{X})}\prod_{(p:E(z))}(\eta(x),\eta(\refl))=(z,p)
+  \end{equation*}
+  Since $E$ is a subtype of $\trunc{0}{X}$, we have equivalences
+  \begin{equation*}
+    ((\eta(x),\eta(\refl))=(z,p))\simeq (\eta(x)=z). 
+  \end{equation*}
+  This identity type is a proposition. Furthermore, using the fact that $E(\eta(y))\simeq\trunc{-1}{x=y}$, it suffices to prove
+  \begin{equation*}
+    \prod_{(y:X)}\prod_{(p:\trunc{-1}{x=y})}\eta(x)=\eta(y)
+  \end{equation*}
+  The proof is completed by the universal property of propositional truncation and path induction.\hfill$\square$ 
+\end{frame}
+
+\begin{frame}
+  Recall that a fiber sequence $F\to E\to B$ consists of pointed maps between pointed types, such that the square
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&]
+      F \arrow[d] \arrow[r] \& E \arrow[d] \\
+      \unit \arrow[r] \& B
+    \end{tikzcd}
+  \end{equation*}
+  is a pullback square.
+  
+  \begin{lemma}
+    Consider a fiber sequence $F\stackrel{i}{\to} E\stackrel{p}{\to} B$ of pointed types and maps, and the induced sequence
+    \begin{equation*}
+      \begin{tikzcd}[ampersand replacement=\&]
+        \trunc{0}{F}\arrow[r,"\trunc{0}{i}"] \& \trunc{0}{E} \arrow[r,"\trunc{0}{p}"] \& \trunc{0}{B}.
+      \end{tikzcd}
+    \end{equation*}
+    This sequence is exact at $\trunc{0}{E}$.
+  \end{lemma}
+\end{frame}
+
+\begin{frame}
+  \\[3em]
+  \begin{proof}
+    Our goal is to show that
+    \begin{equation*}
+      \left\|\sum\nolimits_{(x:\trunc{0}{F})}\trunc{0}{i}(x)=y\right\|\leftrightarrow (\trunc{0}{p}(y)=\eta(b_0)).
+    \end{equation*}
+    for any $y:\trunc{0}{E}$. This is a proposition, so we may assume $y:E$. Note that $\trunc{0}{p}(\eta(y))=\eta(p(y))$. Therefore it is equivalent to show
+    \begin{equation*}
+      \left\|\sum\nolimits_{(x:\trunc{0}{F})}\trunc{0}{i}(x)=\eta(y)\right\|\leftrightarrow \brck{p(y)=b_0}.
+    \end{equation*}
+    The backwards direction is immediate by the universal property of propositional truncation and path induction. \\[10em]
+  \end{proof}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Proof (cont).}
+  It remains to prove
+  \begin{equation*}
+    \left\|\sum\nolimits_{(x:\trunc{0}{F})}\trunc{0}{i}(x)=\eta(y)\right\|\to \brck{p(y)=b_0}.
+    \end{equation*}
+  By the universal property of the propositional truncation, it suffices to show that
+    \begin{equation*}
+      \brck{p(y)=b_0}
+    \end{equation*}
+    for any $x:\trunc{0}{X}$ and $\alpha:\trunc{0}{i}(x)=\eta(y)$. We're proving a proposition, so we may assume $x:X$ and $\alpha:\eta(i(x))=\eta(y)$. The type of $\alpha$ is equivalent to the type $\brck{i(x)=y}$, so we complete the proof by one last application of the universal property of the propositional truncation, and path induction.
+\end{frame}
+
+\begin{frame}
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&]
+      \phantom{\cdots} \arrow[r,phantom,"\phantom{\Omega\delta}"] \& \phantom{\Omega F} \arrow[r,phantom] \arrow[d,phantom,"\phantom{\Omega i}"] \& \phantom{\unit} \arrow[d,phantom] \\
+      \phantom{\cdots} \arrow[r,phantom] \& \phantom{\Omega E} \arrow[r,phantom,"\phantom{\Omega p}"] \arrow[d,phantom] \& \phantom{\Omega B} \arrow[d,phantom,"\phantom{\delta}"] \arrow[r,phantom] \& \phantom{\unit} \arrow[d,phantom] \\
+      \& \phantom{\unit} \arrow[r,phantom] \& F \arrow[r,"i"] \arrow[d] \& E \arrow[d,"p"] \\
+      \& \& \unit \arrow[r] \& B
+    \end{tikzcd}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&]
+      \phantom{\cdots} \arrow[r,phantom,"\phantom{\Omega\delta}"] \& \phantom{\Omega F} \arrow[r,phantom] \arrow[d,phantom,"\phantom{\Omega i}"] \& \phantom{\unit} \arrow[d,phantom] \\
+      \phantom{\cdots} \arrow[r,phantom] \& \phantom{\Omega E} \arrow[r,phantom,"\phantom{\Omega p}"] \arrow[d,phantom] \& \Omega B \arrow[d,"\delta"] \arrow[r] \& \unit \arrow[d] \\
+      \& \phantom{\unit} \arrow[r,phantom] \& F \arrow[r,"i"] \arrow[d] \& E \arrow[d,"p"] \\
+      \& \& \unit \arrow[r] \& B
+    \end{tikzcd}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&]
+      \phantom{\cdots} \arrow[r,phantom,"\phantom{\Omega\delta}"] \& \phantom{\Omega F} \arrow[r,phantom] \arrow[d,phantom,"\phantom{\Omega i}"] \& \phantom{\unit} \arrow[d,phantom] \\
+      \phantom{\cdots} \arrow[r,phantom] \& \Omega E \arrow[r,"\Omega p"] \arrow[d] \& \Omega B \arrow[d,"\delta"] \arrow[r] \& \unit \arrow[d] \\
+      \& \unit \arrow[r] \& F \arrow[r,"i"] \arrow[d] \& E \arrow[d,"p"] \\
+      \& \& \unit \arrow[r] \& B
+    \end{tikzcd}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&]
+      \phantom{\cdots} \arrow[r,phantom,"\phantom{\Omega\delta}"] \& \Omega F \arrow[r] \arrow[d,swap,"\Omega i"] \& \unit \arrow[d] \\
+      \phantom{\cdots} \arrow[r,phantom] \& \Omega E \arrow[r,"\Omega p"] \arrow[d] \& \Omega B \arrow[d,"\delta"] \arrow[r] \& \unit \arrow[d] \\
+      \& \unit \arrow[r] \& F \arrow[r,"i"] \arrow[d] \& E \arrow[d,"p"] \\
+      \& \& \unit \arrow[r] \& B
+    \end{tikzcd}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&]
+      \cdots \arrow[r,"\Omega\delta"] \& \Omega F \arrow[r] \arrow[d,swap,"\Omega i"] \& \unit \arrow[d] \\
+      \cdots \arrow[r] \& \Omega E \arrow[r,"\Omega p"] \arrow[d] \& \Omega B \arrow[d,"\delta"] \arrow[r] \& \unit \arrow[d] \\
+      \& \unit \arrow[r] \& F \arrow[r,"i"] \arrow[d] \& E \arrow[d,"p"] \\
+      \& \& \unit \arrow[r] \& B
+    \end{tikzcd}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  The sequence
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&,column sep=small]
+      \cdots\arrow[r] \& \Omega F \arrow[r] \& \Omega E \arrow[r] \& \Omega B \arrow[r] \& F \arrow[r] \& E \arrow[r] \& B
+    \end{tikzcd}
+  \end{equation*}
+  is a fiber sequence at each step, so it induces the long exact sequence of homotopy groups
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement=\&,column sep=small]
+      \& \& \cdots \arrow[dll,out=0, in=180, looseness=2,overlay] \\
+      \pi_1(F) \arrow[r] \& \pi_1(E) \arrow[r] \& \pi_1(B) \arrow[dll,out=0, in=180, looseness=2,overlay] \\
+      \pi_0(F) \arrow[r] \& \pi_0(E) \arrow[r] \& \pi_0(B).
+    \end{tikzcd}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \begin{corollary}
+    We have
+    \begin{equation*}
+      \pi_k(\sphere{3})=\pi_k(\sphere{2})
+    \end{equation*}
+    for each $k\geq 3$. 
+  \end{corollary}
+
+  \begin{proof}
+    By the Hopf fibration $\sphere{1}\to\sphere{3}\to\sphere{2}$ we obtain a long exact sequence
+    \begin{equation*}
+      \mathclap{
+      \begin{tikzcd}[ampersand replacement=\&,column sep=1em]
+        {} \arrow[r] \& \pi_1(\sphere{1}) \arrow[r] \& \pi_1(\sphere{3}) \arrow[r] \& \pi_1(\sphere{2}) \arrow[r] \& \pi_0(\sphere{1}) \arrow[r] \& \pi_0(\sphere{3}) \arrow[r] \& \pi_0(\sphere{2})
+      \end{tikzcd}}
+    \end{equation*}
+    However, since $\sphere{1}$ is a $1$-type, it follows that $\pi_k(\sphere{1})=0$ for $k\geq 2$. Therefore we have an exact sequence of groups
+    \begin{equation*}
+      \begin{tikzcd}[ampersand replacement=\&]
+        0 \arrow[r] \& \pi_k(\sphere{3}) \arrow[r] \& \pi_k(\sphere{2}) \arrow[r] \& 0
+      \end{tikzcd}
+    \end{equation*}
+    for each $k\geq 3$. This implies that the group homomorphism $\pi_k(\sphere{3})\to\pi_k(\sphere{2})$ is an isomorphism for those $k$.
+  \end{proof}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exercises}
+  \begin{enumerate}
+  \item Show that a group homomorphism $h:G\to H$ is an isomorphism if and only if it fits in an exact sequence
+    \begin{equation*}
+      \begin{tikzcd}[ampersand replacement=\&]
+        0 \arrow[r] \& G \arrow[r,"h"] \& H \arrow[r] \& 0.
+      \end{tikzcd}
+    \end{equation*}
+  \item Suppose that $X$ is $n$-truncated. Show that the homotopy groups
+    \begin{equation*}
+      \pi_i(X,x)
+    \end{equation*}
+    are trivial, for each $x:X$ and $n<i$.
+  \item Let $X$ be a type and let $n\geq 0$. Show that the following are equivalent:
+    \begin{itemize}
+    \item The type $\trunc{-1}{X}$ has an element, and the homotopy groups
+      \begin{equation*}
+        \pi_i(X,x)
+      \end{equation*}
+      are trivial, for each $x:X$ and each $0\leq i\leq n$.
+    \item The $n$-truncation $\trunc{n}{X}$ is contractible.\\[\baselineskip]
+      (In this case we also say that $X$ is \textbf{$n$-connected}.)
+    \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \textbf{Open problem:}\\
+  Compute all the homotopy groups of all the spheres.
+\end{frame}
+
+\end{document}

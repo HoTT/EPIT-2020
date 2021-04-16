@@ -269,10 +269,25 @@ Section Part_4_Equivalences.
     Definition IsPropTrunc (A Q : Type) (q : A -> Q) :=
         forall  P : hProp, IsEquiv (fun f : Q -> P => f ∘ q).
 
-    Theorem univ_trunc (A : Type) : (IsPropTrunc A (Trunc (-1) A) tr).
+    Theorem univ_trunc `{Funext} (A : Type) : (IsPropTrunc A (Trunc (-1) A) tr).
     Proof.
-    Admitted.
-
+      intros Q.
+      srapply isequiv_adjointify.
+      - intros f a.
+        rapply Trunc_rec.
+        1: apply Q.
+        all: eassumption.
+      - intros f.
+        apply path_forall.
+        reflexivity.
+      - intros f.
+        apply path_forall.
+        intros a.
+        pattern a.
+        srapply Trunc_ind.
+        reflexivity. 
+    Qed.
+    
   End Exercise_4_2.
 
 End Part_4_Equivalences.
@@ -285,13 +300,13 @@ Section Part_5_Univalence.
 
     Theorem weasel : Univalence -> Contr { A : hProp & A }.
     Proof.
-        exists (Unit_hp ; tt).
-        intros [A a].
-        unshelve eapply path_sigma'.
-        -   apply path_iff_hprop.
-            + exact (fun _ => a).
-            + exact (fun _ => tt).
-        - apply A.
+    exists (Unit_hp ; tt).
+    intros [A a].
+    unshelve eapply path_sigma'.
+    -   apply path_iff_hprop.
+        + exact (fun _ => a).
+        + exact (fun _ => tt).
+    - apply A.
     Defined.
 
   End Exercise_5_1.
@@ -299,6 +314,8 @@ Section Part_5_Univalence.
   Section Exercise_5_2.
 
     (* Show that Σ (A : U) . isSet A is not a set. Hint: (2 ≃ 2) ≃ 2. *)
+
+
 
     Lemma two_equiv_two `{Funext} : (Bool <~> Bool) <~> Bool.
     Proof.

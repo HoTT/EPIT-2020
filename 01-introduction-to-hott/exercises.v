@@ -1,5 +1,3 @@
-(* If loading this file in emacs, remove first the last few lines that force to call `hoqtop` and rather use the `_CoqProject` method described in the installation instructions *)
-
 From HoTT Require Import HoTT.
 
 (* This file formalizes the exercises from the lectures "Introduction to HoTT". *)
@@ -68,6 +66,26 @@ Section Part_2_Identity_Types.
 
   End Exercise_2_2.
 
+  Section Exercise_2_3.
+
+    (* Suppose
+
+         u, v : Σ (x : A) . B(x)
+         p : π₁ u = π₁ v
+         q : p . (π₂ u) = π₂ v
+
+       are given. Construct a path u = v. *)
+    Theorem Exercise_2_3
+              {A : Type} {B : A -> Type}
+              {u v : {x : A & B x}}
+              (p : u.1 = v.1)
+              (q : p # u.2 = v.2)
+              : u = v.
+    Proof.
+    Admitted.
+
+  End Exercise_2_3.
+
 End Part_2_Identity_Types.
 
 Section Part_3_Homotopy_Levels.
@@ -107,7 +125,7 @@ Section Part_4_Equivalences.
 
     (* (a) If P and Q are propostions then (P → Q) × (Q → P) → P ≃ Q *)
 
-    Variables P Q : hProp.
+    Variables P Q : HProp.
 
     Definition cow : (P -> Q) * (Q -> P) -> P <~> Q.
     Proof.
@@ -124,10 +142,10 @@ Section Part_4_Equivalences.
     (* The library does not seem to have an explicit definition of isIso,
        so we include it here. *)
 
-    Definition isIso {A B} (f : A -> B) : Type :=
-      { g : B -> A & Sect g f * Sect f g }%type.
+     Definition isIso {A B} (f : A -> B) : Type :=
+      { g : B -> A & (g o f == idmap) * (f o g == idmap) }%type.
 
-    Theorem rabbit (X Y : hSet) : (X <~> Y) <~> { f : X -> Y & isIso f }.
+    Theorem rabbit (X Y : HSet) : (X <~> Y) <~> { f : X -> Y & isIso f }.
     Proof.
     Admitted.
 
@@ -154,7 +172,7 @@ Section Part_5_Univalence.
 
     (* Show that the type of true propositions is contractible. *)
 
-    Theorem weasel : Contr { A : hProp & A }.
+    Theorem weasel : Contr { A : HProp & A }.
     Proof.
     Admitted.
 
@@ -168,7 +186,7 @@ Section Part_5_Univalence.
     Proof.
     Admitted.
 
-    Lemma set_not_set : IsHSet hSet -> Empty.
+    Lemma set_not_set : IsHSet HSet -> Empty.
     Proof.
     Admitted.
 

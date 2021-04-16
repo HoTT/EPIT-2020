@@ -53,6 +53,11 @@ Students with the intention to contribute to or trying out the latest
 version of the agda/cubical library will need to install the development version
 of Agda. Detailed instructions can be found at: https://github.com/agda/cubical/blob/master/INSTALL.md
 
+The way to interact with Agda is via emacs and the Agda-mode. This
+mode gets installed with Agda, but you usually need to run `agda-mode
+setup` after the first time installing Agda. For details see:
+https://agda.readthedocs.io/en/v2.6.1/getting-started/installation.html#installation-from-hackage
+
 **Tip**: It can be a bit complicated to install the development version
 of Agda and Anders uses the "cabal sandbox install instructions" solution,
 but other solutions might work better on other systems.
@@ -62,65 +67,77 @@ to ask for help on #tech-desk on Discord.
 
 ## Schedule
 
-*Everything below is under construction. The final version of
-the material and exercises will be uploaded the same day as the course
-is given, but I intend to develop the material here on Github.*
-
 The online lectures will take place on Thursday, April 15, 2021.
 All times are in UTC+2 (i.e. Stockholm time).
 
 | Time        | Topic                                      |
 |:------------|:-------------------------------------------|
-| 14:00–14:15 | Part 1: Introduction                       |
-| 14:15–14:45 | Part 2: The interval and path types        |
-| 14:45–15:00 | (break)                                    |
-| 15:00–15:30 | Part 3: Transport and composition          |
-| 15:30–16:00 | Part 4: Univalence and the SIP             |
-| 16:00–16:15 | (break)                                    |
-| 16:15–17:00 | Part 5: Higher inductive types             |
+| 14:00–14:15 | Introduction                               |
+| 14:15–14:45 | Part 1: The interval and path types        |
+| 14:45–15:15 | Exercise session 1                         |
+| 15:15–15:30 | (break)                                    |
+| 15:30-16:00 | Part 2: Transport and composition          |
+| 16:00–16:30 | Part 3: Univalence and the SIP             |
+| 16:30–17:00 | Exercise session 2                         |
 | 17:00–17:15 | (break)                                    |
-| 17:15–18:30 | Exercise session                           |
+| 17:15–18:00 | Part 4: Higher inductive types             |
+| 18:00–18:30 | Exercise session 3                         |
 
 ## Contents
 
-### Part 1: Introduction
+### Introduction
 
 * Why Cubical Type Theory?
-* Cubical Agda demo
+* Cubical Agda
 
-### Part 2: The interval and path types
+See [Introduction.pdf](material/Introduction.pdf).
+
+### Part 1: The interval and path types
 
 * The interval in Cubical Agda
 * `Path` and `PathP` types
 * Function extensionality
 * Equality in Σ-types
 
-### Part 3: Transport and composition
+See [Part1](material/Part1.agda).
+
+### Exercise session 1
+
+See [ExerciseSession1](material/ExerciseSession1.agda).
+
+### Part 2: Transport and composition
 
 * Cubical `transport`
 * Subst as a special case of cubical `transport`
-* Path induction from `subst`?
+* Path induction from `subst`
 * Homogeneous composition (`hcomp`)
 * Binary composition of paths as special case of `hcomp`
 
-### Part 4: Univalence and the SIP
+See [Part2](material/Part2.agda).
+
+### Part 3: Univalence and the SIP
 
 * Univalence from `ua` and `uaβ`
-* Transporting with `ua` (examples: `ua not : Bool = Bool`, `ua suc : Z = Z`, ...)
-* Subst using `ua`
+* Transporting with `ua`
 * The SIP as a consequence of `ua`
-* Examples of using the SIP for math and programming (algebra, data structures, etc.)
 
-### Part 5: Higher inductive types
+See [Part3](material/Part3.agda).
 
-* Quotients via HITs
-* Propositional truncation for logic?
-* CS example using quotients (maybe finite multisets or queues)
-* Synthetic homotopy theory (probably `Torus = S^1 * S^1`, `pi_1(S^1) = Z`, `pi_1(Torus) = Z * Z`)
+### Exercise session 2
 
-### Exercises
+See [ExerciseSession2](material/ExerciseSession2.agda).
 
-*TODO*
+### Part 4: Higher inductive types
+
+* Set quotients via HITs
+* Propositional truncation
+* A little synthetic homotopy theory
+
+See [Part4](material/Part4.agda).
+
+### Exercise session 3
+
+See [ExerciseSession3](material/ExerciseSession3.agda).
 
 ## Additional material
 

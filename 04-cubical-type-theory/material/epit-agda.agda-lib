@@ -1,0 +1,3 @@
+name: epit-agda
+include: .
+depend: cubical

@@ -284,26 +284,26 @@ _ = refl
 -- We have many more topological examples in the library, including
 -- Klein bottle, RP^n, higher spheres, suspensions, join, wedges,
 -- smash product:
-open import Cubical.HITs.KleinBottle
-open import Cubical.HITs.RPn
-open import Cubical.HITs.S2
-open import Cubical.HITs.S3
-open import Cubical.HITs.Susp
-open import Cubical.HITs.Join
+-- open import Cubical.HITs.KleinBottle
+-- open import Cubical.HITs.RPn
+-- open import Cubical.HITs.S2
+-- open import Cubical.HITs.S3
+-- open import Cubical.HITs.Susp
+-- open import Cubical.HITs.Join
 -- open import Cubical.HITs.Wedge
-open import Cubical.HITs.SmashProduct
+-- open import Cubical.HITs.SmashProduct
 
 -- There's also a proof of the "3x3 lemma" for pushouts in less than
 -- 200LOC. In HoTT-Agda this took about 3000LOC. For details see:
 -- https://github.com/HoTT/HoTT-Agda/tree/master/theorems/homotopy/3x3
-open import Cubical.HITs.Pushout
+-- open import Cubical.HITs.Pushout
 
 -- We also defined the Hopf fibration and proved that its total space
 -- is S³ in about 300LOC:
-open import Cubical.HITs.Hopf
+-- open import Cubical.HITs.Hopf
 
 -- There is also some integer cohomology:
-open import Cubical.ZCohomology.Everything
+-- open import Cubical.ZCohomology.Everything
 -- To compute cohomology groups of various spaces we need a bunch of
 -- interesting theorems: Freudenthal suspension theorem,
 -- Mayer-Vietoris sequence...
@@ -322,3 +322,4 @@ open import Cubical.ZCohomology.Everything
 
 
 --- The end! ---
+

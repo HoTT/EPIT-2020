@@ -9,7 +9,6 @@ Part 2: Transport and composition
 • Binary composition of paths as special case of hcomp
 
 -}
-
 {-# OPTIONS --cubical #-}
 module Part2 where
 

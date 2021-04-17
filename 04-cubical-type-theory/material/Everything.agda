@@ -10,3 +10,6 @@ import Part4
 import ExerciseSession1
 import ExerciseSession2
 import ExerciseSession3
+import SolutionsSession1
+import SolutionsSession2
+import SolutionsSession3

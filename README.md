@@ -17,8 +17,9 @@ We will also have two shorter lectures on:
 
 **The program of the week will be lectures/exercise sessions from 2pm to 6.30pm (UTC+2). We will organize virtual social events in the evening.**
 
-Here is the day by day program, the detailed content and timing of each lecture can be found in the corresponding subfolder. 
-YouTube channel: https://youtu.be/Ur_dMuEVppg
+The lectures will be streamed and recordings of them will be made available on [YouTube](https://www.youtube.com/channel/UCjJu7eXFuKwIp5W6pxeMsBQ).
+
+Here is the day by day program, the detailed content and timing of each lecture can be found in the corresponding subfolder.
 
 * Day 1.
   + Matthieu Sozeau and Nicolas Tabareau: [Introduction](./EPIT-Introduction.pdf)

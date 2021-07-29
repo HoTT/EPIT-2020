@@ -37,14 +37,14 @@ bit of mathematics and do not discuss Cubical Agda.
 ## Installation of Cubical Agda and agda/cubical
 
 In order to follow the course one needs a recent release of Agda
-(version >=2.6.1): https://wiki.portal.chalmers.se/agda/Main/Download
+(version >=2.6.2): https://wiki.portal.chalmers.se/agda/Main/Download
 
-One also needs to download and build v0.2 of the agda/cubical library:
-https://github.com/agda/cubical/releases/tag/v0.2
+One also needs to download and build v0.3 of the agda/cubical library:
+https://github.com/agda/cubical/releases/tag/v0.3
 
 If one has installed Agda and have the `agda` executable in ones path
 then building the library should work by running `make` in the
-cubical-0.2 directory after unpacking the v0.2 package. If one wants
+cubical-0.3 directory after unpacking the v0.3 package. If one wants
 to use the agda/cubical library in another directory one has to
 register it by following:
 https://github.com/agda/cubical/blob/master/INSTALL.md#registering-the-cubical-library
@@ -56,7 +56,7 @@ of Agda. Detailed instructions can be found at: https://github.com/agda/cubical/
 The way to interact with Agda is via emacs and the Agda-mode. This
 mode gets installed with Agda, but you usually need to run `agda-mode
 setup` after the first time installing Agda. For details see:
-https://agda.readthedocs.io/en/v2.6.1/getting-started/installation.html#installation-from-hackage
+https://agda.readthedocs.io/en/v2.6.2/getting-started/installation.html#installation-from-hackage
 
 **Tip**: It can be a bit complicated to install the development version
 of Agda and Anders uses the "cabal sandbox install instructions" solution,

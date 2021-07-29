@@ -81,27 +81,27 @@ open import Cubical.Data.Nat
 open import Cubical.Data.Int hiding (addEq ; subEq)
 
 -- a) Define a path "addEq n" by composing sucPathInt with itself n times.
-addEq : ℕ → Int ≡ Int
+addEq : ℕ → ℤ ≡ ℤ
 addEq n = {!!}
 
--- b) Define another path "subEq n" by composing "sym sucPathInt" with
+-- b) Define another path "subEq n" by composing "sym sucPathℤ" with
 -- itself n times.
-subEq : ℕ → Int ≡ Int
+subEq : ℕ → ℤ ≡ ℤ
 subEq n = {!!}
 
 -- c) Define addition on integers by pattern-matching and transporting
 -- along addEq/subEq appropriately.
-_+Int_ : Int → Int → Int
-m +Int n = {!!}
+_+ℤ_ : ℤ → ℤ → ℤ
+m +ℤ n = {!!}
 
--- d) Do some concrete computations using _+Int_ (this would not work
+-- d) Do some concrete computations using _+ℤ_ (this would not work
 -- in HoTT as the transport would be stuck!)
 
 -- e) Use isEquivTransport from
 
 open import Cubical.Foundations.Transport
 
--- to prove that +Int with a fixed number is an equivalence.
+-- to prove that +ℤ with a fixed number is an equivalence.
 --
 -- Note that proving this for the usual _+_ function would be a lot
 -- longer, but now we get it for free as addition is defined using

@@ -92,10 +92,10 @@ _ = refl
 
 -- Another example, integers:
 
-open import Cubical.Data.Int hiding (_+_ ; +-assoc)
+open import Cubical.Data.Int hiding (_+_)
 
-sucPath : Int ≡ Int
-sucPath = isoToPath (iso sucInt predInt sucPred predSuc)
+sucPath : ℤ ≡ ℤ
+sucPath = isoToPath (iso sucℤ predℤ sucPred predSuc)
 
 _ : transport sucPath (pos 0) ≡ pos 1
 _ = refl

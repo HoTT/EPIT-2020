@@ -13,9 +13,6 @@ Part 1: The interval and path types
 {-# OPTIONS --cubical #-}
 module Part1 where
 
-
-open import Cubical.Core.Primitives public
-
 -- To load an Agda file type "C-c C-l" in emacs (the notation "C-c"
 -- means that one should hold "CTRL" and press "c", for general
 -- documentation about emacs keybindings see:

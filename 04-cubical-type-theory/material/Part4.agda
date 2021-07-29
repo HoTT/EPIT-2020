@@ -116,8 +116,8 @@ data _/_ (A : Type ℓ) (R : A → A → Type ℓ') : Type (ℓ-max ℓ ℓ') wh
 -- requires univalence for propositions (hPropExt).
 
 -- Set quotients let us define things like in normal math:
-ℤ : Type₀
-ℤ = (ℕ × ℕ) / rel
+ℤ' : Type₀
+ℤ' = (ℕ × ℕ) / rel
   where
   rel : (ℕ × ℕ) → (ℕ × ℕ) → Type₀
   rel (x₀ , y₀) (x₁ , y₁) = x₀ + y₁ ≡ x₁ + y₀
@@ -184,7 +184,7 @@ double (loop i) = (loop ∙ loop) i
 -- circle. We first define a family of types over the circle whos
 -- fibers are the integers.
 helix : S¹ → Type₀
-helix base     = Int
+helix base     = ℤ
 helix (loop i) = sucPath i
 
 -- The loopspace of the circle
@@ -193,7 +193,7 @@ helix (loop i) = sucPath i
 
 -- We can then define a function computing how many times we've looped
 -- around the circle by:
-winding : ΩS¹ → Int
+winding : ΩS¹ → ℤ
 winding p = subst helix p (pos 0)
 
 -- This reduces just fine:
@@ -269,7 +269,7 @@ Torus≡S¹×S¹ : Torus ≡ S¹ × S¹
 Torus≡S¹×S¹ = isoToPath (iso t2c c2t t2c-c2t c2t-t2c)
 
 -- We can also directly compute winding numbers on the torus
-windingTorus : point ≡ point → Int × Int
+windingTorus : point ≡ point → ℤ × ℤ
 windingTorus l = ( winding (λ i → proj₁ (t2c (l i)))
                  , winding (λ i → proj₂ (t2c (l i))))
 

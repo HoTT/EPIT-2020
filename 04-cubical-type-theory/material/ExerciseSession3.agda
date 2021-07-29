@@ -40,13 +40,13 @@ isSurjection {A = A} {B = B} f = (b : B) → ∃ A (λ a → f a ≡ b)
 
 -- Exercise* 5: define
 
-intLoop : Int → ΩS¹
+intLoop : ℤ → ΩS¹
 intLoop = {!!}
 
 -- which given +n return loop^n and given -n returns loop^-n. Then
 -- prove that:
 
-windingIntLoop : (n : Int) → winding (intLoop n) ≡ n
+windingIntLoop : (n : ℤ) → winding (intLoop n) ≡ n
 windingIntLoop = {!!}
 
 -- (The other direction is much more difficult and relies on the

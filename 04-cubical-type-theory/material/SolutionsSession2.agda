@@ -67,29 +67,29 @@ isPropIsContr (c0 , h0) (c1 , h1) j =
 open import Cubical.Data.Nat
 open import Cubical.Data.Int hiding (addEq ; subEq)
 
--- Compose sucPathInt with itself n times. Transporting along this
+-- Compose sucPathℤ with itself n times. Transporting along this
 -- will be addition, transporting with it backwards will be subtraction.
 
--- a) Define a path "addEq n" by composing sucPathInt with itself n
+-- a) Define a path "addEq n" by composing sucPathℤ with itself n
 -- times.
-addEq : ℕ → Int ≡ Int
+addEq : ℕ → ℤ ≡ ℤ
 addEq zero = refl
-addEq (suc n) = (addEq n) ∙ sucPathInt
+addEq (suc n) = (addEq n) ∙ sucPathℤ
 
--- b) Define another path "subEq n" by composing "sym sucPathInt" with
+-- b) Define another path "subEq n" by composing "sym sucPathℤ" with
 -- itself n times.
-subEq : ℕ → Int ≡ Int
+subEq : ℕ → ℤ ≡ ℤ
 subEq zero = refl
-subEq (suc n) = (subEq n) ∙ sym sucPathInt
+subEq (suc n) = (subEq n) ∙ sym sucPathℤ
 
 
 -- c) Define addition on integers by pattern-matching and transporting
 -- along addEq/subEq appropriately.
-_+Int_ : Int → Int → Int
-m +Int pos n    = transport (addEq n) m
-m +Int negsuc n = transport (subEq (suc n)) m
+_+ℤ_ : ℤ → ℤ → ℤ
+m +ℤ pos n    = transport (addEq n) m
+m +ℤ negsuc n = transport (subEq (suc n)) m
 
--- d) Do some concrete computations using _+Int_ (this would not work
+-- d) Do some concrete computations using _+ℤ_ (this would not work
 -- in HoTT as the transport would be stuck!)
 
 

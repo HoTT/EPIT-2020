@@ -5,7 +5,7 @@ module SolutionsSession3 where
 open import Part1
 open import Part2
 open import Part3
-open import Part4 hiding (ℤ)
+open import Part4 hiding (ℤ')
 open import ExerciseSession1 hiding (B)
 
 open import Cubical.Foundations.Isomorphism
@@ -23,37 +23,37 @@ assoc-++ (trunc xs xs' p q i k) ys zs j =
         (λ l → assoc-++ (q l) ys zs j) i k
 
 -- Exercise 2
-data ℤ : Type₀ where
-  pos    : (n : ℕ) → ℤ
-  neg    : (n : ℕ) → ℤ
+data ℤ' : Type₀ where
+  pos    : (n : ℕ) → ℤ'
+  neg    : (n : ℕ) → ℤ'
   posneg : pos 0 ≡ neg 0
 
 -- Exercise 3
-Int→ℤ : Int → ℤ
-Int→ℤ (pos n) = pos n
-Int→ℤ (negsuc n) = neg (suc n)
+ℤ→ℤ' : ℤ → ℤ'
+ℤ→ℤ' (pos n) = pos n
+ℤ→ℤ' (negsuc n) = neg (suc n)
 
-ℤ→Int : ℤ → Int
-ℤ→Int (pos n) = pos n
-ℤ→Int (neg zero) = pos 0
-ℤ→Int (neg (suc n)) = negsuc n
-ℤ→Int (posneg _) = pos 0
+ℤ'→ℤ : ℤ' → ℤ
+ℤ'→ℤ (pos n) = pos n
+ℤ'→ℤ (neg zero) = pos 0
+ℤ'→ℤ (neg (suc n)) = negsuc n
+ℤ'→ℤ (posneg _) = pos 0
 
-ℤ→Int→ℤ : ∀ (n : ℤ) → Int→ℤ (ℤ→Int n) ≡ n
-ℤ→Int→ℤ (pos n) _       = pos n
-ℤ→Int→ℤ (neg zero) i    = posneg i
-ℤ→Int→ℤ (neg (suc n)) _ = neg (suc n)
-ℤ→Int→ℤ (posneg j) i    = posneg (j ∧ i)
+ℤ'→ℤ→ℤ' : ∀ (n : ℤ') → ℤ→ℤ' (ℤ'→ℤ n) ≡ n
+ℤ'→ℤ→ℤ' (pos n) _       = pos n
+ℤ'→ℤ→ℤ' (neg zero) i    = posneg i
+ℤ'→ℤ→ℤ' (neg (suc n)) _ = neg (suc n)
+ℤ'→ℤ→ℤ' (posneg j) i    = posneg (j ∧ i)
 
-Int→ℤ→Int : ∀ (n : Int) → ℤ→Int (Int→ℤ n) ≡ n
-Int→ℤ→Int (pos n) _ = pos n
-Int→ℤ→Int (negsuc n) _ = negsuc n
+ℤ→ℤ'→ℤ : ∀ (n : ℤ) → ℤ'→ℤ (ℤ→ℤ' n) ≡ n
+ℤ→ℤ'→ℤ (pos n) _ = pos n
+ℤ→ℤ'→ℤ (negsuc n) _ = negsuc n
 
-Int≡ℤ : Int ≡ ℤ
-Int≡ℤ = isoToPath (iso Int→ℤ ℤ→Int ℤ→Int→ℤ Int→ℤ→Int)
+ℤ≡ℤ' : ℤ ≡ ℤ'
+ℤ≡ℤ' = isoToPath (iso ℤ→ℤ' ℤ'→ℤ ℤ'→ℤ→ℤ' ℤ→ℤ'→ℤ)
 
-isSetℤ : isSet ℤ
-isSetℤ = subst isSet Int≡ℤ isSetInt
+isSetℤ' : isSet ℤ'
+isSetℤ' = subst isSet ℤ≡ℤ' isSetℤ
 
 -- Exercise 4
 isSurjection : (A → B) → Type _
@@ -66,17 +66,17 @@ isSurjectionInc : isSurjection {A = A} ∣_∣
 isSurjectionInc x = rec squash (λ y → ∣ (y , squash ∣ y ∣ x) ∣) x
 
 -- Exercise 5
-intLoop : Int → ΩS¹
+intLoop : ℤ → ΩS¹
 intLoop (pos zero)       = refl
 intLoop (pos (suc n))    = intLoop (pos n) ∙ loop
 intLoop (negsuc zero)    = sym loop
 intLoop (negsuc (suc n)) = intLoop (negsuc n) ∙ sym loop
 
-windingIntLoop : (n : Int) → winding (intLoop n) ≡ n
+windingIntLoop : (n : ℤ) → winding (intLoop n) ≡ n
 windingIntLoop (pos zero)       = refl
-windingIntLoop (pos (suc n))    = cong sucInt (windingIntLoop (pos n))
+windingIntLoop (pos (suc n))    = cong sucℤ (windingIntLoop (pos n))
 windingIntLoop (negsuc zero)    = refl
-windingIntLoop (negsuc (suc n)) = cong predInt (windingIntLoop (negsuc n))
+windingIntLoop (negsuc (suc n)) = cong predℤ (windingIntLoop (negsuc n))
 
 
 -- Exercise 6
